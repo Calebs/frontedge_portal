@@ -1,0 +1,331 @@
+// Forms widget nav
+header[role="banner"] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $header_height;
+    z-index: $header-zindex;
+    @include font-smoothing;
+
+    [class*="container"] {
+        height: 100%;
+        position: relative;
+    }
+
+    @include MQ(L) {
+        height: $header_height_l;
+    }
+}
+
+.preAuthHeader {
+    @include transition(background-color .6s ease-in-out);
+    /* Force Hardware Acceleration in WebKit */
+    @include transform(translate3d(0, 0, 0));
+    @include backface-visibility(hidden);
+    box-shadow: 0 1px 4px rgba(black, .15);
+    background-color: white;
+}
+
+.mainAppHeader {
+    text-align: center;
+    background-color: black;
+    color: $color_white;
+}
+
+.navbarWrapper {
+    @include flexbox();    
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.navbarGroupItem {
+    width: auto;
+    height: 100%;
+    display: block;
+    @include flexbox();
+    align-items: center;
+    position: relative;
+}
+
+.navBarItemLeft {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    z-index: 5;
+    float: left;
+    flex-shrink: 0;
+}
+
+.navBarItemRight {
+    float: right;
+    justify-content: flex-end;
+    z-index: 5;
+    flex-shrink: 0;
+}
+
+.navBarItemCenter {
+    flex-grow: 1;
+
+    @include MQ-MAX(L) {
+        width: 100%;
+        position: absolute;
+        left: 0;
+    }
+
+    // @include MQ(L) {
+    //     padding-left: 40px;
+    // }
+}
+
+.brand_img {
+    display: block;
+    
+    header[role="banner"]  &{
+        height: $header_height;
+    }
+}
+
+.logo_link {
+    padding: 0;
+    display: inline-block;
+    line-height: $header_height;
+    width: 130px;
+    position: relative;
+    height: 100%;
+
+    @include MQ(L) {
+        width: 175px;
+    }
+        
+    >img {
+        vertical-align: middle;
+        display: inline-block;
+    }
+}
+
+.navMenu {
+    @include flexbox();
+    align-items: center;
+    width: 100%;
+}
+
+.menuPrimary {
+    @include transition(all .6s cubic-bezier(.68, .34, .15, 1));
+    transform-origin: top;
+    width: 100%;
+
+    @include MQ-MAX(M) {
+        left: 0;
+        position: fixed;
+        background-color: black;
+        @include flexbox();
+        bottom: 0;
+        height: 60px;
+        align-items: center;
+        padding-left: 15px;
+        padding-right: 15px;
+        box-shadow: 0 0 4px rgba(black, .15);
+    }
+
+    @include MQ(M) {
+        justify-content: center;
+    }
+    
+    .is-active & {
+        @include transform(scaleY(1));
+        visibility: visible;
+        @include transition(transform .8s cubic-bezier(.68, .34, .15, 1));
+    }    
+}
+
+.controlBtn {
+    position: relative;
+}
+
+.menuListItem {
+    position: relative;
+    white-space: nowrap;
+
+    @include MQ-MAX(L) {
+        display: block;
+        width: 100%;
+    }
+
+    @include MQ(M) {
+        padding: 0 15px;
+    }
+}
+
+.menuLinkItem {
+    display: block;
+    white-space: nowrap;
+    letter-spacing: 0;
+    opacity: .5;
+    border-radius: 10px;
+    color: inherit;
+    font-size: 11px;
+    fill: $color_white;
+    background-color: transparent;
+    @include transition(all .6s ease-in-out);
+    text-align: center;
+
+    &:hover,
+    &:focus {
+        opacity: 1;
+        color: inherit;
+    }
+
+    .active & {
+        opacity: 1;
+        fill: $brand_primary;
+    }
+
+    @include MQ(M) {
+        font-size: 14px;
+        padding: 10px 15px;
+
+        .active & {
+            background-color: rgba($brand_primary, .25);
+        }
+    }
+
+    .subMenuContainer:hover > & {
+        color: $brand_primary;
+    }
+}
+
+.subLinkHolder {
+    position: relative;
+    padding-right: 5px;
+}
+
+.dropdownMarker {
+    display: inline-block;
+    position: absolute;
+    @include center(y);
+    right: -6px;
+    margin-top: 3px;
+    transform-origin: center;
+
+    &::after, &::before {
+        content: "";
+        background: $brand_primary;
+        height: 2px;
+        width: 7px;
+        top: 50%;
+        display: block;
+        position: absolute;
+
+        @include MQ-MAX(M) {
+            background: $brand_primary;
+        }
+    }
+
+    &::after {
+        transform-origin: 0 100%;
+        @include transform(rotate(-40deg) scaleY(1.5));
+        left: 50%;
+    }
+
+    &::before {
+        transform-origin: 100% 100%;
+        @include transform(rotate(40deg) scaleY(1.5));
+        right: 50%;
+    }
+
+    .subMenuContainer:hover & {
+        transform: translateY(-6px);
+        @include transition (transform .4s linear 0s);
+
+        &::before {
+            transform-origin: 100% 0;
+            @include transform(rotate(-40deg) scaleY(1.5));
+        }
+
+        &::after {
+            transform-origin: 0 0;
+            @include transform(rotate(40deg) scaleY(1.5));
+        }
+    }
+}
+
+.subMenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    min-width: 280px;
+
+    @include MQ-MAX(M) {
+        bottom: 100%;
+        top: auto;
+    }
+
+    .subMenuContainer:hover > & {
+        display: block;
+    }
+}
+
+.subMenuItem {
+    padding: 11px 0 12px;
+}
+
+.subMenuItem_link {
+    display: block;
+}
+
+.userAccountDetails {
+    @include flexbox();
+    align-items: center;
+
+    &:hover {
+        color: inherit
+    }
+}
+
+.dsp_tab_row {
+    @include flexbox();
+    align-items: center;
+
+    &.menuLinkItem {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .dpd_nav_item & {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.icon_holder {
+    flex-shrink: 0;
+
+    @include MQ(M) {
+        margin-bottom: 5px;
+    }
+
+    .dpd_nav_item & {
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+}
+
+.dpd_header {
+    padding-top: 5px;
+    padding-bottom: 15px;
+    display: block;
+    clear: both;
+    border-bottom: 1px solid $color_grey_dark;
+}
+
+.dpd_footer {
+    clear: both;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid $color_grey_dark;
+    color: $border_grey_light;
+}

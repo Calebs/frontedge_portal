@@ -1,0 +1,108 @@
+.contentFilterBtn {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: white;
+    border: 1px solid $border_grey;
+    border-radius: 25px;
+    color: $color_text;
+
+    &:hover, &:focus {
+        background-color: $border_grey_light;
+        color: $brand_black;
+    }
+}
+
+.snipTrend{
+    display: none;
+    padding-top: 10px;
+    display: block;
+
+    &::before {
+        content: "";
+        margin-right: 2px;
+        display: inline-block;
+        font-size: 1.5em;
+        line-height: 1;
+    }
+    
+    &.trendUp{
+        color: $color_green;
+
+        &::before {
+            content: "+";
+        }
+    }
+    
+    &.trendDown{
+        color: $color_red;
+        
+        &::before {       
+            content: "-";
+        }
+    }
+}
+
+.tabelControl {
+    display: inline-block;
+
+    + .tabelControl {
+        margin-left: 1.5rem;
+    }
+}
+
+.tableControlBtn {
+    padding: 8px 14px;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 700;
+    border-radius: 25px;
+    background-color: $color_white;
+    color: $color_grey_dark;
+    fill: $border_grey_dark;
+    @include transition(all .4s ease-in-out);
+
+    @include MQ-MAX(S) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .cust_icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    &:hover, &:focus {
+        background-color: $brand_inverse;
+        color: $brand_black;
+        fill: $brand_primary;
+    }
+}
+
+.labelTag {
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: .025em;
+    text-transform: uppercase;
+    color: $border_grey_dark;
+    white-space: nowrap;
+}
+
+.labelTagPrimary {
+    color: $brand_primary;
+}
+
+.labelTagSecondary {
+    color: $brand_accent;
+}
+
+.labelTagDanger {
+    color: $color_red;
+}
+
+.labelTagNeutral {
+    color: $color_text;
+}
+
+.labelTagSuccess {
+    color: $color_green;
+}

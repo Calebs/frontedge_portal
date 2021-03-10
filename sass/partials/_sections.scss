@@ -1,0 +1,344 @@
+.mainContentArea {
+    position: relative;
+    width: 100%;
+    padding-top: $header_height;
+    height: 100%;
+
+    &.is_active {
+        overflow: hidden
+    }
+
+    &::before {
+        /* never visible - used to check MQ in jQuery */
+        display: none;
+        content: 'mobile';
+    }
+    @include MQ(M) {
+        padding-top: $header_height_l;
+        &::before {
+            /* never visible - used to check MQ in jQuery */
+            content: 'tablet';
+        }
+    }
+    @include MQ(L) {
+        margin-top: 0;
+        &::before {
+            /* never visible - used to check MQ in jQuery */
+            content: 'desktop';
+        }
+    }
+}
+
+.section_block {
+    padding: 50px 0;
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+
+    .layoutMain & {
+        height: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    @include MQ(M) {
+        padding: 70px 0;
+    }
+
+    .container {
+        z-index: 5;
+    }
+}
+
+.sectionDivider {
+    display: block;
+    clear: both;
+    z-index: 2;
+
+    .section_block & {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+.fillerImage {
+    width: 100%;
+    max-width: 512px;
+    display: block;
+    margin: auto;
+}
+
+.section_cto {
+    margin-top: 40px;
+    clear: both;
+}
+
+.section_header {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.title {
+    line-height: 1.45;
+    font-size: 1em;
+    letter-spacing: .65px;
+    @include break-inside(avoid);
+}
+
+.title_sm {
+    font-size: 1.6rem;
+
+    @include MQ(M) {
+        font-size: 2.1rem;
+    }
+}
+
+.title_md {
+    font-size: 2.1rem;
+
+    @include MQ(M) {
+        font-size: 3.2rem;
+    }
+}
+
+.title_md_preserve {
+    font-size: 3.2rem;
+}
+
+.title_lg {
+    font-size: 2.4rem;
+
+    @include MQ(M) {
+        font-size: 4.2rem;
+    }
+}
+
+.infoBlobDetail {
+    width: 100%;
+    padding: 30px 0;
+
+    @include MQ(S) {
+        max-width: 235px;
+        margin: auto;
+    }
+}
+
+.infoBlobList {
+    padding-left: 24px;
+    > li {
+        display: list-item;
+        list-style: disc;
+    }
+}
+
+.verticalSectionDivider {
+    display: block;
+    width: 2px;
+    height: 130px;
+    background-color: $brand_accent;
+}
+
+// footer
+.footerArea {
+    position: relative;
+    padding: 50px 0 30px;
+    background-color: $brand_black;
+    color: rgba(white, .9);
+}
+
+footer[role="contentinfo"] {
+    width: 100%;
+    clear: both;
+}
+
+.brandBlock {
+    position: relative;
+    text-align: center;
+
+    @include MQ(M) {
+        margin-bottom: 20px;
+        padding-top: 15px;
+        text-align: left;
+        border-bottom: none;
+    }
+}
+
+.brand_media {
+    overflow: hidden;
+
+    img {
+        max-width: 140px;
+
+        @include MQ(M) {
+            max-width: 220px;
+        }
+    }
+}
+
+.footerBlock {
+    @include flexbox();
+    flex-direction: column;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    @include MQ-MAX(M) {
+        text-align: center;
+
+        .brandNav & {
+            border-bottom: 1px solid rgba($border_grey_light, .3);
+        }
+    }
+}
+
+.blockHeaderLink {
+    display: block;
+    width: 100%;
+    line-height: 32px;
+    cursor: pointer;
+
+    @include MQ(M) {
+        pointer-events: none;
+    }
+}
+
+.ft_block_segment + .ft_block_segment {
+    margin-top: 25px;
+}
+
+.ft_block_header {
+    display: block;
+}
+
+.item_title {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.ft_nav_block > li {
+    line-height: 2.5em;
+}
+
+.footerCrumbs {
+    clear: both;
+    padding-top: 10px;
+
+    @include MQ(M) {
+        padding-top: 50px;
+    }
+}
+
+.footer_links {
+    @include flexbox();
+    justify-content: center;
+
+    @include MQ(M) {
+        text-align: right;
+    }
+}
+
+.footerLinkItem {
+    display: block;
+    padding: 7.5px 15px;
+
+    &:hover, &:focus {
+        text-decoration: underline;
+    }
+}
+
+.formPanel {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+
+    @include MQ(M) {
+        min-height: 400px;
+        padding: 40px;
+    }
+}
+
+.infoCardItem {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.infoCardWrapper {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 0 0 4px rgba(black, .15);
+    padding: 30px 20px;
+    @include transition(all .6s ease-in-out);
+    position: relative;
+
+    @include MQ(M) {
+        padding: 40px;
+    }
+}
+
+// Dashboard Layout
+.appMainHeader {
+    width: 100%;
+    background-color: $brand_inverse;
+    position: relative;
+}
+
+.appPageHeader {
+    @include flexbox();
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0 80px;
+}
+
+.appContentPanelHolder {
+    position: relative;
+    margin-top: -50px;
+    padding-bottom: 100px;
+    z-index: 2;
+
+    @include MQ(M) {
+        padding-bottom: 50px;
+    }
+} 
+
+// Content Pane
+
+.contentPanelBlock {
+    margin-bottom: 30px;
+}
+
+.contentPanelWrapper {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    background-color: white;
+    padding: 30px 15px;
+    box-shadow: 1px 1px 3px rgba(black, .15); 
+
+    @include MQ-MAX(M) {
+        .panelflat_sm & {
+            background-color: transparent;
+            box-shadow: unset;
+            padding: 0;
+        }
+    }
+    
+    @include MQ(M) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+.contentPanelHeader {
+    position: relative;
+    @include flexbox();
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}

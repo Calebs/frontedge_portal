@@ -81,8 +81,7 @@
 
 .title {
     line-height: 1.45;
-    font-size: 1em;
-    letter-spacing: .65px;
+    font-size: 1.6rem;
     @include break-inside(avoid);
 }
 
@@ -297,12 +296,8 @@ footer[role="contentinfo"] {
 .appContentPanelHolder {
     position: relative;
     margin-top: -50px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     z-index: 2;
-
-    @include MQ(M) {
-        padding-bottom: 50px;
-    }
 } 
 
 // Content Pane

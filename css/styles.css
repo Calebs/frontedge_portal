@@ -489,7 +489,6 @@ fieldset + fieldset {
 @media only screen and (min-width: 768px) {
   /* line 71, ../sass/partials/_form.scss */
   .form_row_title {
-    margin-top: 10px;
     font-size: 16px;
     text-align: right;
   }
@@ -1226,6 +1225,41 @@ svg {
 /* line 115, ../sass/partials/_custom_icons.scss */
 .icon_remove {
   background-image: url(../img/icons/remove.svg);
+}
+
+/* line 119, ../sass/partials/_custom_icons.scss */
+.icon_config {
+  background-image: url(../img/icons/Wrench.svg);
+}
+
+/* line 123, ../sass/partials/_custom_icons.scss */
+.icon_contact {
+  background-image: url(../img/icons/ChatsCircle.svg);
+}
+
+/* line 127, ../sass/partials/_custom_icons.scss */
+.icon_phone {
+  background-image: url(../img/icons/Phone.svg);
+}
+
+/* line 131, ../sass/partials/_custom_icons.scss */
+.icon_email {
+  background-image: url(../img/icons/email.svg);
+}
+
+/* line 135, ../sass/partials/_custom_icons.scss */
+.icon_address {
+  background-image: url(../img/icons/mapPin.svg);
+}
+
+/* line 139, ../sass/partials/_custom_icons.scss */
+.icon_url {
+  background-image: url(../img/icons/url.svg);
+}
+
+/* line 143, ../sass/partials/_custom_icons.scss */
+.icon_bank {
+  background-image: url(../img/icons/Bank.svg);
 }
 
 /* line 1, ../sass/partials/_navigation.scss */
@@ -2910,6 +2944,113 @@ footer[role="contentinfo"] {
   margin-bottom: 30px;
 }
 
+/* line 342, ../sass/partials/_sections.scss */
+.profileLayoutView {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  padding-top: 20px;
+  /* Tablets and phablets */
+}
+@media only screen and (max-width: 767px) {
+  /* line 342, ../sass/partials/_sections.scss */
+  .profileLayoutView {
+    flex-direction: column;
+  }
+}
+
+/* line 351, ../sass/partials/_sections.scss */
+.profileImageHolder {
+  flex-shrink: 0;
+  margin-bottom: 20px;
+  /* Tablets and phablets */
+}
+@media only screen and (min-width: 768px) {
+  /* line 351, ../sass/partials/_sections.scss */
+  .profileImageHolder {
+    margin-right: 50px;
+  }
+}
+
+/* line 360, ../sass/partials/_sections.scss */
+.profileInfoholder {
+  position: relative;
+  flex-grow: 1;
+}
+
+/* line 365, ../sass/partials/_sections.scss */
+.profileMastHeadArea {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  /* Tablets and phablets */
+  /* Tablets and phablets */
+}
+@media only screen and (max-width: 767px) {
+  /* line 365, ../sass/partials/_sections.scss */
+  .profileMastHeadArea {
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* line 365, ../sass/partials/_sections.scss */
+  .profileMastHeadArea {
+    justify-content: space-between;
+  }
+}
+
+/* line 378, ../sass/partials/_sections.scss */
+.userNameHeader {
+  clear: both;
+}
+
+/* line 382, ../sass/partials/_sections.scss */
+.nameTag {
+  font-size: 0.6em;
+  padding-left: 5px;
+  color: #757575;
+}
+
+/* line 388, ../sass/partials/_sections.scss */
+.userNameSub {
+  clear: both;
+  font-size: 14px;
+  /* Mobile devices */
+}
+@media only screen and (min-width: 576px) {
+  /* line 388, ../sass/partials/_sections.scss */
+  .userNameSub {
+    font-size: 18px;
+  }
+}
+
+/* line 397, ../sass/partials/_sections.scss */
+.mastHeaderContentHolder {
+  flex-grow: 1;
+}
+
+/* line 401, ../sass/partials/_sections.scss */
+.contactSnipBar {
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  /* Tablets and phablets */
+}
+@media only screen and (min-width: 768px) {
+  /* line 401, ../sass/partials/_sections.scss */
+  .contactSnipBar {
+    padding: 30px;
+  }
+}
+
 /* line 1, ../sass/partials/_user_area.scss */
 .media_item {
   display: -webkit-box;
@@ -3002,6 +3143,22 @@ footer[role="contentinfo"] {
 }
 
 /* line 72, ../sass/partials/_user_area.scss */
+.avi_large {
+  width: 64px;
+  height: 64px;
+  font-size: 21px;
+  /* Tablets and phablets */
+}
+@media only screen and (min-width: 768px) {
+  /* line 72, ../sass/partials/_user_area.scss */
+  .avi_large {
+    width: 128px;
+    height: 128px;
+    font-size: 48px;
+  }
+}
+
+/* line 84, ../sass/partials/_user_area.scss */
 .default_avi {
   width: 100%;
   height: 100%;
@@ -3020,12 +3177,12 @@ footer[role="contentinfo"] {
   align-items: center;
   justify-content: center;
 }
-/* line 90, ../sass/partials/_user_area.scss */
+/* line 102, ../sass/partials/_user_area.scss */
 .has_image .default_avi {
   opacity: 0;
 }
 
-/* line 95, ../sass/partials/_user_area.scss */
+/* line 107, ../sass/partials/_user_area.scss */
 .user_info {
   font-size: 12px;
   overflow: hidden;
@@ -3108,6 +3265,16 @@ footer[role="contentinfo"] {
   justify-content: center;
   align-items: center;
   background-color: #E5E5E5;
+}
+
+/* line 62, ../sass/partials/_lists.scss */
+.contactItem {
+  align-items: center;
+  font-size: 16px;
+}
+/* line 65, ../sass/partials/_lists.scss */
+.contactItem + .contactItem {
+  margin-top: 15px;
 }
 
 /* line 1, ../sass/partials/_controls.scss */
@@ -3256,6 +3423,87 @@ footer[role="contentinfo"] {
 .fileUploadWidgetToggle:hover, .fileUploadWidgetToggle:focus {
   border-color: #00BAFF;
   background-color: #f0fbff;
+}
+
+/* line 128, ../sass/partials/_controls.scss */
+.profileStatMeta {
+  padding: 0 15px;
+  /* Mobile devices */
+}
+@media only screen and (max-width: 575px) {
+  /* line 128, ../sass/partials/_controls.scss */
+  .profileStatMeta {
+    width: 50%;
+    flex-basis: 50%;
+  }
+}
+
+/* line 137, ../sass/partials/_controls.scss */
+.profileManagementOptions {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-shrink: 0;
+}
+
+/* line 142, ../sass/partials/_controls.scss */
+.bubbleControlItem + .bubbleControlItem {
+  margin-left: 30px;
+}
+
+/* line 146, ../sass/partials/_controls.scss */
+.bubbleControlBtn {
+  display: block;
+  text-align: center;
+  background-color: transparent;
+  color: #555555;
+  font-weight: 700;
+}
+/* line 153, ../sass/partials/_controls.scss */
+.bubbleControlBtn:hover, .bubbleControlBtn :focus {
+  color: #000000;
+}
+/* line 156, ../sass/partials/_controls.scss */
+.bubbleControlBtn:hover .bubbleControlTile, .bubbleControlBtn :focus .bubbleControlTile {
+  background-color: #f5f5f5;
+}
+
+/* line 162, ../sass/partials/_controls.scss */
+.tileLabel {
+  margin-top: 10px;
+  display: block;
+}
+
+/* line 167, ../sass/partials/_controls.scss */
+.bubbleControlTile {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 0;
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  align-items: center;
+  background-color: #f0fbff;
+  border-radius: 50%;
+  -moz-transition: all, ease-in-out 0.4s 0s;
+  -o-transition: all, ease-in-out 0.4s 0s;
+  -webkit-transition: all, ease-in-out 0.4s;
+  -webkit-transition-delay: 0s, 0s;
+  transition: all, ease-in-out 0.4s 0s;
+}
+/* line 181, ../sass/partials/_controls.scss */
+.contactItem .bubbleControlTile {
+  width: 32px;
+  height: 32px;
+  background-color: #DBEEF8;
 }
 
 /* line 1, ../sass/partials/_dialogs.scss */

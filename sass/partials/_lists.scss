@@ -58,3 +58,11 @@
     align-items: center;
     background-color: $border_grey_light;
 }
+
+.contactItem {
+    align-items: center;
+    font-size: 16px;
+    + .contactItem {
+        margin-top: 15px;   
+    }
+}

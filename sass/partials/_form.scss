@@ -70,8 +70,8 @@ fieldset {
 
 .form_row_title {
     position: relative;
+    
     @include MQ(M) {
-        margin-top: 10px;
         font-size: 16px;
         text-align: right;
     }

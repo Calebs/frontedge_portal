@@ -337,3 +337,76 @@ footer[role="contentinfo"] {
     align-items: center;
     margin-bottom: 30px;
 }
+
+// Profile View Layout
+.profileLayoutView {
+    @include flexbox();
+    padding-top: 20px;
+
+    @include MQ-MAX(M) {
+        flex-direction: column;
+    }
+}
+
+.profileImageHolder {
+    flex-shrink: 0;
+    margin-bottom: 20px;
+
+    @include MQ(M) {
+        margin-right: 50px;
+    }
+}
+
+.profileInfoholder {
+    position: relative;
+    flex-grow: 1;   
+}
+
+.profileMastHeadArea {
+    width: 100%;
+    @include flexbox();
+
+    @include MQ-MAX(M) {
+        flex-direction: column;
+    }
+
+    @include MQ(M) {
+        justify-content: space-between;
+    }
+}
+
+.userNameHeader {
+    clear: both;
+}
+
+.nameTag {
+    font-size: 0.6em;
+    padding-left: 5px;
+    color: $color_grey_dark;
+}
+
+.userNameSub {
+    clear: both;
+    font-size: 14px;
+
+    @include MQ(S) {
+        font-size: 18px;
+    }
+}
+
+.mastHeaderContentHolder {
+    flex-grow: 1;
+}
+
+.contactSnipBar {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: $color_white;
+
+    @include MQ(M) {
+        padding: 30px;
+    }
+}

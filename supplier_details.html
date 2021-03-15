@@ -20,6 +20,151 @@
 
 <body class="bg__off_white">
 
+    <div class="modal fade" id="contactSupplier">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title">Contact Supplier</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <form class="content_wrapper">
+                        <div class="row form-group">
+                            <div class="form_group_item form_row_title col-md-4">
+                                <label class="control-label font-black text-style-italics">Sender</label>
+                            </div>
+                            <div class="form_group_item col-md-8">
+                                <p class="form-control-plaintext">admin@frontedge.com</p>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="form_group_item form_row_title col-md-4">
+                                <label class="control-label font-black text-style-italics">To</label>
+                            </div>
+                            <div class="form_group_item col-md-8">
+                                <p class="form-control-plaintext">Azeez Olumide <span class="font-sm color__grey_light">(az_olu@gmail.com)</span></p>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="form_group_item form_row_title col-md-4">
+                                <label class="control-label font-black text-style-italics">Subject</label>
+                            </div>
+                            <div class="form_group_item col-md-8">
+                                <input type="text" class="form-control" placeholder="Hello from Front edge">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="form_group_item form_row_title col-md-4">
+                                <label class="control-label font-black text-style-italics required">Message</label>
+                            </div>
+                            <div class="form_group_item col-md-8">
+                                <textarea rows="5" class="form-control" placeholder=""></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                    <button type="submit" class="btn btn-secondary">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="manageSupplier">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title">Manage Supplier</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <form class="content_wrapper">
+                        <fieldset>
+                            <div class="row form-group">
+                                <div class="form_group_item form_row_title col-md-5">
+                                    <label class="control-label font-black text-style-italics">Update Status</label>
+                                </div>
+                                <div class="form_group_item col-md-7">
+                                    <select class="form-control">
+                                        <option>Active</option>
+                                        <option>Inactive</option>
+                                        <option>Suspended</option>
+                                        <option>Closed</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <h4 class="title title_sm margin_bottom_md">Bank Details</h4>
+                            <div class="row form-group">
+                                <div class="form_group_item form_row_title col-md-5">
+                                    <label class="control-label font-black text-style-italics">Bank Name</label>
+                                </div>
+                                <div class="form_group_item col-md-7">
+                                    <select class="form-control">
+                                        <option>Select bank name</option>
+                                        <option selected>Access Bank PLC</option>
+                                        <option>Access Diamod </option>
+                                        <option>United Bank of Africa</option>
+                                        <option>Union Bank</option>
+                                        <option>Wema Bank</option>
+                                        <option>Providus Bank</option>
+                                        <option>Guarantee Trust Bank</option>
+                                        <option>Zenith Bank PLC</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="form_group_item form_row_title col-md-5">
+                                    <label class="control-label font-black text-style-italics">Account Number</label>
+                                </div>
+                                <div class="form_group_item col-md-7">
+                                    <input type="number" class="form-control" maxlength="10" value="0011234321">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                    <button type="submit" class="btn btn-secondary">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="confirm_delete">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <div class="centered text-center">
+                        <div class="promptImageHolder centered">
+                            <img src="./img/icons/confirm_removal.svg" alt="">
+                        </div>
+                        <h2 class="title title_sm font-black text-style-italics margin_bottom_sm color__danger">Are you sure?</h2>
+                        <p>Please confirm the removal of Supplier: <strong>Supplier Name</strong>. This action can not be undone </p>
+                        <div class="section_cto">
+                            <button type="submit" class="btn btn-danger btn-sm btn-block">Yes! remove this Supplier</button>
+                            <button type="button" data-dismiss="modal" class="btn btn-sm btn-default btn-block font-regular">No, don’t remove</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <header role="banner" class="mainAppHeader">
         <div class="container">
@@ -220,13 +365,758 @@
                             <nav class="detail_control" aria-label="Page breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="user_suppliers.html">Suppliers</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Buyer Details</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Supplier Details</li>
                                 </ol>
                             </nav>
                         </header>
 
-                        <div class="paneInner">
-                            
+                        <div class="paneInner profileLayoutView">
+                            <div class="profileImageHolder">
+                                <div class="userAvi avi_large aviCubed">
+                                    <!-- <img src="img/banners/" alt=""> -->
+                                    <span class="default_avi">AR</span>
+                                </div>
+                            </div>
+                            <div class="profileInfoholder">
+                                <div class="profileMastHeadArea">
+                                    <div class="mastHeaderContentHolder">
+                                        <div class="userNameHeader">
+                                            <h4 class="title title_md font-black color__black">Amaechi Rotimi <span class="nameTag font-regular">231GU0</span></h4>
+                                        </div>
+                                        <div class="userNameSub">
+                                            <span class="color__grey_light">For:</span>
+                                            <span>Kia Motors</span>
+                                        </div>
+
+                                        <div class="row margin_top_sm">
+                                            <article class="profileStatMeta">
+                                                <div class="insight_item">
+                                                    <div class="insight_value">
+                                                        <span class="title title_sm color__black font-regular">#3400280-908</span>
+                                                    </div>
+                                                    <div class="insight_title ">
+                                                        <span class="color__grey_dark">RC Number</span>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="profileStatMeta">
+                                                <div class="insight_item">
+                                                    <div class="insight_value">
+                                                        <span class="title title_sm color__black font-regular">#00280979908</span>
+                                                    </div>
+                                                    <div class="insight_title ">
+                                                        <span class="color__grey_dark">Tax ID Number</span>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="profileStatMeta">
+                                                <div class="insight_item">
+                                                    <div class="insight_value">
+                                                        <span class="title title_sm color__black font-regular">Front Edge Digital</span>
+                                                    </div>
+                                                    <div class="insight_title ">
+                                                        <span class="color__grey_dark">Buyer</span>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="profileStatMeta">
+                                                <div class="insight_item">
+                                                    <div class="insight_value">
+                                                        <span class="labelTag labelTagSuccess">Active</span>
+                                                    </div>
+                                                    <div class="insight_title ">
+                                                        <span class="color__grey_dark">Status</span>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                    <div class="profileManagementOptions">
+                                        <div class="bubbleControlItem">
+                                            <a href="#manageSupplier" data-toggle="modal" data-backdrop="static" class="bubbleControlBtn">
+                                                <div class="bubbleControlTile">
+                                                    <span class="cust_icon icon_config"></span>
+                                                </div>
+                                                <div class="contactInfoDetails">
+                                                    <span class="tileLabel">Settings</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="bubbleControlItem">
+                                            <a href="#contactSupplier" data-toggle="modal" data-backdrop="static" class="bubbleControlBtn">
+                                                <div class="bubbleControlTile">
+                                                    <span class="cust_icon icon_contact"></span>
+                                                </div>
+                                                <span class="tileLabel">Contact</span>
+                                            </a>
+                                        </div>
+                                        <div class="bubbleControlItem">
+                                            <a href="#confirm_delete" data-toggle="modal" class="bubbleControlBtn">
+                                                <div class="bubbleControlTile">
+                                                    <span class="cust_icon icon_remove"></span>
+                                                </div>
+                                                <span class="tileLabel">Delete</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contactSnipBar">
+                                    <article class="contactItem media_item">
+                                        <div class="media_figure">
+                                            <div class="bubbleControlTile">
+                                                <span class="cust_icon icon_xs icon_phone"></span>
+                                            </div>
+                                        </div>
+                                        <div class="media_info">
+                                            <p><a href="tel:08078282929">08078282929</a></p>
+                                        </div>
+                                    </article>
+                                    <article class="contactItem media_item">
+                                        <div class="media_figure">
+                                            <div class="bubbleControlTile">
+                                                <span class="cust_icon icon_xs icon_email"></span>
+                                            </div>
+                                        </div>
+                                        <div class="media_info">
+                                            <p><a href="mailto:emekaemmanuel045@gmail.com">emekaemmanuel045@gmail.com</a></p>
+                                        </div>
+                                    </article>
+                                    <article class="contactItem media_item">
+                                        <div class="media_figure">
+                                            <div class="bubbleControlTile">
+                                                <span class="cust_icon icon_xs icon_url"></span>
+                                            </div>
+                                        </div>
+                                        <div class="media_info">
+                                            <p><a href="www.company.com">www.company.com</a></p>
+                                        </div>
+                                    </article>
+                                    <article class="contactItem media_item">
+                                        <div class="media_figure">
+                                            <div class="bubbleControlTile">
+                                                <span class="cust_icon icon_xs icon_address"></span>
+                                            </div>
+                                        </div>
+                                        <div class="media_info">
+                                            <p>3, Street name and co here, City, State.</p>
+                                        </div>
+                                    </article>
+                                    <article class="contactItem media_item">
+                                        <div class="media_figure">
+                                            <div class="bubbleControlTile">
+                                                <span class="cust_icon icon_xs icon_bank"></span>
+                                            </div>
+                                        </div>
+                                        <div class="media_info">
+                                            <p><span class="font-bold">Access Bank</span> - 0011234321</p>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <div class="panelSubGroup">
+                                    <header class="contentPanelHeader">
+                                        <h4 class="title title_sm color__black">Invoices Issued <span class="nameTag font-regular">13</span></h4>
+                                        <div class="paneCtaHolder">
+                                        </div>
+                                    </header>
+                                    <div class="table table-responsive table-brand">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th class="hidden-sm">
+                                                        <div class="">Date</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="">Description</div>
+                                                    </th>
+                                                    <th class="hidden-sm">
+                                                        <div class="">Amount</div>
+                                                    </th>
+                                                    <th>
+                                                        <div>Payout</div>
+                                                    </th>
+                                                    <th>
+                                                        <div>Options</div>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="hidden-sm">
+                                                        <div class="">
+                                                            <time>21/02/2021</time>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="user_info">
+                                                            <h4 class="title font-bold color__black">Invoice Number</h4>
+                                                            <span class="labelTag labelTagSecondary">Accepted</span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="hidden-sm">
+                                                        <div class="">
+                                                            <span>
+                                                                ₦50,000.00
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="">
+                                                            <span>
+                                                                ₦48,423.75
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="dropdown tabelControl">
+                                                            <a href="#" data-toggle="dropdown" class="tableControlBtn">
+                                                                <span class="btnLabel hidden-sm">Options</span>
+                                                                <span class="btnIcon">
+                                                                    <svg class="cust_icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M8 4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2C10.5304 2 11.0391 2.21071 11.4142 2.58579C11.7893 2.96086 12 3.46957 12 4C12 4.53043 11.7893 5.03914 11.4142 5.41421C11.0391 5.78929 10.5304 6 10 6C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4ZM8 10C8 9.46957 8.21071 8.96086 8.58579 8.58579C8.96086 8.21071 9.46957 8 10 8C10.5304 8 11.0391 8.21071 11.4142 8.58579C11.7893 8.96086 12 9.46957 12 10C12 10.5304 11.7893 11.0391 11.4142 11.4142C11.0391 11.7893 10.5304 12 10 12C9.46957 12 8.96086 11.7893 8.58579 11.4142C8.21071 11.0391 8 10.5304 8 10ZM8 16C8 15.4696 8.21071 14.9609 8.58579 14.5858C8.96086 14.2107 9.46957 14 10 14C10.5304 14 11.0391 14.2107 11.4142 14.5858C11.7893 14.9609 12 15.4696 12 16C12 16.5304 11.7893 17.0391 11.4142 17.4142C11.0391 17.7893 10.5304 18 10 18C9.46957 18 8.96086 17.7893 8.58579 17.4142C8.21071 17.0391 8 16.5304 8 16V16Z"/>
+                                                                    </svg>                                                                
+                                                                </span>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="dropdown-item">
+                                                                    <a href="#about_invoice">View Details</a>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <a href="#edit_details" data-toggle="modal">Edit Details</a>
+                                                                </li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li class="dropdown-item">
+                                                                    <button type="button">Download CSV</button>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <button type="button">Print</button>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <button data-target="#confirm_delete" data-toggle="modal">Delete Record</button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="hidden-sm">
+                                                        <div class="">
+                                                            <time>21/02/2021</time>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="user_info">
+                                                            <h4 class="title font-bold color__black">Invoice Number</h4>
+                                                            <span class="labelTag labelTagSuccess">Paid</span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="hidden-sm">
+                                                        <div class="">
+                                                            <span>
+                                                                ₦50,000.00
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="">
+                                                            <span>
+                                                                ₦48,423.75
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="dropdown tabelControl">
+                                                            <a href="#" data-toggle="dropdown" class="tableControlBtn">
+                                                                <span class="btnLabel hidden-sm">Options</span>
+                                                                <span class="btnIcon">
+                                                                    <svg class="cust_icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M8 4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2C10.5304 2 11.0391 2.21071 11.4142 2.58579C11.7893 2.96086 12 3.46957 12 4C12 4.53043 11.7893 5.03914 11.4142 5.41421C11.0391 5.78929 10.5304 6 10 6C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4ZM8 10C8 9.46957 8.21071 8.96086 8.58579 8.58579C8.96086 8.21071 9.46957 8 10 8C10.5304 8 11.0391 8.21071 11.4142 8.58579C11.7893 8.96086 12 9.46957 12 10C12 10.5304 11.7893 11.0391 11.4142 11.4142C11.0391 11.7893 10.5304 12 10 12C9.46957 12 8.96086 11.7893 8.58579 11.4142C8.21071 11.0391 8 10.5304 8 10ZM8 16C8 15.4696 8.21071 14.9609 8.58579 14.5858C8.96086 14.2107 9.46957 14 10 14C10.5304 14 11.0391 14.2107 11.4142 14.5858C11.7893 14.9609 12 15.4696 12 16C12 16.5304 11.7893 17.0391 11.4142 17.4142C11.0391 17.7893 10.5304 18 10 18C9.46957 18 8.96086 17.7893 8.58579 17.4142C8.21071 17.0391 8 16.5304 8 16V16Z"/>
+                                                                    </svg>                                                                
+                                                                </span>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="dropdown-item">
+                                                                    <a href="#about_invoice">View Details</a>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <a href="#edit_details" data-toggle="modal">Edit Details</a>
+                                                                </li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li class="dropdown-item">
+                                                                    <button type="button">Download CSV</button>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <button type="button">Print</button>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <button data-target="#confirm_delete" data-toggle="modal">Delete Record</button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="hidden-sm">
+                                                        <div class="">
+                                                            <time>21/02/2021</time>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="user_info">
+                                                            <h4 class="title font-bold color__black">Invoice Number</h4>
+                                                            <span class="labelTag labelTagDanger">Overdue</span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="hidden-sm">
+                                                        <div class="">
+                                                            <span>
+                                                                ₦50,000.00
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="">
+                                                            <span>
+                                                                ₦48,423.75
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="dropdown tabelControl">
+                                                            <a href="#" data-toggle="dropdown" class="tableControlBtn">
+                                                                <span class="btnLabel hidden-sm">Options</span>
+                                                                <span class="btnIcon">
+                                                                    <svg class="cust_icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M8 4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2C10.5304 2 11.0391 2.21071 11.4142 2.58579C11.7893 2.96086 12 3.46957 12 4C12 4.53043 11.7893 5.03914 11.4142 5.41421C11.0391 5.78929 10.5304 6 10 6C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4ZM8 10C8 9.46957 8.21071 8.96086 8.58579 8.58579C8.96086 8.21071 9.46957 8 10 8C10.5304 8 11.0391 8.21071 11.4142 8.58579C11.7893 8.96086 12 9.46957 12 10C12 10.5304 11.7893 11.0391 11.4142 11.4142C11.0391 11.7893 10.5304 12 10 12C9.46957 12 8.96086 11.7893 8.58579 11.4142C8.21071 11.0391 8 10.5304 8 10ZM8 16C8 15.4696 8.21071 14.9609 8.58579 14.5858C8.96086 14.2107 9.46957 14 10 14C10.5304 14 11.0391 14.2107 11.4142 14.5858C11.7893 14.9609 12 15.4696 12 16C12 16.5304 11.7893 17.0391 11.4142 17.4142C11.0391 17.7893 10.5304 18 10 18C9.46957 18 8.96086 17.7893 8.58579 17.4142C8.21071 17.0391 8 16.5304 8 16V16Z"/>
+                                                                    </svg>                                                                
+                                                                </span>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="dropdown-item">
+                                                                    <a href="#about_invoice">View Details</a>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <a href="#edit_details" data-toggle="modal">Edit Details</a>
+                                                                </li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li class="dropdown-item">
+                                                                    <button type="button">Download CSV</button>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <button type="button">Print</button>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <button data-target="#confirm_delete" data-toggle="modal">Delete Record</button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="hidden-sm">
+                                                        <div class="">
+                                                            <time>21/02/2021</time>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="user_info">
+                                                            <h4 class="title font-bold color__black">Invoice Number</h4>
+                                                            <span class="labelTag labelTagSecondary">Accepted</span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="hidden-sm">
+                                                        <div class="">
+                                                            <span>
+                                                                ₦50,000.00
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="">
+                                                            <span>
+                                                                ₦48,423.75
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="dropdown tabelControl">
+                                                            <a href="#" data-toggle="dropdown" class="tableControlBtn">
+                                                                <span class="btnLabel hidden-sm">Options</span>
+                                                                <span class="btnIcon">
+                                                                    <svg class="cust_icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M8 4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2C10.5304 2 11.0391 2.21071 11.4142 2.58579C11.7893 2.96086 12 3.46957 12 4C12 4.53043 11.7893 5.03914 11.4142 5.41421C11.0391 5.78929 10.5304 6 10 6C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4ZM8 10C8 9.46957 8.21071 8.96086 8.58579 8.58579C8.96086 8.21071 9.46957 8 10 8C10.5304 8 11.0391 8.21071 11.4142 8.58579C11.7893 8.96086 12 9.46957 12 10C12 10.5304 11.7893 11.0391 11.4142 11.4142C11.0391 11.7893 10.5304 12 10 12C9.46957 12 8.96086 11.7893 8.58579 11.4142C8.21071 11.0391 8 10.5304 8 10ZM8 16C8 15.4696 8.21071 14.9609 8.58579 14.5858C8.96086 14.2107 9.46957 14 10 14C10.5304 14 11.0391 14.2107 11.4142 14.5858C11.7893 14.9609 12 15.4696 12 16C12 16.5304 11.7893 17.0391 11.4142 17.4142C11.0391 17.7893 10.5304 18 10 18C9.46957 18 8.96086 17.7893 8.58579 17.4142C8.21071 17.0391 8 16.5304 8 16V16Z"/>
+                                                                    </svg>                                                                
+                                                                </span>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="dropdown-item">
+                                                                    <a href="#about_invoice">View Details</a>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <a href="#edit_details" data-toggle="modal">Edit Details</a>
+                                                                </li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li class="dropdown-item">
+                                                                    <button type="button">Download CSV</button>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <button type="button">Print</button>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <button data-target="#confirm_delete" data-toggle="modal">Delete Record</button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="hidden-sm">
+                                                        <div class="">
+                                                            <time>21/02/2021</time>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="user_info">
+                                                            <h4 class="title font-bold color__black">Invoice Number</h4>
+                                                            <span class="labelTag labelTagSuccess">Paid</span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="hidden-sm">
+                                                        <div class="">
+                                                            <span>
+                                                                ₦50,000.00
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="">
+                                                            <span>
+                                                                ₦48,423.75
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="dropdown tabelControl">
+                                                            <a href="#" data-toggle="dropdown" class="tableControlBtn">
+                                                                <span class="btnLabel hidden-sm">Options</span>
+                                                                <span class="btnIcon">
+                                                                    <svg class="cust_icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M8 4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2C10.5304 2 11.0391 2.21071 11.4142 2.58579C11.7893 2.96086 12 3.46957 12 4C12 4.53043 11.7893 5.03914 11.4142 5.41421C11.0391 5.78929 10.5304 6 10 6C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4ZM8 10C8 9.46957 8.21071 8.96086 8.58579 8.58579C8.96086 8.21071 9.46957 8 10 8C10.5304 8 11.0391 8.21071 11.4142 8.58579C11.7893 8.96086 12 9.46957 12 10C12 10.5304 11.7893 11.0391 11.4142 11.4142C11.0391 11.7893 10.5304 12 10 12C9.46957 12 8.96086 11.7893 8.58579 11.4142C8.21071 11.0391 8 10.5304 8 10ZM8 16C8 15.4696 8.21071 14.9609 8.58579 14.5858C8.96086 14.2107 9.46957 14 10 14C10.5304 14 11.0391 14.2107 11.4142 14.5858C11.7893 14.9609 12 15.4696 12 16C12 16.5304 11.7893 17.0391 11.4142 17.4142C11.0391 17.7893 10.5304 18 10 18C9.46957 18 8.96086 17.7893 8.58579 17.4142C8.21071 17.0391 8 16.5304 8 16V16Z"/>
+                                                                    </svg>                                                                
+                                                                </span>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="dropdown-item">
+                                                                    <a href="#about_invoice">View Details</a>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <a href="#edit_details" data-toggle="modal">Edit Details</a>
+                                                                </li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li class="dropdown-item">
+                                                                    <button type="button">Download CSV</button>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <button type="button">Print</button>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <button data-target="#confirm_delete" data-toggle="modal">Delete Record</button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="hidden-sm">
+                                                        <div class="">
+                                                            <time>21/02/2021</time>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="user_info">
+                                                            <h4 class="title font-bold color__black">Invoice Number</h4>
+                                                            <span class="labelTag labelTagSecondary">Accepted</span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="hidden-sm">
+                                                        <div class="">
+                                                            <span>
+                                                                ₦50,000.00
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="">
+                                                            <span>
+                                                                ₦48,423.75
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="dropdown tabelControl">
+                                                            <a href="#" data-toggle="dropdown" class="tableControlBtn">
+                                                                <span class="btnLabel hidden-sm">Options</span>
+                                                                <span class="btnIcon">
+                                                                    <svg class="cust_icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M8 4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2C10.5304 2 11.0391 2.21071 11.4142 2.58579C11.7893 2.96086 12 3.46957 12 4C12 4.53043 11.7893 5.03914 11.4142 5.41421C11.0391 5.78929 10.5304 6 10 6C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4ZM8 10C8 9.46957 8.21071 8.96086 8.58579 8.58579C8.96086 8.21071 9.46957 8 10 8C10.5304 8 11.0391 8.21071 11.4142 8.58579C11.7893 8.96086 12 9.46957 12 10C12 10.5304 11.7893 11.0391 11.4142 11.4142C11.0391 11.7893 10.5304 12 10 12C9.46957 12 8.96086 11.7893 8.58579 11.4142C8.21071 11.0391 8 10.5304 8 10ZM8 16C8 15.4696 8.21071 14.9609 8.58579 14.5858C8.96086 14.2107 9.46957 14 10 14C10.5304 14 11.0391 14.2107 11.4142 14.5858C11.7893 14.9609 12 15.4696 12 16C12 16.5304 11.7893 17.0391 11.4142 17.4142C11.0391 17.7893 10.5304 18 10 18C9.46957 18 8.96086 17.7893 8.58579 17.4142C8.21071 17.0391 8 16.5304 8 16V16Z"/>
+                                                                    </svg>                                                                
+                                                                </span>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="dropdown-item">
+                                                                    <a href="#about_invoice">View Details</a>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <a href="#edit_details" data-toggle="modal">Edit Details</a>
+                                                                </li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li class="dropdown-item">
+                                                                    <button type="button">Download CSV</button>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <button type="button">Print</button>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <button data-target="#confirm_delete" data-toggle="modal">Delete Record</button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="hidden-sm">
+                                                        <div class="">
+                                                            <time>21/02/2021</time>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="user_info">
+                                                            <h4 class="title font-bold color__black">Invoice Number</h4>
+                                                            <span class="labelTag labelTagSuccess">Paid</span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="hidden-sm">
+                                                        <div class="">
+                                                            <span>
+                                                                ₦50,000.00
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="">
+                                                            <span>
+                                                                ₦48,423.75
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="dropdown tabelControl">
+                                                            <a href="#" data-toggle="dropdown" class="tableControlBtn">
+                                                                <span class="btnLabel hidden-sm">Options</span>
+                                                                <span class="btnIcon">
+                                                                    <svg class="cust_icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M8 4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2C10.5304 2 11.0391 2.21071 11.4142 2.58579C11.7893 2.96086 12 3.46957 12 4C12 4.53043 11.7893 5.03914 11.4142 5.41421C11.0391 5.78929 10.5304 6 10 6C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4ZM8 10C8 9.46957 8.21071 8.96086 8.58579 8.58579C8.96086 8.21071 9.46957 8 10 8C10.5304 8 11.0391 8.21071 11.4142 8.58579C11.7893 8.96086 12 9.46957 12 10C12 10.5304 11.7893 11.0391 11.4142 11.4142C11.0391 11.7893 10.5304 12 10 12C9.46957 12 8.96086 11.7893 8.58579 11.4142C8.21071 11.0391 8 10.5304 8 10ZM8 16C8 15.4696 8.21071 14.9609 8.58579 14.5858C8.96086 14.2107 9.46957 14 10 14C10.5304 14 11.0391 14.2107 11.4142 14.5858C11.7893 14.9609 12 15.4696 12 16C12 16.5304 11.7893 17.0391 11.4142 17.4142C11.0391 17.7893 10.5304 18 10 18C9.46957 18 8.96086 17.7893 8.58579 17.4142C8.21071 17.0391 8 16.5304 8 16V16Z"/>
+                                                                    </svg>                                                                
+                                                                </span>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="dropdown-item">
+                                                                    <a href="#about_invoice">View Details</a>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <a href="#edit_details" data-toggle="modal">Edit Details</a>
+                                                                </li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li class="dropdown-item">
+                                                                    <button type="button">Download CSV</button>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <button type="button">Print</button>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <button data-target="#confirm_delete" data-toggle="modal">Delete Record</button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="hidden-sm">
+                                                        <div class="">
+                                                            <time>21/02/2021</time>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="user_info">
+                                                            <h4 class="title font-bold color__black">Invoice Number</h4>
+                                                            <span class="labelTag labelTagDanger">Overdue</span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="hidden-sm">
+                                                        <div class="">
+                                                            <span>
+                                                                ₦50,000.00
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="">
+                                                            <span>
+                                                                ₦48,423.75
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="dropdown tabelControl">
+                                                            <a href="#" data-toggle="dropdown" class="tableControlBtn">
+                                                                <span class="btnLabel hidden-sm">Options</span>
+                                                                <span class="btnIcon">
+                                                                    <svg class="cust_icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M8 4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2C10.5304 2 11.0391 2.21071 11.4142 2.58579C11.7893 2.96086 12 3.46957 12 4C12 4.53043 11.7893 5.03914 11.4142 5.41421C11.0391 5.78929 10.5304 6 10 6C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4ZM8 10C8 9.46957 8.21071 8.96086 8.58579 8.58579C8.96086 8.21071 9.46957 8 10 8C10.5304 8 11.0391 8.21071 11.4142 8.58579C11.7893 8.96086 12 9.46957 12 10C12 10.5304 11.7893 11.0391 11.4142 11.4142C11.0391 11.7893 10.5304 12 10 12C9.46957 12 8.96086 11.7893 8.58579 11.4142C8.21071 11.0391 8 10.5304 8 10ZM8 16C8 15.4696 8.21071 14.9609 8.58579 14.5858C8.96086 14.2107 9.46957 14 10 14C10.5304 14 11.0391 14.2107 11.4142 14.5858C11.7893 14.9609 12 15.4696 12 16C12 16.5304 11.7893 17.0391 11.4142 17.4142C11.0391 17.7893 10.5304 18 10 18C9.46957 18 8.96086 17.7893 8.58579 17.4142C8.21071 17.0391 8 16.5304 8 16V16Z"/>
+                                                                    </svg>                                                                
+                                                                </span>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="dropdown-item">
+                                                                    <a href="#about_invoice">View Details</a>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <a href="#edit_details" data-toggle="modal">Edit Details</a>
+                                                                </li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li class="dropdown-item">
+                                                                    <button type="button">Download CSV</button>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <button type="button">Print</button>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <button data-target="#confirm_delete" data-toggle="modal">Delete Record</button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="hidden-sm">
+                                                        <div class="">
+                                                            <time>21/02/2021</time>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="user_info">
+                                                            <h4 class="title font-bold color__black">Invoice Number</h4>
+                                                            <span class="labelTag labelTagSecondary">Accepted</span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="hidden-sm">
+                                                        <div class="">
+                                                            <span>
+                                                                ₦50,000.00
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="">
+                                                            <span>
+                                                                ₦48,423.75
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="dropdown tabelControl">
+                                                            <a href="#" data-toggle="dropdown" class="tableControlBtn">
+                                                                <span class="btnLabel hidden-sm">Options</span>
+                                                                <span class="btnIcon">
+                                                                    <svg class="cust_icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M8 4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2C10.5304 2 11.0391 2.21071 11.4142 2.58579C11.7893 2.96086 12 3.46957 12 4C12 4.53043 11.7893 5.03914 11.4142 5.41421C11.0391 5.78929 10.5304 6 10 6C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4ZM8 10C8 9.46957 8.21071 8.96086 8.58579 8.58579C8.96086 8.21071 9.46957 8 10 8C10.5304 8 11.0391 8.21071 11.4142 8.58579C11.7893 8.96086 12 9.46957 12 10C12 10.5304 11.7893 11.0391 11.4142 11.4142C11.0391 11.7893 10.5304 12 10 12C9.46957 12 8.96086 11.7893 8.58579 11.4142C8.21071 11.0391 8 10.5304 8 10ZM8 16C8 15.4696 8.21071 14.9609 8.58579 14.5858C8.96086 14.2107 9.46957 14 10 14C10.5304 14 11.0391 14.2107 11.4142 14.5858C11.7893 14.9609 12 15.4696 12 16C12 16.5304 11.7893 17.0391 11.4142 17.4142C11.0391 17.7893 10.5304 18 10 18C9.46957 18 8.96086 17.7893 8.58579 17.4142C8.21071 17.0391 8 16.5304 8 16V16Z"/>
+                                                                    </svg>                                                                
+                                                                </span>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="dropdown-item">
+                                                                    <a href="#about_invoice">View Details</a>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <a href="#edit_details" data-toggle="modal">Edit Details</a>
+                                                                </li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li class="dropdown-item">
+                                                                    <button type="button">Download CSV</button>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <button type="button">Print</button>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <button data-target="#confirm_delete" data-toggle="modal">Delete Record</button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="hidden-sm">
+                                                        <div class="">
+                                                            <time>21/02/2021</time>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="user_info">
+                                                            <h4 class="title font-bold color__black">Invoice Number</h4>
+                                                            <span class="labelTag labelTagSuccess">Paid</span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="hidden-sm">
+                                                        <div class="">
+                                                            <span>
+                                                                ₦50,000.00
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="">
+                                                            <span>
+                                                                ₦48,423.75
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="dropdown tabelControl">
+                                                            <a href="#" data-toggle="dropdown" class="tableControlBtn">
+                                                                <span class="btnLabel hidden-sm">Options</span>
+                                                                <span class="btnIcon">
+                                                                    <svg class="cust_icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M8 4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2C10.5304 2 11.0391 2.21071 11.4142 2.58579C11.7893 2.96086 12 3.46957 12 4C12 4.53043 11.7893 5.03914 11.4142 5.41421C11.0391 5.78929 10.5304 6 10 6C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4ZM8 10C8 9.46957 8.21071 8.96086 8.58579 8.58579C8.96086 8.21071 9.46957 8 10 8C10.5304 8 11.0391 8.21071 11.4142 8.58579C11.7893 8.96086 12 9.46957 12 10C12 10.5304 11.7893 11.0391 11.4142 11.4142C11.0391 11.7893 10.5304 12 10 12C9.46957 12 8.96086 11.7893 8.58579 11.4142C8.21071 11.0391 8 10.5304 8 10ZM8 16C8 15.4696 8.21071 14.9609 8.58579 14.5858C8.96086 14.2107 9.46957 14 10 14C10.5304 14 11.0391 14.2107 11.4142 14.5858C11.7893 14.9609 12 15.4696 12 16C12 16.5304 11.7893 17.0391 11.4142 17.4142C11.0391 17.7893 10.5304 18 10 18C9.46957 18 8.96086 17.7893 8.58579 17.4142C8.21071 17.0391 8 16.5304 8 16V16Z"/>
+                                                                    </svg>                                                                
+                                                                </span>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="dropdown-item">
+                                                                    <a href="#about_invoice">View Details</a>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <a href="#edit_details" data-toggle="modal">Edit Details</a>
+                                                                </li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li class="dropdown-item">
+                                                                    <button type="button">Download CSV</button>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <button type="button">Print</button>
+                                                                </li>
+                                                                <li class="dropdown-item">
+                                                                    <button data-target="#confirm_delete" data-toggle="modal">Delete Record</button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
 
                     </div>

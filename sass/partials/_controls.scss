@@ -124,3 +124,64 @@
         background-color: $brand_inverse;
     }
 }
+
+.profileStatMeta {
+    padding: 0 15px;
+
+    @include MQ-MAX(S) {
+        width: 50%;
+        flex-basis: 50%;
+    }
+}
+
+.profileManagementOptions {
+    @include flexbox();
+    flex-shrink: 0;
+}
+
+.bubbleControlItem + .bubbleControlItem {
+    margin-left: 30px;
+}
+
+.bubbleControlBtn {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    color: $color_text_gray;
+    font-weight: 700;
+
+    &:hover, :focus {
+        color: $brand_black;
+
+        .bubbleControlTile {
+            background-color: $color_white;
+        }
+    }
+}
+
+.tileLabel {
+    margin-top: 10px;
+    display: block;
+}
+
+.bubbleControlTile {
+    @include flexbox();
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    align-items: center;
+    background-color: $brand_inverse;
+    border-radius: 50%;
+    @include transition(all, .4s ease-in-out 0s);
+
+    .contactItem &{
+        width: 32px;
+        height: 32px;
+        background-color: #DBEEF8;
+    }
+
+}

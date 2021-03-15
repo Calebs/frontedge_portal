@@ -100,6 +100,24 @@ button {
     line-height: 1;
 }
 
+.btn-icon {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    opacity: .75;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    
+    &:hover, &:hover {
+        background-color: $brand_inverse;
+        opacity: 1;
+    }
+}
+
 .btnNav {
     color: $brand_primary;
     background-color: white;

@@ -84,6 +84,10 @@ body {
     color: $brand_black !important;
 }
 
+.color__inverse {
+    color: $brand_inverse !important;
+}
+
 .color__danger {
     color: $color_red !important;
 }
@@ -97,7 +101,7 @@ body {
 }
 
 .color__default {
-    color: $color_text !important;
+    color: $color_text_gray !important;
 }
 
 .font-sm {
@@ -326,4 +330,72 @@ address, address span {
         height: auto;
         max-width: 128px;
     }
+}
+
+// alert
+.alert {
+    display: block;
+    border: none;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    top: 10px;
+    z-index: 1000;
+    background-color: transparent;
+    color: $color_text !important;
+}
+
+.alertWrapper {
+    @include flexbox();
+    width: 100%;
+    border-radius: 5px;
+    flex-direction: column;
+    max-width: 320px;
+    margin: auto;
+    padding: 10px 15px;
+    background-color: $color_white;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.alertBtn {
+    flex-shrink: 0;
+
+    @include MQ(S) {
+        margin-left: 15px;
+    }
+
+    @include MQ-MAX(S) {
+        margin-top: 15px;
+    }
+}
+
+.alert-primary .alertWrapper {
+    box-shadow: inset 4px 0 $brand_primary;
+    color: $brand_primary;
+}
+
+.alert-secondary .alertWrapper{
+    box-shadow: inset 4px 0 $brand_accent;
+    color: $brand_accent;
+}
+
+.alert-danger .alertWrapper{
+    box-shadow: inset 4px 0 $color_red;
+    color: $brand_black;
+}
+
+.alert-success .alertWrapper{
+    box-shadow: inset 4px 0 $color_green;
+    color: $brand_black;
+}
+
+.alert-info .alertWrapper {
+    box-shadow: inset 4px 0 $brand_inverse;
+    color: $brand_black;
+}
+
+.alert-dismissible .close {
+    top: 10px;
 }

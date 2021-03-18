@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Supplier Signup | Front Edge Limited</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,900;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/base.min.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+    <style>
+        .footerCrumbs {
+            padding-top: 0 !important;
+        }
+
+        .btn-link {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        .btn-link:hover, .btn-link:focus {
+            color: #FFCC00;
+        }
+    </style>
+
+</head>
+
+<body class="">
+
+    <div class="alert alert-danger fade show alert-dismissible" role="alert">
+        <div class="alertWrapper">
+            <div class="alertInfo">
+                <p class="">An error occured while trying to create your account, Please try again later</p>
+            </div>
+            <button type="button" class="close_dialog" data-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+
+    <main class="authenticationPageLayout " style="background-image: url(./img/banners/signup_banner.jpg);">
+        <header class="bannerHeader">
+            <div class="container content_narrow">
+                <div class="brand_img">
+                    <a href="index.html" class="logo_link">
+                        <img src="img/logo_white.svg" alt="Front Edge Limited">
+                    </a>
+                </div>
+            </div>
+        </header>
+        
+        <div class="section_block padding-top-none">
+            <div class="container content_narrow">
+                <div class="row">
+                    <div class="col-md-6 color__inverse">
+                        <div class="authblock">
+                            <div class="section_header">
+                                <h3 class="title title_lg color__white">Create your supplier account to continue</h3>
+                            </div>
+                            <form action="">
+                                <div class="form-group">
+                                    <label class="control-label sr-only">Full Name (First and Last Name)</label>
+                                    <div class="inputaffixed inputRounded inputPrefixed">
+                                        <div class="inputfixture">
+                                            <i class="cust_icon icon_user"></i>
+                                        </div>
+                                        <input type="text" required class="form-control inputRounded inputControl " placeholder="Full name (First and Last Name)">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label sr-only">Email Address</label>
+                                    <div class="inputaffixed inputRounded inputPrefixed">
+                                        <div class="inputfixture">
+                                            <i class="cust_icon icon_email"></i>
+                                        </div>
+                                        <input type="text" required class="form-control inputRounded inputControl " placeholder="Email Address">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label sr-only">Phone Number</label>
+                                    <div class="inputaffixed inputRounded inputPrefixed">
+                                        <div class="inputfixture">
+                                            <i class="cust_icon icon_phone"></i>
+                                        </div>
+                                        <input type="text" required class="form-control inputRounded inputControl " placeholder="Phone Number">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label sr-only">Password</label>
+                                    <div class="inputaffixed inputRounded inputPrefixed">
+                                        <div class="inputfixture">
+                                            <i class="cust_icon icon_lock"></i>
+                                        </div>
+                                        <input type="password" class="form-control inputRounded inputControl" placeholder="Enter Password">
+                                    </div>
+                                </div>
+    
+                                <div class="primaryActionHolder">
+                                    <button type="submit" class="btn btn-block btn-primary">Continue</button>
+                                </div>
+    
+                                <div class="disclaimer_block margin_top_md">
+                                    <p>By clicking the “Create account” button, you are creating a Front edge account, and you agree to all of our <a href="../terms.html" class="btn-link">Terms of Use</a> and <a href="../privacy.html" class="btn-link">Privacy Policies</a> </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer role="contentinfo" class="authFooter">
+        <div class="container content_narrow">
+            <div class="authFtNav">
+                <nav class="footItemRow">
+                    <ul class="footer_links">
+                        <li class="footerLinkWrapper"><a class="footerLinkItem" href="">Home</a></li>
+                        <li class="footerLinkWrapper"><a class="footerLinkItem" href="">About Us</a></li>
+                        <li class="footerLinkWrapper"><a class="footerLinkItem" href="../blog.html">For Corporates</a></li>
+                        <li class="footerLinkWrapper"><a class="footerLinkItem" href="../about.html">For Small & Medium Businesses</a></li>
+                        <li class="footerLinkWrapper"><a class="footerLinkItem" href="../terms.html">Terms</a></li>
+                        <li class="footerLinkWrapper"><a class="footerLinkItem" href="../privacy.html">Policies</a></li>
+                    </ul>
+                </nav>
+                <div class="authFtSub">
+                    <p>Image by Bronisław Dróżka from Pixabay</p>
+                </div>
+            </div>
+            <div class="footerCrumbs">
+                <p class="copyright">Copyright © 2020 Front Edge Capital Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+	<script src="js/jquery.js"></script>
+    <script src="js/base.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

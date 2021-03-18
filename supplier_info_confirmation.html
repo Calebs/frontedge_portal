@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Confirm your details | Front Edge Limited</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,900;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/base.min.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+    <style>
+        .btn-decline {
+            border: 1px solid #F6515B;
+            color: #F6515B;
+            background-color: transparent;
+        }
+
+        .btn-decline:hover, .btn-decline:focus {
+            background-color: tomato;
+            color: white;
+            border-color: transparent;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body class="">
+
+    <div class="modal fade" id="decline_form">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title"></h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <p class="margin_bottom_md font-md">Why did you decline the invitation?</p>
+                    <form class="content_wrapper">
+                        
+                        <div class="form-group">
+                            <label for="status_active" class="controlSummary">
+                                <input type="radio" checked name="user_status" id="status_active">
+                                <div class="controlSummaryDetails">
+                                    <h5 class="title font-black text-style-italics">Incorrect Company details</h5>
+                                    <p>The information provided on your company is incorrect</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="status_inactive" class="controlSummary">
+                                <input type="radio" name="user_status" id="status_inactive">
+                                <div class="controlSummaryDetails">
+                                    <h5 class="title font-black text-style-italics">Spam</h5>
+                                    <p>You believe you have been added in error.</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="status_suspend" class="controlSummary">
+                                <input type="radio" name="user_status" id="status_suspend">
+                                <div class="controlSummaryDetails">
+                                    <h5 class="title font-black text-style-italics">Others</h5>
+                                    <p>I have other reasons for rejecting the invitation</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label font-black text-style-italics">Additonal Comment</label>
+                            <textarea class="form-control" rows="5" placeholder="Specific feedback for the buyer that added you. "></textarea>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="inviteAccepted">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <div class="dialogDismiss">
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <div class="centered text-center">
+                        <div class="promptImageHolder centered">
+                            <img src="./img/icons/hello.svg" alt="">
+                        </div>
+                        <h2 class="title title_sm font-black text-style-italics margin_bottom_sm color__black">Welcome to Front Edge</h2>
+                        <p>We’re excited to provide you with just in time capital to reach your business potential. Continue to your dasboard to begin.</p>
+                        <div class="section_cto">
+                            <a href="supplier_signup.html" class="btn btn-secondary btn-sm btn-block">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="mainContentArea padding-top-none">
+        <section class="section_block padding-top-none bg__inverse">
+            <header class="bannerHeader">
+                <div class="container">
+                    <div class="brand_img">
+                        <a href="index.html" class="logo_link">
+                            <img src="img/logo.svg" alt="Front Edge Limited">
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <div class="container ">
+                <div class="row ">
+                    <div class="heroTextWrapper text-center offset-md-3 col-md-6 ">
+                        <h2 class="title title_lg font-regular margin_bottom_md color__primary">Huge has added you as a supplier on Front edge.</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section_block padding-top-none">
+            <div class="container ">
+                <div class="offset-md-2 col-md-8">
+                    <div class="formPanel">
+                        <div class="section_header">
+                            <h4 class="title title_md">To sign up to the program, please verify the credentials below.</h4>
+                        </div>
+                        <form id="form">
+                            <fieldset>
+                                <div class="margin_bottom_md media_item">
+                                    <div class="media_figure">
+                                        <span class="cust_icon icon_sm icon_company"></span>
+                                    </div>
+                                    <div class="media_info">
+                                        <h4 class="title title_sm color__default">Company Details</h4>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="form_group_item form_row_title col-md-4">
+                                        <label class="control-label font-black text-style-italics">Company Name</label>
+                                    </div>
+                                    <div class="form_group_item col-md-8">
+                                        <p class="font-default form-control-plaintext">Zeal Professional Services</p>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="form_group_item form_row_title col-md-4">
+                                        <label class="control-label font-black text-style-italics">RC Number</label>
+                                    </div>
+                                    <div class="form_group_item col-md-8">
+                                        <p class="font-default form-control-plaintext">332265GB54446</p>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="form_group_item form_row_title col-md-4">
+                                        <label class="control-label font-black text-style-italics">Tax ID Number</label>
+                                    </div>
+                                    <div class="form_group_item col-md-8">
+                                        <p class="font-default form-control-plaintext">09865544441</p>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="form_group_item form_row_title col-md-4">
+                                        <label class="control-label font-black text-style-italics">Vendor Code</label>
+                                    </div>
+                                    <div class="form_group_item col-md-8">
+                                        <p class="font-default form-control-plaintext">234DC5</p>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <div class="margin_bottom_md media_item">
+                                    <div class="media_figure">
+                                        <span class="cust_icon icon_sm icon_bank_primary"></span>
+                                    </div>
+                                    <div class="media_info">
+                                        <h4 class="title title_sm color__default">Bank Details</h4>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="form_group_item form_row_title col-md-4">
+                                        <label class="control-label font-black text-style-italics">Bank Name</label>
+                                    </div>
+                                    <div class="form_group_item col-md-8">
+                                        <p class="font-default form-control-plaintext">Guaranty Trust Bank</p>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="form_group_item form_row_title col-md-4">
+                                        <label class="control-label font-black text-style-italics">Account Number</label>
+                                    </div>
+                                    <div class="form_group_item col-md-8">
+                                        <p class="font-default form-control-plaintext">0006518018</p>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div class="text-center section_cto">
+                                <button type="button" data-target="#decline_form" data-backdrop="static" data-toggle="modal" class="btn btn-decline">Incorrect Details</button>
+                                <button type="button" data-target="#inviteAccepted" data-backdrop="static" data-toggle="modal" class="btn btn-secondary">Accept Details</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="imageBlob logoBgPattern"></div>
+    </main>
+
+    <footer role="contentinfo" class="footerArea">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 footerBlock">
+                    <div class="brandBlock">
+                        <div class="brand_media">
+                            <a href="index.html">
+                                <img src="./img/logo_white.svg" alt="Front Edge Limited">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footerCrumbs">
+                        <p class="copyright">&copy; Front Edge 2020</p>
+                    </div>
+                </div>
+                <div class="col-md-9 brandNav">
+                    <div class="row" id="footerBlockItem">
+                        <div class="col-md-4 footerBlock">
+                            <div class="ft_block_header">
+                                <h3 class="item_title">
+                                    <a data-toggle="collapse" data-parent="#footerBlockItem" href="#footerblock_1" class="blockHeaderLink font-bold color__white collapsed">Solutions</a>
+                                </h3>
+                            </div>
+                            <div class="ft_block_segment panel-collapse" id="footerblock_1">
+                                <ul class="ft_nav_block">
+                                    <li><a href="corporates.html">For Corporates</a></li>
+                                    <li><a href="small_bizs.html">For Small & Medium Businesses</a></li>
+                                    <li><a href="capital_calc.html">Working Capital Calculator</a></li>
+                                    <li><a href="get_financed.html">Get financed</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 footerBlock">
+                            <div class="ft_block_header">
+                                <h3 class="item_title">
+                                    <a data-toggle="collapse" data-parent="#footerBlockItem" href="#footerblock_2" class="blockHeaderLink font-bold color__white collapsed">Company</a>
+                                </h3>
+                            </div>
+                            <div class="ft_block_segment panel-collapse" id="footerblock_2">
+                                <ul class="ft_nav_block">
+                                    <li><a href="about.html">About us</a></li>
+                                    <li><a href="case_studies.html">Case Studies</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-5 footerBlock">
+                            <div class="ft_block_header">
+                                <h3 class="item_title">
+                                    <a data-toggle="collapse" data-parent="#footerBlockItem" href="#footerblock_3" class="blockHeaderLink font-bold color__white collapsed">Contact</a>
+                                </h3>
+                            </div>
+                            <div class="ft_block_segment panel-collapse" id="footerblock_3">
+                                <ul class="ft_nav_block">
+                                    <li>
+                                        <a href="mailto:hello@frontedge.com" class="contactInfoLink">
+                                            <span class="infoLinkLabel">hello@frontedge.com</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <address>
+                                            <span>Suites 4-6, 2nd Floor,</span>
+                                            <span> Pees Galleria,</span>
+                                            <span>2A Osborne Road,</span>
+                                            <span>Ikoyi, Lagos</span>
+                                        </address>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+	<script src="js/jquery.js"></script>
+    <script src="js/base.min.js"></script>
+    <script src="js/main.js"></script>
+    
+
+</body>
+</html>

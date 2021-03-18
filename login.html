@@ -16,79 +16,105 @@
     <link rel="stylesheet" href="css/base.min.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
     <script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+    <style>
+        .footerCrumbs {
+            padding-top: 0 !important;
+        }
+
+        .btn-link {
+            color: #FFCC00
+        }
+    </style>
+
 </head>
 
 <body class="">
     
-    <main class="authenticationPageLayout">
-        <div class="grdly_page_frame">
-            <section class="splitLayout">
-                <div class="sideImage">
-                    
-                    <div class="sideContent">
-                        <div class="outReachBanner">
-                            <div class="outReachHeader">
-                                <div class="LogoHolder">
-                                    <a href="./index.html">
-                                        <img src="./img/logo.svg" alt="Front Edge Limited">
-                                    </a>
+    <div class="alert alert-danger fade show alert-dismissible" role="alert">
+        <div class="alertWrapper">
+            <div class="alertInfo">
+                <p class="">An error occured while trying to create your account, Please try again later</p>
+            </div>
+            <button type="button" class="close_dialog" data-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+
+    <main class="authenticationPageLayout " style="background-image: url(./img/banners/login_banner.jpg);">
+        <header class="bannerHeader">
+            <div class="container content_narrow">
+                <div class="brand_img">
+                    <a href="index.html" class="logo_link">
+                        <img src="img/logo_white.svg" alt="Front Edge Limited">
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div class="section_block padding-top-none">
+            <div class="container content_narrow">
+                <div class="row">
+                    <div class="col-md-6 color__inverse">
+                        <div class="authblock">
+                            <div class="section_header">
+                                <h3 class="title title_lg color__white">Welcome back!</h3>
+                                <p class="font-md font-black text-style-italics">Sign In to access your portal</p>
+                            </div>
+                            <form action="">
+                                <div class="form-group">
+                                    <label class="control-label sr-only">Email Address</label>
+                                    <div class="inputaffixed inputRounded inputPrefixed">
+                                        <div class="inputfixture">
+                                            <i class="cust_icon icon_email"></i>
+                                        </div>
+                                        <input type="text" required class="form-control inputRounded inputControl " placeholder="Email Address">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="outReachContent">
-                                <h2 class="title title_sm margin_bottom_lg color__primary">Welcome back!</h2>
-                                <p class="font-bold">Enter your ID and <br> Password to continue</p> 
-                            </div>
+                                <div class="form-group">
+                                    <label class="control-label sr-only">Password</label>
+                                    <div class="inputaffixed inputRounded inputPrefixed">
+                                        <div class="inputfixture">
+                                            <i class="cust_icon icon_lock"></i>
+                                        </div>
+                                        <input type="password" class="form-control inputRounded inputControl" placeholder="Enter Password">
+                                    </div>
+                                </div>
+                                <div class="disclaimer_block margin_bottom_md">
+                                    <p>Can't remember your password? <a href="forgot_password.html" class="btn-link font-bold">Reset it</a></p>
+                                </div>
+
+                                <div class="primaryActionHolder">
+                                    <button type="submit" class="btn btn-block btn-primary">Continue</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
-                <div class="layoutMain">
-                    <div class="bgImageHolder userTypeSchools"></div>
-                    <div class="section_block">
-                        <div class="container">
-                            <div class="row">
-                                <div class="authblock offset-md-3 col-md-6">
-                                    <div class="blockHeader margin_bottom_lg text-center">
-                                        <h3 class="title title_md margin_bottom_x color__white">Sign In</h3>
-                                        <p class="font-bold">To Access the Portal</p>
-                                    </div>
-                                    <div class="error_message hidden text-left">
-                                        <p>An error occured while trying to create your account, Please try again later.</p>
-                                    </div>
-                                    <form action="">
-                                        <div class="form-group">
-                                            <label class="control-label sr-only">Username</label>
-                                            <div class="inputaffixed inputRounded inputPrefixed">
-                                                <div class="inputfixture">
-                                                    <i class="cust_icon icon_user"></i>
-                                                </div>
-                                                <input type="text" required class="form-control inputRounded inputControl " placeholder="Enter User Name here">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label sr-only">Password</label>
-                                            <div class="inputaffixed inputRounded inputPrefixed">
-                                                <div class="inputfixture">
-                                                    <i class="cust_icon icon_lock"></i>
-                                                </div>
-                                                <input type="password" class="form-control inputRounded inputControl" placeholder="Enter Password">
-                                            </div>
-                                        </div>
-    
-                                        <div class="primaryActionHolder">
-                                            <button type="submit" class="btn btn-lg btn-block btn-secondary">Continue</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="footerCrumbs text-center color__white">
-                                <p class="copyright">Copyright © 2020 Front Edge Capital Limited. All rights reserved.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            </div>
         </div>
     </main>
+    
+    <footer role="contentinfo" class="authFooter">
+        <div class="container content_narrow">
+            <div class="authFtNav">
+                <nav class="footItemRow">
+                    <ul class="footer_links">
+                        <li class="footerLinkWrapper"><a class="footerLinkItem" href="">Home</a></li>
+                        <li class="footerLinkWrapper"><a class="footerLinkItem" href="">About Us</a></li>
+                        <li class="footerLinkWrapper"><a class="footerLinkItem" href="../blog.html">For Corporates</a></li>
+                        <li class="footerLinkWrapper"><a class="footerLinkItem" href="../about.html">For Small & Medium Businesses</a></li>
+                        <li class="footerLinkWrapper"><a class="footerLinkItem" href="../terms.html">Terms</a></li>
+                        <li class="footerLinkWrapper"><a class="footerLinkItem" href="../privacy.html">Policies</a></li>
+                    </ul>
+                </nav>
+                <div class="authFtSub">
+                    <p>Image by Bronisław Dróżka from Pixabay</p>
+                </div>
+            </div>
+            <div class="footerCrumbs">
+                <p class="copyright">Copyright © 2020 Front Edge Capital Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
 	<script src="js/jquery.js"></script>
     <script src="js/base.min.js"></script>

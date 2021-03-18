@@ -130,6 +130,10 @@ input:focus {
     }
 }
 
+.form-control:disabled, .form-control[readonly] {
+    background-color: $brand_inverse;
+}
+
 .inputRounded {
     border-radius: 30px !important;
 }

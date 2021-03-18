@@ -252,6 +252,10 @@ button {
     position: relative;
     background-color: $border_grey_light;
 
+    .alert & {
+        background-color: transparent;
+    }
+
     &::before,
     &::after {
         position: absolute;

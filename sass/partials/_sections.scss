@@ -240,6 +240,10 @@ footer[role="contentinfo"] {
     display: block;
     padding: 7.5px 15px;
 
+    .footerLinkWrapper & {
+        padding: 0;
+    }
+
     &:hover, &:focus {
         text-decoration: underline;
     }

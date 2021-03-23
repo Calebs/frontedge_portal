@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Suppliers :: Users | Front Edge</title>
+    <title>Colleagues :: Users | Front Edge</title>
     <link rel="shortcut icon" href="img/favicon.png" type="image/png">
     <link rel="icon" href="img/favicon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -20,11 +20,11 @@
 
 <body class="bg__off_white">
 
-    <div class="modal fade" id="update_status">
+    <div class="modal fade" id="update_role">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <header class="modal-header">
-                    <h4 class="modal-title">Update Status</h4>
+                    <h4 class="modal-title">Update Role</h4>
                     <div class="dialogDismiss">
                         <button type="button" class="close_dialog" data-dismiss="modal"></button>
                     </div>
@@ -34,61 +34,27 @@
                     <div class="media_item margin_bottom_md">
                         <div class="userAvi avi_md aviCubed">
                             <img src="img/banners/dummyUser_2.jpg" alt="">
-                            <span class="default_avi">RA</span>
+                            <span class="default_avi">DS</span>
                         </div>
                         <div class="user_info">
-                            <span>Supplier</span>
-                            <h4 class="title title_sm font-bold color__black">Amechi Rotimi</h4>
+                            <h4 class="title title_sm font-bold color__black">Digne Shaw</h4>
+                            <span>Buyer Manager</span>
                         </div>
                     </div>
 
-                    <form class="content_wrapper">
-                        
-                        <div class="form-group">
-                            <label for="status_active" class="controlSummary">
-                                <input type="radio" checked name="user_status" id="status_active">
-                                <div class="controlSummaryDetails">
-                                    <h5 class="title font-black text-style-italics">Active</h5>
-                                    <p>Can sign in, manage suppliers and Invoices</p>
-                                </div>
-                            </label>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="status_inactive" class="controlSummary">
-                                <input type="radio" name="user_status" id="status_inactive">
-                                <div class="controlSummaryDetails">
-                                    <h5 class="title font-black text-style-italics">Inactive</h5>
-                                    <p>Does not have any supplier or Invoice</p>
-                                </div>
-                            </label>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="status_suspend" class="controlSummary">
-                                <input type="radio" name="user_status" id="status_suspend">
-                                <div class="controlSummaryDetails">
-                                    <h5 class="title font-black text-style-italics">Suspended</h5>
-                                    <p>Barred from using the platform</p>
-                                </div>
-                            </label>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="status_closed" class="controlSummary">
-                                <input type="radio" name="user_status" id="status_closed">
-                                <div class="controlSummaryDetails">
-                                    <h5 class="title font-black text-style-italics">Closed</h5>
-                                    <p>User account has been removed from the public</p>
-                                </div>
-                            </label>
-                        </div>
-
-                    </form>
+                    <div class="form-group">
+                        <label class="control-label font-black text-style-italics">Role</label>
+                        <select class="form-control">
+                            <option>Buyer Manager</option>
+                            <option>Admin</option>
+                            <option>Super Admin</option>
+                            <option>Supplier Manager</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
-                    <button type="button" class="btn btn-secondary">Save</button>
+                    <button type="button" class="btn btn-secondary">Update</button>
                 </div>
             </div>
         </div>
@@ -108,10 +74,10 @@
                             <img src="./img/icons/confirm_removal.svg" alt="">
                         </div>
                         <h2 class="title title_sm font-black text-style-italics margin_bottom_sm color__danger">Are you sure?</h2>
-                        <p>Please confirm the removal of Supplier: <strong>Supplier Name</strong>. This action can not be undone </p>
+                        <p>Please confirm the removal of buyer: <strong>Buyer Name</strong>. This action can not be undone </p>
                         <div class="section_cto">
-                            <button type="submit" class="btn btn-danger btn-sm btn-block">Yes! remove this Supplier</button>
-                            <button type="button" data-dismiss="modal" class="btn btn-sm btn-default btn-block font-regular">No, don’t remove</button>
+                            <button type="submit" class="btn btn-danger btn-sm btn-block">Yes! remove Buyer</button>
+                            <button type="button" data-dismiss="modal" class="btn btn-sm btn-default btn-block">No, I don’t</button>
                         </div>
                     </div>
                 </div>
@@ -303,13 +269,13 @@
                 <div class="appPageHeader">
                     <nav class="contentNavMain centered">
                         <ul class="nav pageSubNav">
-                            <li class="pageSubNavItem">
+                            <li class="pageSubNavItem ">
                                 <a href="user_buyers.html" class="pageSubNavLink">Buyers</a>
                             </li>
-                            <li class="pageSubNavItem active">
+                            <li class="pageSubNavItem ">
                                 <a href="user_suppliers.html" class="pageSubNavLink">Suppliers</a>
                             </li>
-                            <li class="pageSubNavItem">
+                            <li class="pageSubNavItem active">
                                 <a href="user_colleagues.html" class="pageSubNavLink">Colleagues</a>
                             </li>
                         </ul>
@@ -325,36 +291,30 @@
                     <div class="contentPanelWrapper">
                         
                         <header class="contentPanelHeader">
-                            <h4 class="title title_sm caps_upper font-bold color__black">Suppliers</h4>
+                            <h4 class="title title_sm caps_upper font-bold color__black">Colleagues</h4>
                             <div class="paneCtaHolder">
-                                <a href="new_supplier.html" class="btn btn-sm btn-secondary">
+                                <a href="#filterBlock" data-toggle="collapse" data-parent="#ListFilter" class="btn btn-sm btn-default-outline collapsed visible_sm">
+                                    <span class="btnIcon">
+                                        <svg class="cust_icon icon_xs"  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.63028 2.25H13.3697C13.6119 2.25 13.8488 2.32034 14.0518 2.45248C14.2547 2.58461 14.4149 2.77285 14.5129 2.99431C14.6108 3.21577 14.6424 3.46092 14.6036 3.69996C14.5649 3.93901 14.4576 4.16165 14.2947 4.34084L10.25 8.78996V12.2324C10.25 12.4382 10.1992 12.6408 10.1021 12.8222C10.005 13.0037 9.8646 13.1583 9.69338 13.2725L7.69338 14.6058C7.50513 14.7313 7.28635 14.8034 7.06036 14.8143C6.83437 14.8252 6.60966 14.7746 6.41018 14.6678C6.2107 14.5611 6.04394 14.4022 5.92768 14.2081C5.81141 14.014 5.75 13.792 5.75 13.5657V8.78996L1.70535 4.34084L2.26031 3.83634L1.70535 4.34084C1.54246 4.16165 1.43512 3.93901 1.39638 3.69996C1.35764 3.46092 1.38917 3.21577 1.48714 2.99431C1.58511 2.77285 1.74529 2.58461 1.94823 2.45248C2.15117 2.32034 2.38812 2.25 2.63028 2.25ZM3.19542 3.75L6.92493 7.85246C7.1341 8.08255 7.25 8.38235 7.25 8.6933V13.0986L8.75 12.0986V8.6933C8.75 8.38235 8.86591 8.08255 9.07508 7.85246L12.8046 3.75H3.19542Z"/>
+                                        </svg>                                                                              
+                                    </span>
+                                    <span class="btnLabel hidden-sm">Filter</span>
+                                </a>
+                                <a href="new_colleague.html" class="btn btn-sm btn-secondary">
                                     <span class="btnIcon">
                                         <svg class="cust_icon icon_xs" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M13.5 7.5H8.5V2.5C8.5 2.36739 8.44732 2.24021 8.35355 2.14645C8.25979 2.05268 8.13261 2 8 2C7.86739 2 7.74021 2.05268 7.64645 2.14645C7.55268 2.24021 7.5 2.36739 7.5 2.5V7.5H2.5C2.36739 7.5 2.24021 7.55268 2.14645 7.64645C2.05268 7.74021 2 7.86739 2 8C2 8.13261 2.05268 8.25979 2.14645 8.35355C2.24021 8.44732 2.36739 8.5 2.5 8.5H7.5V13.5C7.5 13.6326 7.55268 13.7598 7.64645 13.8536C7.74021 13.9473 7.86739 14 8 14C8.13261 14 8.25979 13.9473 8.35355 13.8536C8.44732 13.7598 8.5 13.6326 8.5 13.5V8.5H13.5C13.6326 8.5 13.7598 8.44732 13.8536 8.35355C13.9473 8.25979 14 8.13261 14 8C14 7.86739 13.9473 7.74021 13.8536 7.64645C13.7598 7.55268 13.6326 7.5 13.5 7.5Z"/>
                                         </svg>                                            
                                     </span>
-                                    <span class="btnLabel hidden-sm">Supplier</span>
+                                    <span class="btnLabel hidden-sm">Colleague</span>
                                 </a>
                             </div>
                         </header>
 
-                        <nav class="pageNavSecondary margin_bottom_lg">
-                            <ul class="nav secondaryNavlist">
-                                <li class="secondaryNavItem active">
-                                    <a href="user_suppliers.html" class="secondaryNavLink">Active <span class="navItemCount">12</span></a>
-                                </li>
-                                <li class="secondaryNavItem">
-                                    <a href="user_suppliers_declined.html" class="secondaryNavLink">Declined<span class="navItemCount">2</span></a>
-                                </li>
-                                <li class="secondaryNavItem">
-                                    <a href="user_suppliers_pending.html" class="secondaryNavLink">Pending <span class="navItemCount">5</span></a>
-                                </li>
-                            </ul>
-                        </nav>
-
-                        <div class="pageFilterBar margin_bottom_lg row">
+                        <div class="pageFilterBar panel-collapse row" id="filterBlock">
                             <div class="searchBar panelContentFilterItem col-md-4">
-                                <input type="search" class="form-control" placeholder="Find supplier by name or code">
+                                <input type="search" class="form-control" placeholder="Find by name">
                                 <div class="searchControl">
                                     <button class="searchBtn">
                                         <svg class="cust_icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -364,6 +324,32 @@
                                     </button>
                                 </div>
                             </div>
+                            <div class="panelContentFilterItem col-sm-6 col-md-4">
+                                <div class="inputaffixed inputPrefixed">
+                                    <div class="inputfixture">
+                                        <span class="font-bold color__grey_light">Role:</span>
+                                    </div>
+                                    <select class="form-control inputControl">
+                                        <option>All</option>
+                                        <option>Role 1</option>
+                                        <option>Admin</option>
+                                        <option>Super Admin</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="panelContentFilterItem col-sm-6 col-md-4">
+                                <div class="inputaffixed inputPrefixed">
+                                    <div class="inputfixture">
+                                        <span class="font-bold color__grey_light">Sort By:</span>
+                                    </div>
+                                    <select class="form-control inputControl">
+                                        <option>Name (Aa - Zz)</option>
+                                        <option>Name (Zz - Aa)</option>
+                                        <option>Recency</option>
+                                        <option>Status</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="emptyStateBlock centered hidden">
@@ -371,11 +357,11 @@
                                 <div class="emptyStateIlloHolder">
                                     <img src="./img/icons/empty_list.svg" alt="No Empty">
                                 </div>
-                                <h4 class="title title_sm font-black margin_bottom_sm color__black">No active supplier Found</h4>
-                                <p>You will find suppliers that have accepted your invitation, and created an account here.</p>
+                                <h4 class="title title_sm font-black margin_bottom_sm color__black">No Colleague Found</h4>
+                                <p>Colleagues are members of your team. You can create them and assign specific roles based on the tasks they perform. Add a colleague to get started</p>
                                 <div class="section_cto">
-                                    <a href="new_supplier.html" class="btn btn-sm btn-primary">
-                                        Invite a Supplier
+                                    <a href="new_colleague.html" class="btn btn-primary">
+                                        New Colleague
                                     </a>
                                 </div>
                             </div>
@@ -387,13 +373,7 @@
                                     <thead>
                                         <tr>
                                             <th>
-                                                <div>Supplier</div>
-                                            </th>
-                                            <th class="hidden-sm">
-                                                <div class="">Company</div>
-                                            </th>
-                                            <th>
-                                                <div class="">Status</div>
+                                                <div>Description</div>
                                             </th>
                                             <th class="hidden-sm">
                                                 <div class="">Phone Number</div>
@@ -411,27 +391,13 @@
                                             <td>
                                                 <div class="media_item">
                                                     <div class="userAvi ">
-                                                        <img src="img/banners/dummyUser_2.jpg" alt="">
-                                                        <span class="default_avi">RA</span>
+                                                        <img src="./img/banners/dummyUser_1.jpg" alt="">
+                                                        <span class="default_avi">EO</span>
                                                     </div>
                                                     <div class="user_info">
-                                                        <h4 class="title font-bold color__black">Amechi Rotimi</h4>
-                                                        <div class="metaList">
-                                                            <div class="metaItem">
-                                                                <span>231GU0</span>
-                                                            </div>
-                                                        </div>
+                                                        <h4 class="title font-bold color__black">Colleague Name</h4>
+                                                        <span class="">User role</span>
                                                     </div>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <time>Kia Motors</time>
-                                                </div>
-                                            </td>
-                                            <td class="">
-                                                <div class="">
-                                                    <span class="labelTag labelTagSuccess">Active</span>
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
@@ -456,16 +422,13 @@
                                                     </a>
                                                     <ul class="dropdown-menu">
                                                         <li class="dropdown-item">
-                                                            <a href="supplier_details.html">View Details</a>
+                                                            <a href="#update_role" data-toggle="modal">Update Role</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
+                                                            <a href="new_colleague.html">Edit Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="new_supplier.html">Edit Details</a>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Supplier</button>
+                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Colleague</button>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -475,27 +438,13 @@
                                             <td>
                                                 <div class="media_item">
                                                     <div class="userAvi ">
-                                                        <!-- <img src="img/banners/" alt=""> -->
-                                                        <span class="default_avi">VN</span>
+                                                        <img src="./img/banners/dummyUser_2.jpg" alt="">
+                                                        <span class="default_avi">EO</span>
                                                     </div>
                                                     <div class="user_info">
-                                                        <h4 class="title font-bold color__black">Victor Nwachukwu</h4>
-                                                        <div class="metaList">
-                                                            <div class="metaItem">
-                                                                <span>180DX2</span>
-                                                            </div>
-                                                        </div>
+                                                        <h4 class="title font-bold color__black">Digne Shaw</h4>
+                                                        <span class="">Buyer Manager</span>
                                                     </div>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <time>Nwachukwu LTD</time>
-                                                </div>
-                                            </td>
-                                            <td class="">
-                                                <div class="">
-                                                    <span class="labelTag labelTagDanger">Suspended</span>
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
@@ -520,16 +469,13 @@
                                                     </a>
                                                     <ul class="dropdown-menu">
                                                         <li class="dropdown-item">
-                                                            <a href="supplier_details.html">View Details</a>
+                                                            <a href="#update_role" data-toggle="modal">Update Role</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
+                                                            <a href="new_colleague.html">Edit Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="new_supplier.html" data-toggle="modal">Edit Details</a>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Supplier</button>
+                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Colleague</button>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -539,27 +485,13 @@
                                             <td>
                                                 <div class="media_item">
                                                     <div class="userAvi ">
-                                                        <img src="img/banners/dummyUser_1.jpg" alt="">
-                                                        <span class="default_avi">EA</span>
+                                                        <img src="./img/banners/dummyUser_3.jpg" alt="">
+                                                        <span class="default_avi">EO</span>
                                                     </div>
                                                     <div class="user_info">
-                                                        <h4 class="title font-bold color__black">Edward Adebayo</h4>
-                                                        <div class="metaList">
-                                                            <div class="metaItem">
-                                                                <span>197UC2</span>
-                                                            </div>
-                                                        </div>
+                                                        <h4 class="title font-bold color__black">Mike Beispel</h4>
+                                                        <span class="">Huge Customer</span>
                                                     </div>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <time>Elvis John Limited</time>
-                                                </div>
-                                            </td>
-                                            <td class="">
-                                                <div class="">
-                                                    <span class="labelTag labelTagDefault">Inactive</span>
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
@@ -584,16 +516,13 @@
                                                     </a>
                                                     <ul class="dropdown-menu">
                                                         <li class="dropdown-item">
-                                                            <a href="supplier_details.html">View Details</a>
+                                                            <a href="#update_role" data-toggle="modal">Update Role</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
+                                                            <a href="new_colleague.html">Edit Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="new_supplier.html" data-toggle="modal">Edit Details</a>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Supplier</button>
+                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Colleague</button>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -603,27 +532,13 @@
                                             <td>
                                                 <div class="media_item">
                                                     <div class="userAvi ">
-                                                        <img src="img/banners/dummyUser_2.jpg" alt="">
-                                                        <span class="default_avi">RA</span>
+                                                        <!-- <img src="./img/banners/" alt=""> -->
+                                                        <span class="default_avi">VK</span>
                                                     </div>
                                                     <div class="user_info">
-                                                        <h4 class="title font-bold color__black">Amechi Rotimi</h4>
-                                                        <div class="metaList">
-                                                            <div class="metaItem">
-                                                                <span>231GU0</span>
-                                                            </div>
-                                                        </div>
+                                                        <h4 class="title font-bold color__black">Victor Kenneth</h4>
+                                                        <span class="">Super Admin</span>
                                                     </div>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <time>Kia Motors</time>
-                                                </div>
-                                            </td>
-                                            <td class="">
-                                                <div class="">
-                                                    <span class="labelTag labelTagSuccess">Active</span>
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
@@ -648,16 +563,13 @@
                                                     </a>
                                                     <ul class="dropdown-menu">
                                                         <li class="dropdown-item">
-                                                            <a href="supplier_details.html">View Details</a>
+                                                            <a href="#update_role" data-toggle="modal">Update Role</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
+                                                            <a href="new_colleague.html">Edit Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="new_supplier.html" data-toggle="modal">Edit Details</a>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Supplier</button>
+                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Colleague</button>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -667,27 +579,13 @@
                                             <td>
                                                 <div class="media_item">
                                                     <div class="userAvi ">
-                                                        <!-- <img src="img/banners/" alt=""> -->
-                                                        <span class="default_avi">VN</span>
+                                                        <img src="./img/banners/dummyUser_1.jpg" alt="">
+                                                        <span class="default_avi">EO</span>
                                                     </div>
                                                     <div class="user_info">
-                                                        <h4 class="title font-bold color__black">Victor Nwachukwu</h4>
-                                                        <div class="metaList">
-                                                            <div class="metaItem">
-                                                                <span>180DX2</span>
-                                                            </div>
-                                                        </div>
+                                                        <h4 class="title font-bold color__black">Colleague Name</h4>
+                                                        <span class="">User role</span>
                                                     </div>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <time>Nwachukwu LTD</time>
-                                                </div>
-                                            </td>
-                                            <td class="">
-                                                <div class="">
-                                                    <span class="labelTag labelTagDanger">Suspended</span>
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
@@ -712,16 +610,13 @@
                                                     </a>
                                                     <ul class="dropdown-menu">
                                                         <li class="dropdown-item">
-                                                            <a href="supplier_details.html">View Details</a>
+                                                            <a href="#update_role" data-toggle="modal">Update Role</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
+                                                            <a href="new_colleague.html">Edit Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="new_supplier.html" data-toggle="modal">Edit Details</a>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Supplier</button>
+                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Colleague</button>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -731,27 +626,13 @@
                                             <td>
                                                 <div class="media_item">
                                                     <div class="userAvi ">
-                                                        <img src="img/banners/dummyUser_1.jpg" alt="">
-                                                        <span class="default_avi">EA</span>
+                                                        <img src="./img/banners/dummyUser_2.jpg" alt="">
+                                                        <span class="default_avi">EO</span>
                                                     </div>
                                                     <div class="user_info">
-                                                        <h4 class="title font-bold color__black">Edward Adebayo</h4>
-                                                        <div class="metaList">
-                                                            <div class="metaItem">
-                                                                <span>197UC2</span>
-                                                            </div>
-                                                        </div>
+                                                        <h4 class="title font-bold color__black">Digne Shaw</h4>
+                                                        <span class="">Buyer Manager</span>
                                                     </div>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <time>Elvis John Limited</time>
-                                                </div>
-                                            </td>
-                                            <td class="">
-                                                <div class="">
-                                                    <span class="labelTag labelTagDefault">Inactive</span>
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
@@ -776,16 +657,13 @@
                                                     </a>
                                                     <ul class="dropdown-menu">
                                                         <li class="dropdown-item">
-                                                            <a href="supplier_details.html">View Details</a>
+                                                            <a href="#update_role" data-toggle="modal">Update Role</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
+                                                            <a href="new_colleague.html">Edit Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="new_supplier.html" data-toggle="modal">Edit Details</a>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Supplier</button>
+                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Colleague</button>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -795,27 +673,13 @@
                                             <td>
                                                 <div class="media_item">
                                                     <div class="userAvi ">
-                                                        <img src="img/banners/dummyUser_2.jpg" alt="">
-                                                        <span class="default_avi">RA</span>
+                                                        <img src="./img/banners/dummyUser_3.jpg" alt="">
+                                                        <span class="default_avi">EO</span>
                                                     </div>
                                                     <div class="user_info">
-                                                        <h4 class="title font-bold color__black">Amechi Rotimi</h4>
-                                                        <div class="metaList">
-                                                            <div class="metaItem">
-                                                                <span>231GU0</span>
-                                                            </div>
-                                                        </div>
+                                                        <h4 class="title font-bold color__black">Mike Beispel</h4>
+                                                        <span class="">Huge Customer</span>
                                                     </div>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <time>Kia Motors</time>
-                                                </div>
-                                            </td>
-                                            <td class="">
-                                                <div class="">
-                                                    <span class="labelTag labelTagSuccess">Active</span>
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
@@ -840,16 +704,13 @@
                                                     </a>
                                                     <ul class="dropdown-menu">
                                                         <li class="dropdown-item">
-                                                            <a href="supplier_details.html">View Details</a>
+                                                            <a href="#update_role" data-toggle="modal">Update Role</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
+                                                            <a href="new_colleague.html">Edit Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="new_supplier.html" data-toggle="modal">Edit Details</a>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Supplier</button>
+                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Colleague</button>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -859,27 +720,13 @@
                                             <td>
                                                 <div class="media_item">
                                                     <div class="userAvi ">
-                                                        <!-- <img src="img/banners/" alt=""> -->
-                                                        <span class="default_avi">VN</span>
+                                                        <!-- <img src="./img/banners/" alt=""> -->
+                                                        <span class="default_avi">VK</span>
                                                     </div>
                                                     <div class="user_info">
-                                                        <h4 class="title font-bold color__black">Victor Nwachukwu</h4>
-                                                        <div class="metaList">
-                                                            <div class="metaItem">
-                                                                <span>180DX2</span>
-                                                            </div>
-                                                        </div>
+                                                        <h4 class="title font-bold color__black">Victor Kenneth</h4>
+                                                        <span class="">Super Admin</span>
                                                     </div>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <time>Nwachukwu LTD</time>
-                                                </div>
-                                            </td>
-                                            <td class="">
-                                                <div class="">
-                                                    <span class="labelTag labelTagDanger">Suspended</span>
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
@@ -904,272 +751,13 @@
                                                     </a>
                                                     <ul class="dropdown-menu">
                                                         <li class="dropdown-item">
-                                                            <a href="supplier_details.html">View Details</a>
+                                                            <a href="#update_role" data-toggle="modal">Update Role</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
+                                                            <a href="new_colleague.html">Edit Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="new_supplier.html" data-toggle="modal">Edit Details</a>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Supplier</button>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="media_item">
-                                                    <div class="userAvi ">
-                                                        <img src="img/banners/dummyUser_1.jpg" alt="">
-                                                        <span class="default_avi">EA</span>
-                                                    </div>
-                                                    <div class="user_info">
-                                                        <h4 class="title font-bold color__black">Edward Adebayo</h4>
-                                                        <div class="metaList">
-                                                            <div class="metaItem">
-                                                                <span>197UC2</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <time>Elvis John Limited</time>
-                                                </div>
-                                            </td>
-                                            <td class="">
-                                                <div class="">
-                                                    <span class="labelTag labelTagDefault">Inactive</span>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <a href="tel:09090527304">09090527304</a>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="hidden-sm">
-                                                    <a href="mailto:emekaemmanuel045@gmail.com">emekaemmanuel045@gmail.com</a>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="dropdown tabelControl">
-                                                    <a href="#" data-toggle="dropdown" class="tableControlBtn">
-                                                        <span class="btnLabel hidden-sm">Options</span>
-                                                        <span class="btnIcon">                                                    
-                                                            <svg class="cust_icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M8 4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2C10.5304 2 11.0391 2.21071 11.4142 2.58579C11.7893 2.96086 12 3.46957 12 4C12 4.53043 11.7893 5.03914 11.4142 5.41421C11.0391 5.78929 10.5304 6 10 6C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4ZM8 10C8 9.46957 8.21071 8.96086 8.58579 8.58579C8.96086 8.21071 9.46957 8 10 8C10.5304 8 11.0391 8.21071 11.4142 8.58579C11.7893 8.96086 12 9.46957 12 10C12 10.5304 11.7893 11.0391 11.4142 11.4142C11.0391 11.7893 10.5304 12 10 12C9.46957 12 8.96086 11.7893 8.58579 11.4142C8.21071 11.0391 8 10.5304 8 10ZM8 16C8 15.4696 8.21071 14.9609 8.58579 14.5858C8.96086 14.2107 9.46957 14 10 14C10.5304 14 11.0391 14.2107 11.4142 14.5858C11.7893 14.9609 12 15.4696 12 16C12 16.5304 11.7893 17.0391 11.4142 17.4142C11.0391 17.7893 10.5304 18 10 18C9.46957 18 8.96086 17.7893 8.58579 17.4142C8.21071 17.0391 8 16.5304 8 16V16Z"/>
-                                                            </svg>                                                                
-                                                        </span>
-                                                    </a>
-                                                    <ul class="dropdown-menu">
-                                                        <li class="dropdown-item">
-                                                            <a href="supplier_details.html">View Details</a>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <a href="new_supplier.html" data-toggle="modal">Edit Details</a>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Supplier</button>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="media_item">
-                                                    <div class="userAvi ">
-                                                        <img src="img/banners/dummyUser_2.jpg" alt="">
-                                                        <span class="default_avi">RA</span>
-                                                    </div>
-                                                    <div class="user_info">
-                                                        <h4 class="title font-bold color__black">Amechi Rotimi</h4>
-                                                        <div class="metaList">
-                                                            <div class="metaItem">
-                                                                <span>231GU0</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <time>Kia Motors</time>
-                                                </div>
-                                            </td>
-                                            <td class="">
-                                                <div class="">
-                                                    <span class="labelTag labelTagSuccess">Active</span>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <a href="tel:09090527304">09090527304</a>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="hidden-sm">
-                                                    <a href="mailto:emekaemmanuel045@gmail.com">emekaemmanuel045@gmail.com</a>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="dropdown tabelControl">
-                                                    <a href="#" data-toggle="dropdown" class="tableControlBtn">
-                                                        <span class="btnLabel hidden-sm">Options</span>
-                                                        <span class="btnIcon">                                                    
-                                                            <svg class="cust_icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M8 4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2C10.5304 2 11.0391 2.21071 11.4142 2.58579C11.7893 2.96086 12 3.46957 12 4C12 4.53043 11.7893 5.03914 11.4142 5.41421C11.0391 5.78929 10.5304 6 10 6C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4ZM8 10C8 9.46957 8.21071 8.96086 8.58579 8.58579C8.96086 8.21071 9.46957 8 10 8C10.5304 8 11.0391 8.21071 11.4142 8.58579C11.7893 8.96086 12 9.46957 12 10C12 10.5304 11.7893 11.0391 11.4142 11.4142C11.0391 11.7893 10.5304 12 10 12C9.46957 12 8.96086 11.7893 8.58579 11.4142C8.21071 11.0391 8 10.5304 8 10ZM8 16C8 15.4696 8.21071 14.9609 8.58579 14.5858C8.96086 14.2107 9.46957 14 10 14C10.5304 14 11.0391 14.2107 11.4142 14.5858C11.7893 14.9609 12 15.4696 12 16C12 16.5304 11.7893 17.0391 11.4142 17.4142C11.0391 17.7893 10.5304 18 10 18C9.46957 18 8.96086 17.7893 8.58579 17.4142C8.21071 17.0391 8 16.5304 8 16V16Z"/>
-                                                            </svg>                                                                
-                                                        </span>
-                                                    </a>
-                                                    <ul class="dropdown-menu">
-                                                        <li class="dropdown-item">
-                                                            <a href="supplier_details.html">View Details</a>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <a href="new_supplier.html" data-toggle="modal">Edit Details</a>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Supplier</button>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="media_item">
-                                                    <div class="userAvi ">
-                                                        <!-- <img src="img/banners/" alt=""> -->
-                                                        <span class="default_avi">VN</span>
-                                                    </div>
-                                                    <div class="user_info">
-                                                        <h4 class="title font-bold color__black">Victor Nwachukwu</h4>
-                                                        <div class="metaList">
-                                                            <div class="metaItem">
-                                                                <span>180DX2</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <time>Nwachukwu LTD</time>
-                                                </div>
-                                            </td>
-                                            <td class="">
-                                                <div class="">
-                                                    <span class="labelTag labelTagDanger">Suspended</span>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <a href="tel:09090527304">09090527304</a>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="hidden-sm">
-                                                    <a href="mailto:emekaemmanuel045@gmail.com">emekaemmanuel045@gmail.com</a>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="dropdown tabelControl">
-                                                    <a href="#" data-toggle="dropdown" class="tableControlBtn">
-                                                        <span class="btnLabel hidden-sm">Options</span>
-                                                        <span class="btnIcon">                                                    
-                                                            <svg class="cust_icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M8 4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2C10.5304 2 11.0391 2.21071 11.4142 2.58579C11.7893 2.96086 12 3.46957 12 4C12 4.53043 11.7893 5.03914 11.4142 5.41421C11.0391 5.78929 10.5304 6 10 6C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4ZM8 10C8 9.46957 8.21071 8.96086 8.58579 8.58579C8.96086 8.21071 9.46957 8 10 8C10.5304 8 11.0391 8.21071 11.4142 8.58579C11.7893 8.96086 12 9.46957 12 10C12 10.5304 11.7893 11.0391 11.4142 11.4142C11.0391 11.7893 10.5304 12 10 12C9.46957 12 8.96086 11.7893 8.58579 11.4142C8.21071 11.0391 8 10.5304 8 10ZM8 16C8 15.4696 8.21071 14.9609 8.58579 14.5858C8.96086 14.2107 9.46957 14 10 14C10.5304 14 11.0391 14.2107 11.4142 14.5858C11.7893 14.9609 12 15.4696 12 16C12 16.5304 11.7893 17.0391 11.4142 17.4142C11.0391 17.7893 10.5304 18 10 18C9.46957 18 8.96086 17.7893 8.58579 17.4142C8.21071 17.0391 8 16.5304 8 16V16Z"/>
-                                                            </svg>                                                                
-                                                        </span>
-                                                    </a>
-                                                    <ul class="dropdown-menu">
-                                                        <li class="dropdown-item">
-                                                            <a href="supplier_details.html">View Details</a>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <a href="new_supplier.html" data-toggle="modal">Edit Details</a>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Supplier</button>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="media_item">
-                                                    <div class="userAvi ">
-                                                        <img src="img/banners/dummyUser_1.jpg" alt="">
-                                                        <span class="default_avi">EA</span>
-                                                    </div>
-                                                    <div class="user_info">
-                                                        <h4 class="title font-bold color__black">Edward Adebayo</h4>
-                                                        <div class="metaList">
-                                                            <div class="metaItem">
-                                                                <span>197UC2</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <time>Elvis John Limited</time>
-                                                </div>
-                                            </td>
-                                            <td class="">
-                                                <div class="">
-                                                    <span class="labelTag labelTagDefault">Inactive</span>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <a href="tel:09090527304">09090527304</a>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="hidden-sm">
-                                                    <a href="mailto:emekaemmanuel045@gmail.com">emekaemmanuel045@gmail.com</a>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="dropdown tabelControl">
-                                                    <a href="#" data-toggle="dropdown" class="tableControlBtn">
-                                                        <span class="btnLabel hidden-sm">Options</span>
-                                                        <span class="btnIcon">                                                    
-                                                            <svg class="cust_icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M8 4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2C10.5304 2 11.0391 2.21071 11.4142 2.58579C11.7893 2.96086 12 3.46957 12 4C12 4.53043 11.7893 5.03914 11.4142 5.41421C11.0391 5.78929 10.5304 6 10 6C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4ZM8 10C8 9.46957 8.21071 8.96086 8.58579 8.58579C8.96086 8.21071 9.46957 8 10 8C10.5304 8 11.0391 8.21071 11.4142 8.58579C11.7893 8.96086 12 9.46957 12 10C12 10.5304 11.7893 11.0391 11.4142 11.4142C11.0391 11.7893 10.5304 12 10 12C9.46957 12 8.96086 11.7893 8.58579 11.4142C8.21071 11.0391 8 10.5304 8 10ZM8 16C8 15.4696 8.21071 14.9609 8.58579 14.5858C8.96086 14.2107 9.46957 14 10 14C10.5304 14 11.0391 14.2107 11.4142 14.5858C11.7893 14.9609 12 15.4696 12 16C12 16.5304 11.7893 17.0391 11.4142 17.4142C11.0391 17.7893 10.5304 18 10 18C9.46957 18 8.96086 17.7893 8.58579 17.4142C8.21071 17.0391 8 16.5304 8 16V16Z"/>
-                                                            </svg>                                                                
-                                                        </span>
-                                                    </a>
-                                                    <ul class="dropdown-menu">
-                                                        <li class="dropdown-item">
-                                                            <a href="supplier_details.html">View Details</a>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <a href="new_supplier.html" data-toggle="modal">Edit Details</a>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Supplier</button>
+                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Colleague</button>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -1189,15 +777,6 @@
                                     </div>
                                     <div class="pager_item">
                                         <a href="#">2</a>
-                                    </div>
-                                    <div class="pager_item">
-                                        <a href="#">3</a>
-                                    </div>
-                                    <div class="pager_item">
-                                        <a href="#">4</a>
-                                    </div>
-                                    <div class="pager_item">
-                                        <a href="#">5</a>
                                     </div>
                                     <div class="pager_item next">
                                         <a href="#">Next</a>

@@ -58,6 +58,14 @@ fieldset {
 .form-group {
     position: relative;
     margin-bottom: 30px;
+
+    .form_group_item & {
+        margin-bottom: 15px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .formWidth1_3 {

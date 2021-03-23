@@ -142,13 +142,29 @@ button {
 }
 
 .btn-primary-outline {
-    background-color: white;
-    color: $brand_primary;
+    background-color: $brand_inverse;
+    color: $brand_black;
+    fill: $brand_black;
     border: 1px solid $brand_primary;
 
     &:hover, &:focus {
-        color: $color_white;
+        color: $brand_inverse;
+        fill: $brand_inverse;
         background-color: $brand_primary;
+        border-color: transparent;
+    }
+}
+
+.btn-default-outline {
+    background-color: white;
+    color: $color_text_gray;
+    fill: $color_text_gray;
+    border: 1px solid $border_grey_light;
+
+    &:hover, &:focus {
+        color: $color_white;
+        fill: $color_white;
+        background-color: $brand_black;
         border-color: transparent;
     }
 }
@@ -203,6 +219,10 @@ button {
 .btn-sm.btn,
 .btn-group-sm>.btn {
     font-size: 12px;
+    
+    @include MQ-MAX(S) {
+        padding: 1em;
+    }
 }
 
 .btn-lg.btn,
@@ -217,7 +237,10 @@ button {
     display: inline-flex;
     align-items: center;
     color: inherit;
-    opacity: .5;
+
+    > * + * {
+        margin-left: 10px;
+    }
         
     &:hover,
     &:focus {
@@ -290,6 +313,7 @@ button {
 .pageSubNav {
     padding: 5px;
     justify-content: center;
+    flex-wrap: nowrap;
     border: 1px solid rgba($color_white, .5);
     border-radius: 35px;
 }
@@ -308,7 +332,7 @@ button {
     font-weight: 900;
     font-style: italic;
     color: $border_grey_dark;
-    font-size: 13px;
+    font-size: 12px;
     border-radius: 30px;
     background-color: transparent;
 

@@ -66,7 +66,7 @@ jQuery(document).ready(function($){
             this.previousTop = currentTop;
         });
     }
-        //open/close primary navigation
+    //open/close primary navigation
     $('.primary-nav-trigger').on('click', function(event){
         event.stopPropagation();
         $('.menu-icon').toggleClass('is-clicked');
@@ -77,6 +77,7 @@ jQuery(document).ready(function($){
 
     if ($(window).width() < MQL) {
         $('.ft_block_segment.panel-collapse').addClass('collapse');
+        $('.pageFilterBar.panel-collapse').addClass('collapse');
     }
         
         // Show and hide password, user login
@@ -96,13 +97,5 @@ jQuery(document).ready(function($){
         show_more_toggle.on('click', function() {
         $(this).parents(".collapsibleBlock").toggleClass('blockCollapsed');
     });
-
-     /*Custom Selector*/
-     var selector = $(".pillSelectControl"), 
-        selectorLabel = $(".pillWrapper");
-     
-        selector.on('change', function() {
-          $(this).parents(".selectorItem").toggleClass("selected");
-      });
 
 });

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Dashboard | Front Edge</title>
+    <title>Buyers :: Users | Front Edge</title>
     <link rel="shortcut icon" href="img/favicon.png" type="image/png">
     <link rel="icon" href="img/favicon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -20,39 +20,75 @@
 
 <body class="bg__off_white">
 
-    <div class="modal fade" id="edit_details">
+    <div class="modal fade" id="update_status">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <header class="modal-header">
-                    <h4 class="modal-title">Edit Invoice</h4>
+                    <h4 class="modal-title">Update Status</h4>
                     <div class="dialogDismiss">
                         <button type="button" class="close_dialog" data-dismiss="modal"></button>
                     </div>
                 </header>
                 <div class="modal-body">
-                    <p class="margin_bottom_md">You can only chage the following information. If you can’t find the information you wish to edit, please delete the invoice, and upload the correct one. </p>
+
+                    <div class="media_item margin_bottom_md">
+                        <div class="userAvi avi_md aviCubed">
+                            <img src="img/banners/dummyUser_2.jpg" alt="">
+                            <span class="default_avi">BN</span>
+                        </div>
+                        <div class="user_info">
+                            <span>Buyer</span>
+                            <h4 class="title title_sm font-bold color__black">Buyer Name</h4>
+                        </div>
+                    </div>
+
                     <form class="content_wrapper">
                         
                         <div class="form-group">
-                            <label for="" class="control-label font-black text-style-italics">Buyer</label>
-                            <select class="form-control">
-                                <option>Select a Buyer</option>
-                                <option>Mr. Biggs</option>
-                                <option>Chevron PLC</option>
-                                <option>Front Edge Limited</option>
-                            </select>
+                            <label for="status_active" class="controlSummary">
+                                <input type="radio" checked name="user_status" id="status_active">
+                                <div class="controlSummaryDetails">
+                                    <h5 class="title font-black text-style-italics">Active</h5>
+                                    <p>Can sign in, manage suppliers and Invoices</p>
+                                </div>
+                            </label>
                         </div>
 
                         <div class="form-group">
-                            <label for="" class="control-label font-black text-style-italics">Supplier Code</label>
-                            <input class="form-control" type="text" placeholder="Enter supplier code"/>
+                            <label for="status_inactive" class="controlSummary">
+                                <input type="radio" name="user_status" id="status_inactive">
+                                <div class="controlSummaryDetails">
+                                    <h5 class="title font-black text-style-italics">Inactive</h5>
+                                    <p>Does not have any supplier or Invoice</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="status_suspend" class="controlSummary">
+                                <input type="radio" name="user_status" id="status_suspend">
+                                <div class="controlSummaryDetails">
+                                    <h5 class="title font-black text-style-italics">Suspended</h5>
+                                    <p>Barred from using the platform</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="status_closed" class="controlSummary">
+                                <input type="radio" name="user_status" id="status_closed">
+                                <div class="controlSummaryDetails">
+                                    <h5 class="title font-black text-style-italics">Closed</h5>
+                                    <p>User account has been removed from the public</p>
+                                </div>
+                            </label>
                         </div>
 
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
-                    <button type="button" class="btn btn-secondary">Save Changes</button>
+                    <button type="button" class="btn btn-secondary">Save</button>
                 </div>
             </div>
         </div>
@@ -72,10 +108,10 @@
                             <img src="./img/icons/confirm_removal.svg" alt="">
                         </div>
                         <h2 class="title title_sm font-black text-style-italics margin_bottom_sm color__danger">Are you sure?</h2>
-                        <p>Please confirm the removal of invoice number: <strong>2211243798</strong> and the attached information. This action can not be undone </p>
+                        <p>Please confirm the removal of buyer: <strong>Buyer Name</strong>. This action can not be undone </p>
                         <div class="section_cto">
-                            <button type="submit" class="btn btn-danger btn-sm btn-block">Yes! I want to remove this buyer</button>
-                            <button type="button" data-dismiss="modal" class="btn btn-sm btn-default btn-block font-regular">No, don’t want to remove this buyer</button>
+                            <button type="submit" class="btn btn-danger btn-sm btn-block">Yes! remove Buyer</button>
+                            <button type="button" data-dismiss="modal" class="btn btn-sm btn-default btn-block">No, I don’t</button>
                         </div>
                     </div>
                 </div>
@@ -85,7 +121,7 @@
             </div>
         </div>
     </div>
-    
+
     <header role="banner" class="mainAppHeader">
         <div class="container">
             <div class="navbarWrapper">
@@ -98,7 +134,7 @@
                 </div>
                 <div class="navbarGroupItem navBarItemCenter">
                     <nav class="navMenu menuPrimary">
-                        <div class="menuListItem active">
+                        <div class="menuListItem ">
                             <a href="dashboard.html" class="menuLinkItem dsp_tab_row">
                                 <span class="icon_holder">
                                     <svg class="cust_icon" viewBox="0 0 17 16" xmlns="http://www.w3.org/2000/svg">
@@ -146,7 +182,7 @@
                                 <span class="navLabel">Repayment</span>
                             </a>
                         </div>
-                        <div class="menuListItem subMenuContainer">
+                        <div class="menuListItem active subMenuContainer">
                             <a href="#" class="menuLinkItem dsp_tab_row">
                                 <span class="icon_holder">
                                     <svg class="cust_icon" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -265,12 +301,19 @@
         <header class="appMainHeader bg__black">
             <div class="container">
                 <div class="appPageHeader">
-                    <div class="appPageTitleHolder">
-                        <h2 class="title title_lg font-regular color__white">Dashboard</h2>      
-                    </div>
-                    <div class="appPageCTAMain">
-                        <!-- Main Page acction button here -->
-                    </div>
+                    <nav class="contentNavMain centered">
+                        <ul class="nav pageSubNav">
+                            <li class="pageSubNavItem active">
+                                <a href="user_buyers.html" class="pageSubNavLink">Buyers</a>
+                            </li>
+                            <li class="pageSubNavItem ">
+                                <a href="user_suppliers.html" class="pageSubNavLink">Suppliers</a>
+                            </li>
+                            <li class="pageSubNavItem">
+                                <a href="user_colleagues.html" class="pageSubNavLink">Colleagues</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>            
         </header>
@@ -280,157 +323,97 @@
 
                 <section class="contentPanelBlock">
                     <div class="contentPanelWrapper">
-                        <header class="contentPanelHeader">
-                            <div class="panelContentFilterItem dropdown">
-                                <a href="#" class="contentFilterBtn dropdown-toggle" data-toggle="dropdown">
-                                    <span>This Week</span>
-                                    <span class="cust_icon icon_xs icon_chevron_down"></span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Today</a></li>
-                                    <li><a href="#">This Week</a></li>
-                                    <li><a href="#">This Month</a></li>
-                                </ul>
-                            </div>
-                        </header>
                         
-                        <div class="paneInner">
-                            <div class="row">
-                                <article class="statItem col-12 col-lg ">
-                                    <div class="insight_item media_item">
-                                        <div class="media_figure hidden-sm">
-                                            <div class="dataSnipIcon">
-                                                <img src="./img/icons/net_invoice.svg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="media_info text-center-sm">
-                                            <div class="insight_value">
-                                                <span class="title title_md_preserve font-black color__primary">₦3,475,034.17</span>
-                                                <span class="statSupportInfo" data-toggle="tooltip" title="Volume of Invoices financed by Front Edge over the set period">
-                                                    <i class="cust_icon icon_info"></i>
-                                                </span>
-                                            </div>
-                                            <div class="insight_title ">
-                                                <span class="color__grey_dark">Total Value of Invoices</span>
-                                            </div>
-                                            <div class="snipTrend trendUp">
-                                                <span>10%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-
-                                <article class="statItem col-4 col-lg ">
-                                    <div class="insight_item media_item">
-                                        <div class="media_figure hidden-sm">
-                                            <div class="dataSnipIcon">
-                                                <img src="./img/icons/invoice_count.svg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="media_info">
-                                            <div class="insight_value">
-                                                <span class="title title_md font-black color__black">52</span>
-                                            </div>
-                                            <div class="insight_title ">
-                                                <span class="color__grey_dark">Invoices Financed</span>
-                                            </div>
-                                            <div class="snipTrend trendDown">
-                                                <span>10%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-
-                                <article class="statItem col-4 col-lg ">
-                                    <div class="insight_item media_item">
-                                        <div class="media_figure hidden-sm">
-                                            <div class="dataSnipIcon">
-                                                <img src="./img/icons/supplier_count.svg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="media_info">
-                                            <div class="insight_value">
-                                                <span class="title title_md font-black color__black">63</span>
-                                            </div>
-                                            <div class="insight_title ">
-                                                <span class="color__grey_dark">Active Suppliers</span>
-                                            </div>
-                                            <div class="snipTrend">
-                                                <span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-
-                                <article class="statItem col-4 col-lg ">
-                                    <div class="insight_item media_item">
-                                        <div class="media_figure hidden-sm">
-                                            <div class="dataSnipIcon">
-                                                <img src="./img/icons/day_tracker.svg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="media_info">
-                                            <div class="insight_value">
-                                                <span class="title title_md font-black color__black">29</span>
-                                            </div>
-                                            <div class="insight_title ">
-                                                <span class="color__grey_dark">Days Paid Early</span>
-                                            </div>
-                                            <div class="snipTrend">
-                                                <span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="contentPanelBlock panelflat_sm">
-                    <div class="contentPanelWrapper">
                         <header class="contentPanelHeader">
-                            <h4 class="title title_sm caps_upper font-bold color__black">Recent Invoices</h4>
+                            <h4 class="title title_sm caps_upper font-bold color__black">Buyers </h4>
                             <div class="paneCtaHolder">
-                                <a href="invoices.html" class="btn-link">
-                                    <span class="btnLabel">View All</span>
+                                <a href="#filterBlock" data-toggle="collapse" data-parent="#ListFilter" class="btn btn-sm btn-default-outline collapsed visible_sm">
                                     <span class="btnIcon">
-                                        <svg class="cust_icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M8 1.5C6.71442 1.5 5.45772 1.88122 4.3888 2.59545C3.31988 3.30968 2.48676 4.32484 1.99479 5.51256C1.50282 6.70028 1.37409 8.00721 1.6249 9.26809C1.8757 10.529 2.49477 11.6872 3.40381 12.5962C4.31285 13.5052 5.47104 14.1243 6.73192 14.3751C7.99279 14.6259 9.29973 14.4972 10.4874 14.0052C11.6752 13.5132 12.6903 12.6801 13.4046 11.6112C14.1188 10.5423 14.5 9.28558 14.5 8C14.498 6.2767 13.8126 4.62456 12.594 3.40601C11.3754 2.18745 9.7233 1.50199 8 1.5ZM10.0845 8.37158L7.58448 10.6216C7.53569 10.6655 7.47871 10.6995 7.41681 10.7214C7.35491 10.7433 7.28929 10.7529 7.2237 10.7494C7.15812 10.746 7.09385 10.7297 7.03458 10.7014C6.9753 10.6731 6.92218 10.6334 6.87824 10.5846C6.8343 10.5358 6.80041 10.4788 6.77851 10.4169C6.7566 10.355 6.74711 10.2894 6.75057 10.2238C6.75403 10.1582 6.77039 10.094 6.79869 10.0347C6.82699 9.97544 6.8667 9.92233 6.91553 9.87842L9.00244 8L6.91553 6.12158C6.81706 6.03285 6.75785 5.90865 6.75092 5.77628C6.744 5.64391 6.78992 5.51421 6.8786 5.41569C6.96728 5.31717 7.09146 5.2579 7.22382 5.25091C7.35619 5.24393 7.48591 5.28979 7.58448 5.37842L10.0845 7.62842C10.1366 7.67529 10.1782 7.73259 10.2067 7.79661C10.2353 7.86062 10.25 7.92992 10.25 8C10.25 8.07008 10.2353 8.13938 10.2067 8.20339C10.1782 8.26741 10.1366 8.32471 10.0845 8.37158Z"/>
+                                        <svg class="cust_icon icon_xs"  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.63028 2.25H13.3697C13.6119 2.25 13.8488 2.32034 14.0518 2.45248C14.2547 2.58461 14.4149 2.77285 14.5129 2.99431C14.6108 3.21577 14.6424 3.46092 14.6036 3.69996C14.5649 3.93901 14.4576 4.16165 14.2947 4.34084L10.25 8.78996V12.2324C10.25 12.4382 10.1992 12.6408 10.1021 12.8222C10.005 13.0037 9.8646 13.1583 9.69338 13.2725L7.69338 14.6058C7.50513 14.7313 7.28635 14.8034 7.06036 14.8143C6.83437 14.8252 6.60966 14.7746 6.41018 14.6678C6.2107 14.5611 6.04394 14.4022 5.92768 14.2081C5.81141 14.014 5.75 13.792 5.75 13.5657V8.78996L1.70535 4.34084L2.26031 3.83634L1.70535 4.34084C1.54246 4.16165 1.43512 3.93901 1.39638 3.69996C1.35764 3.46092 1.38917 3.21577 1.48714 2.99431C1.58511 2.77285 1.74529 2.58461 1.94823 2.45248C2.15117 2.32034 2.38812 2.25 2.63028 2.25ZM3.19542 3.75L6.92493 7.85246C7.1341 8.08255 7.25 8.38235 7.25 8.6933V13.0986L8.75 12.0986V8.6933C8.75 8.38235 8.86591 8.08255 9.07508 7.85246L12.8046 3.75H3.19542Z"/>
+                                        </svg>                                                                              
+                                    </span>
+                                    <span class="btnLabel hidden-sm">Filter</span>
+                                </a>
+                                <a href="new_buyer.html" class="btn btn-sm btn-secondary">
+                                    <span class="btnIcon">
+                                        <svg class="cust_icon icon_xs" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.5 7.5H8.5V2.5C8.5 2.36739 8.44732 2.24021 8.35355 2.14645C8.25979 2.05268 8.13261 2 8 2C7.86739 2 7.74021 2.05268 7.64645 2.14645C7.55268 2.24021 7.5 2.36739 7.5 2.5V7.5H2.5C2.36739 7.5 2.24021 7.55268 2.14645 7.64645C2.05268 7.74021 2 7.86739 2 8C2 8.13261 2.05268 8.25979 2.14645 8.35355C2.24021 8.44732 2.36739 8.5 2.5 8.5H7.5V13.5C7.5 13.6326 7.55268 13.7598 7.64645 13.8536C7.74021 13.9473 7.86739 14 8 14C8.13261 14 8.25979 13.9473 8.35355 13.8536C8.44732 13.7598 8.5 13.6326 8.5 13.5V8.5H13.5C13.6326 8.5 13.7598 8.44732 13.8536 8.35355C13.9473 8.25979 14 8.13261 14 8C14 7.86739 13.9473 7.74021 13.8536 7.64645C13.7598 7.55268 13.6326 7.5 13.5 7.5Z"/>
                                         </svg>                                            
                                     </span>
+                                    <span class="btnLabel hidden-sm">Buyer</span>
                                 </a>
                             </div>
                         </header>
+
+                        <div class="pageFilterBar panel-collapse row" id="filterBlock">
+                            <div class="searchBar panelContentFilterItem col-md-4">
+                                <input type="search" class="form-control" placeholder="Find buyer by name">
+                                <div class="searchControl">
+                                    <button class="searchBtn">
+                                        <svg class="cust_icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 4C7.13401 4 4 7.13401 4 11C4 14.866 7.13401 18 11 18C14.866 18 18 14.866 18 11C18 7.13401 14.866 4 11 4ZM2 11C2 6.02944 6.02944 2 11 2C15.9706 2 20 6.02944 20 11C20 15.9706 15.9706 20 11 20C6.02944 20 2 15.9706 2 11Z"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9429 15.9428C16.3334 15.5523 16.9666 15.5523 17.3571 15.9428L21.7071 20.2928C22.0976 20.6833 22.0976 21.3165 21.7071 21.707C21.3166 22.0975 20.6834 22.0975 20.2929 21.707L15.9429 17.357C15.5524 16.9665 15.5524 16.3333 15.9429 15.9428Z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="panelContentFilterItem col-sm-6 col-md-4">
+                                <div class="inputaffixed inputPrefixed">
+                                    <div class="inputfixture">
+                                        <span class="font-bold color__grey_light">Status:</span>
+                                    </div>
+                                    <select class="form-control inputControl">
+                                        <option>Active</option>
+                                        <option>Inactive</option>
+                                        <option>Closed</option>
+                                        <option>Suspended</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="panelContentFilterItem col-sm-6 col-md-4">
+                                <div class="inputaffixed inputPrefixed">
+                                    <div class="inputfixture">
+                                        <span class="font-bold color__grey_light">Sort By:</span>
+                                    </div>
+                                    <select class="form-control inputControl">
+                                        <option>Name (Aa - Zz)</option>
+                                        <option>Name (Zz - Aa)</option>
+                                        <option>Recency</option>
+                                        <option>Status</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="emptyStateBlock centered hidden">
                             <div class="emptyStateWrapper color__grey_dark text-center">
                                 <div class="emptyStateIlloHolder">
-                                    <img src="./img/icons/invoice_illo.svg" alt="No new Invoice">
+                                    <img src="./img/icons/empty_list.svg" alt="No Empty">
                                 </div>
-                                <h4 class="title title_sm font-regular">There are no new and unattended invoice for you at the moment. </h4>
+                                <h4 class="title title_sm font-black margin_bottom_sm color__black">No Buyer Found</h4>
+                                <p>You will find all your registered buyers here. Add your first buyer to begin</p>
+                                <div class="section_cto">
+                                    <a href="new_buyer.html" class="btn btn-primary">
+                                        Add a Buyer
+                                    </a>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="paneInner">
+                        <div class="paneInner ">
                             <div class="table table-responsive table-brand">
                                 <table class="table table-hover">
                                     <thead>
                                         <tr>
-                                            <th class="hidden-sm">
-                                                <div class="">Date</div>
-                                            </th>
                                             <th>
-                                                <div class="">Description</div>
+                                                <div>Description</div>
                                             </th>
                                             <th class="hidden-sm">
-                                                <div class="">Amount</div>
+                                                <div class="">Phone Number</div>
                                             </th>
                                             <th class="hidden-sm">
-                                                <div class="">Discount</div>
-                                            </th>
-                                            <th>
-                                                <div>Payout</div>
+                                                <div>Email Address</div>
                                             </th>
                                             <th>
                                                 <div>Options</div>
@@ -439,50 +422,25 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <time>21/02/2021</time>
-                                                </div>
-                                            </td>
                                             <td>
                                                 <div class="media_item">
                                                     <div class="userAvi ">
-                                                        <img src="img/banners/dummyUser_2.jpg" alt="">
-                                                        <span class="default_avi">SN</span>
+                                                        <span class="default_avi">EO</span>
                                                     </div>
                                                     <div class="user_info">
-                                                        <h4 class="title font-bold color__black">Supplier Name</h4>
-                                                        <div class="metaList">
-                                                            <div class="metaItem">
-                                                                <span>Invoice Number</span>
-                                                            </div>
-                                                            <span class="inlineSeparator">•</span>
-                                                            <div class="metaItem">
-                                                                <span class="labelTag labelTagSecondary">Accepted</span>
-                                                            </div>
-                                                        </div>
+                                                        <h4 class="title font-bold color__black">Emmanuel's Organization</h4>
+                                                        <span class="labelTag labelTagDefault">Inactive</span>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
                                                 <div class="">
-                                                    <span>
-                                                        ₦50,000.00
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <span>
-                                                        ₦1,576.25
-                                                    </span>
+                                                    <a href="tel:09090527304">09090527304</a>
                                                 </div>
                                             </td>
                                             <td>
-                                                <div class="">
-                                                    <span>
-                                                        ₦48,423.75
-                                                    </span>
+                                                <div class="hidden-sm">
+                                                    <a href="mailto:emekaemmanuel045@gmail.com">emekaemmanuel045@gmail.com</a>
                                                 </div>
                                             </td>
                                             <td>
@@ -497,69 +455,41 @@
                                                     </a>
                                                     <ul class="dropdown-menu">
                                                         <li class="dropdown-item">
-                                                            <a href="#about_invoice">View Details</a>
+                                                            <a href="buyer_details.html">View Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="#edit_details" data-toggle="modal">Edit Details</a>
-                                                        </li>
-                                                        <li class="dropdown-divider"></li>
-                                                        <li class="dropdown-item">
-                                                            <button type="button">Download CSV</button>
+                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <button type="button">Print</button>
+                                                            <a href="new_buyer.html">Edit Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Delete Record</button>
+                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Buyer</button>
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <time>21/02/2021</time>
-                                                </div>
-                                            </td>
                                             <td>
                                                 <div class="media_item">
                                                     <div class="userAvi ">
-                                                        <span class="default_avi">UL</span>
+                                                        <span class="default_avi">SC</span>
                                                     </div>
                                                     <div class="user_info">
-                                                        <h4 class="title font-bold color__black">Unilever PLC</h4>
-                                                        <div class="metaList">
-                                                            <div class="metaItem">
-                                                                <span>22141155943</span>
-                                                            </div>
-                                                            <span class="inlineSeparator">•</span>
-                                                            <div class="metaItem">
-                                                                <span class="labelTag labelTagDanger">Overdue</span>
-                                                            </div>
-                                                        </div>
+                                                        <h4 class="title font-bold color__black">Smart Contr Sma Ltd Buyer</h4>
+                                                        <span class="labelTag labelTagDanger">Closed</span>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
                                                 <div class="">
-                                                    <span>
-                                                        ₦50,000.00
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <span>
-                                                        ₦1,576.25
-                                                    </span>
+                                                    <a href="tel:09090527304">09090527304</a>
                                                 </div>
                                             </td>
                                             <td>
-                                                <div class="">
-                                                    <span>
-                                                        ₦48,423.75
-                                                    </span>
+                                                <div class="hidden-sm">
+                                                    <a href="mailto:emekaemmanuel045@gmail.com">emekaemmanuel045@gmail.com</a>
                                                 </div>
                                             </td>
                                             <td>
@@ -574,69 +504,41 @@
                                                     </a>
                                                     <ul class="dropdown-menu">
                                                         <li class="dropdown-item">
-                                                            <a href="#about_invoice">View Details</a>
+                                                            <a href="buyer_details.html">View Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="#">Edit Details</a>
-                                                        </li>
-                                                        <li class="dropdown-divider"></li>
-                                                        <li class="dropdown-item">
-                                                            <button type="button">Download CSV</button>
+                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <button type="button">Print</button>
+                                                            <a href="new_buyer.html">Edit Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Delete Record</button>
+                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Buyer</button>
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <time>21/02/2021</time>
-                                                </div>
-                                            </td>
                                             <td>
                                                 <div class="media_item">
                                                     <div class="userAvi ">
-                                                        <span class="default_avi">SW</span>
+                                                        <span class="default_avi">VV</span>
                                                     </div>
                                                     <div class="user_info">
-                                                        <h4 class="title font-bold color__black">Stom World</h4>
-                                                        <div class="metaList">
-                                                            <div class="metaItem">
-                                                                <span>22141155943</span>
-                                                            </div>
-                                                            <span class="inlineSeparator">•</span>
-                                                            <div class="metaItem">
-                                                                <span class="labelTag labelTagPrimary">Settled</span>
-                                                            </div>
-                                                        </div>
+                                                        <h4 class="title font-bold color__black">Vvik</h4>
+                                                        <span class="labelTag labelTagSuccess">Active</span>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
                                                 <div class="">
-                                                    <span>
-                                                        ₦50,000.00
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <span>
-                                                        ₦1,576.25
-                                                    </span>
+                                                    <a href="tel:09090527304">09090527304</a>
                                                 </div>
                                             </td>
                                             <td>
-                                                <div class="">
-                                                    <span>
-                                                        ₦48,423.75
-                                                    </span>
+                                                <div class="hidden-sm">
+                                                    <a href="mailto:emekaemmanuel045@gmail.com">emekaemmanuel045@gmail.com</a>
                                                 </div>
                                             </td>
                                             <td>
@@ -651,69 +553,41 @@
                                                     </a>
                                                     <ul class="dropdown-menu">
                                                         <li class="dropdown-item">
-                                                            <a href="#about_invoice">View Details</a>
+                                                            <a href="buyer_details.html">View Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="#">Edit Details</a>
-                                                        </li>
-                                                        <li class="dropdown-divider"></li>
-                                                        <li class="dropdown-item">
-                                                            <button type="button">Download CSV</button>
+                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <button type="button">Print</button>
+                                                            <a href="new_buyer.html">Edit Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Delete Record</button>
+                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Buyer</button>
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <time>21/02/2021</time>
-                                                </div>
-                                            </td>
                                             <td>
                                                 <div class="media_item">
                                                     <div class="userAvi ">
-                                                        <span class="default_avi">MB</span>
+                                                        <span class="default_avi">BO</span>
                                                     </div>
                                                     <div class="user_info">
-                                                        <h4 class="title font-bold color__black">Mr. Biggs</h4>
-                                                        <div class="metaList">
-                                                            <div class="metaItem">
-                                                                <span>23331325j32</span>
-                                                            </div>
-                                                            <span class="inlineSeparator">•</span>
-                                                            <div class="metaItem">
-                                                                <span class="labelTag labelTagSuccess">Paid</span>
-                                                            </div>
-                                                        </div>
+                                                        <h4 class="title font-bold color__black">Buyer Organization</h4>
+                                                        <span class="labelTag labelTagSecondary">Suspended</span>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
                                                 <div class="">
-                                                    <span>
-                                                        ₦50,000.00
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <span>
-                                                        ₦1,576.25
-                                                    </span>
+                                                    <a href="tel:09090527304">09090527304</a>
                                                 </div>
                                             </td>
                                             <td>
-                                                <div class="">
-                                                    <span>
-                                                        ₦48,423.75
-                                                    </span>
+                                                <div class="hidden-sm">
+                                                    <a href="mailto:emekaemmanuel045@gmail.com">emekaemmanuel045@gmail.com</a>
                                                 </div>
                                             </td>
                                             <td>
@@ -728,70 +602,41 @@
                                                     </a>
                                                     <ul class="dropdown-menu">
                                                         <li class="dropdown-item">
-                                                            <a href="#about_invoice">View Details</a>
+                                                            <a href="buyer_details.html">View Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="#">Edit Details</a>
-                                                        </li>
-                                                        <li class="dropdown-divider"></li>
-                                                        <li class="dropdown-item">
-                                                            <button type="button">Download CSV</button>
+                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <button type="button">Print</button>
+                                                            <a href="new_buyer.html">Edit Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Delete Record</button>
+                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Buyer</button>
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <time>21/02/2021</time>
-                                                </div>
-                                            </td>
                                             <td>
                                                 <div class="media_item">
                                                     <div class="userAvi ">
-                                                        <img src="img/banners/dummyUser_2.jpg" alt="">
-                                                        <span class="default_avi">SN</span>
+                                                        <span class="default_avi">EO</span>
                                                     </div>
                                                     <div class="user_info">
-                                                        <h4 class="title font-bold color__black">Supplier Name</h4>
-                                                        <div class="metaList">
-                                                            <div class="metaItem">
-                                                                <span>Invoice Number</span>
-                                                            </div>
-                                                            <span class="inlineSeparator">•</span>
-                                                            <div class="metaItem">
-                                                                <span class="labelTag labelTagSecondary">Accepted</span>
-                                                            </div>
-                                                        </div>
+                                                        <h4 class="title font-bold color__black">Emmanuel's Organization</h4>
+                                                        <span class="labelTag labelTagDefault">Inactive</span>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
                                                 <div class="">
-                                                    <span>
-                                                        ₦50,000.00
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <span>
-                                                        ₦1,576.25
-                                                    </span>
+                                                    <a href="tel:09090527304">09090527304</a>
                                                 </div>
                                             </td>
                                             <td>
-                                                <div class="">
-                                                    <span>
-                                                        ₦48,423.75
-                                                    </span>
+                                                <div class="hidden-sm">
+                                                    <a href="mailto:emekaemmanuel045@gmail.com">emekaemmanuel045@gmail.com</a>
                                                 </div>
                                             </td>
                                             <td>
@@ -806,69 +651,41 @@
                                                     </a>
                                                     <ul class="dropdown-menu">
                                                         <li class="dropdown-item">
-                                                            <a href="#about_invoice">View Details</a>
+                                                            <a href="buyer_details.html">View Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="#">Edit Details</a>
-                                                        </li>
-                                                        <li class="dropdown-divider"></li>
-                                                        <li class="dropdown-item">
-                                                            <button type="button">Download CSV</button>
+                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <button type="button">Print</button>
+                                                            <a href="new_buyer.html">Edit Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Delete Record</button>
+                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Buyer</button>
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <time>21/02/2021</time>
-                                                </div>
-                                            </td>
                                             <td>
                                                 <div class="media_item">
                                                     <div class="userAvi ">
-                                                        <span class="default_avi">UL</span>
+                                                        <span class="default_avi">SC</span>
                                                     </div>
                                                     <div class="user_info">
-                                                        <h4 class="title font-bold color__black">Unilever PLC</h4>
-                                                        <div class="metaList">
-                                                            <div class="metaItem">
-                                                                <span>22141155943</span>
-                                                            </div>
-                                                            <span class="inlineSeparator">•</span>
-                                                            <div class="metaItem">
-                                                                <span class="labelTag labelTagDanger">Overdue</span>
-                                                            </div>
-                                                        </div>
+                                                        <h4 class="title font-bold color__black">Smart Contr Sma Ltd Buyer</h4>
+                                                        <span class="labelTag labelTagDanger">Closed</span>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
                                                 <div class="">
-                                                    <span>
-                                                        ₦50,000.00
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <span>
-                                                        ₦1,576.25
-                                                    </span>
+                                                    <a href="tel:09090527304">09090527304</a>
                                                 </div>
                                             </td>
                                             <td>
-                                                <div class="">
-                                                    <span>
-                                                        ₦48,423.75
-                                                    </span>
+                                                <div class="hidden-sm">
+                                                    <a href="mailto:emekaemmanuel045@gmail.com">emekaemmanuel045@gmail.com</a>
                                                 </div>
                                             </td>
                                             <td>
@@ -883,69 +700,41 @@
                                                     </a>
                                                     <ul class="dropdown-menu">
                                                         <li class="dropdown-item">
-                                                            <a href="#about_invoice">View Details</a>
+                                                            <a href="buyer_details.html">View Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="#">Edit Details</a>
-                                                        </li>
-                                                        <li class="dropdown-divider"></li>
-                                                        <li class="dropdown-item">
-                                                            <button type="button">Download CSV</button>
+                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <button type="button">Print</button>
+                                                            <a href="new_buyer.html">Edit Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Delete Record</button>
+                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Buyer</button>
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <time>21/02/2021</time>
-                                                </div>
-                                            </td>
                                             <td>
                                                 <div class="media_item">
                                                     <div class="userAvi ">
-                                                        <span class="default_avi">SW</span>
+                                                        <span class="default_avi">VV</span>
                                                     </div>
                                                     <div class="user_info">
-                                                        <h4 class="title font-bold color__black">Stom World</h4>
-                                                        <div class="metaList">
-                                                            <div class="metaItem">
-                                                                <span>22141155943</span>
-                                                            </div>
-                                                            <span class="inlineSeparator">•</span>
-                                                            <div class="metaItem">
-                                                                <span class="labelTag labelTagPrimary">Settled</span>
-                                                            </div>
-                                                        </div>
+                                                        <h4 class="title font-bold color__black">Vvik</h4>
+                                                        <span class="labelTag labelTagSuccess">Active</span>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
                                                 <div class="">
-                                                    <span>
-                                                        ₦50,000.00
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <span>
-                                                        ₦1,576.25
-                                                    </span>
+                                                    <a href="tel:09090527304">09090527304</a>
                                                 </div>
                                             </td>
                                             <td>
-                                                <div class="">
-                                                    <span>
-                                                        ₦48,423.75
-                                                    </span>
+                                                <div class="hidden-sm">
+                                                    <a href="mailto:emekaemmanuel045@gmail.com">emekaemmanuel045@gmail.com</a>
                                                 </div>
                                             </td>
                                             <td>
@@ -960,69 +749,41 @@
                                                     </a>
                                                     <ul class="dropdown-menu">
                                                         <li class="dropdown-item">
-                                                            <a href="#about_invoice">View Details</a>
+                                                            <a href="buyer_details.html">View Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="#">Edit Details</a>
-                                                        </li>
-                                                        <li class="dropdown-divider"></li>
-                                                        <li class="dropdown-item">
-                                                            <button type="button">Download CSV</button>
+                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <button type="button">Print</button>
+                                                            <a href="new_buyer.html">Edit Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Delete Record</button>
+                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Buyer</button>
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <time>21/02/2021</time>
-                                                </div>
-                                            </td>
                                             <td>
                                                 <div class="media_item">
                                                     <div class="userAvi ">
-                                                        <span class="default_avi">MB</span>
+                                                        <span class="default_avi">BO</span>
                                                     </div>
                                                     <div class="user_info">
-                                                        <h4 class="title font-bold color__black">Mr. Biggs</h4>
-                                                        <div class="metaList">
-                                                            <div class="metaItem">
-                                                                <span>23331325j32</span>
-                                                            </div>
-                                                            <span class="inlineSeparator">•</span>
-                                                            <div class="metaItem">
-                                                                <span class="labelTag labelTagSuccess">Paid</span>
-                                                            </div>
-                                                        </div>
+                                                        <h4 class="title font-bold color__black">Buyer Organization</h4>
+                                                        <span class="labelTag labelTagSecondary">Suspended</span>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
                                                 <div class="">
-                                                    <span>
-                                                        ₦50,000.00
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <span>
-                                                        ₦1,576.25
-                                                    </span>
+                                                    <a href="tel:09090527304">09090527304</a>
                                                 </div>
                                             </td>
                                             <td>
-                                                <div class="">
-                                                    <span>
-                                                        ₦48,423.75
-                                                    </span>
+                                                <div class="hidden-sm">
+                                                    <a href="mailto:emekaemmanuel045@gmail.com">emekaemmanuel045@gmail.com</a>
                                                 </div>
                                             </td>
                                             <td>
@@ -1037,148 +798,41 @@
                                                     </a>
                                                     <ul class="dropdown-menu">
                                                         <li class="dropdown-item">
-                                                            <a href="#about_invoice">View Details</a>
+                                                            <a href="buyer_details.html">View Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="#">Edit Details</a>
-                                                        </li>
-                                                        <li class="dropdown-divider"></li>
-                                                        <li class="dropdown-item">
-                                                            <button type="button">Download CSV</button>
+                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <button type="button">Print</button>
+                                                            <a href="new_buyer.html">Edit Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Delete Record</button>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        
-                                        <tr>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <time>21/02/2021</time>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="media_item">
-                                                    <div class="userAvi ">
-                                                        <img src="img/banners/dummyUser_2.jpg" alt="">
-                                                        <span class="default_avi">SN</span>
-                                                    </div>
-                                                    <div class="user_info">
-                                                        <h4 class="title font-bold color__black">Supplier Name</h4>
-                                                        <div class="metaList">
-                                                            <div class="metaItem">
-                                                                <span>Invoice Number</span>
-                                                            </div>
-                                                            <span class="inlineSeparator">•</span>
-                                                            <div class="metaItem">
-                                                                <span class="labelTag labelTagSecondary">Accepted</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <span>
-                                                        ₦50,000.00
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <span>
-                                                        ₦1,576.25
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="">
-                                                    <span>
-                                                        ₦48,423.75
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="dropdown tabelControl">
-                                                    <a href="#" data-toggle="dropdown" class="tableControlBtn">
-                                                        <span class="btnLabel hidden-sm">Options</span>
-                                                        <span class="btnIcon">                                                    
-                                                            <svg class="cust_icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M8 4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2C10.5304 2 11.0391 2.21071 11.4142 2.58579C11.7893 2.96086 12 3.46957 12 4C12 4.53043 11.7893 5.03914 11.4142 5.41421C11.0391 5.78929 10.5304 6 10 6C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4ZM8 10C8 9.46957 8.21071 8.96086 8.58579 8.58579C8.96086 8.21071 9.46957 8 10 8C10.5304 8 11.0391 8.21071 11.4142 8.58579C11.7893 8.96086 12 9.46957 12 10C12 10.5304 11.7893 11.0391 11.4142 11.4142C11.0391 11.7893 10.5304 12 10 12C9.46957 12 8.96086 11.7893 8.58579 11.4142C8.21071 11.0391 8 10.5304 8 10ZM8 16C8 15.4696 8.21071 14.9609 8.58579 14.5858C8.96086 14.2107 9.46957 14 10 14C10.5304 14 11.0391 14.2107 11.4142 14.5858C11.7893 14.9609 12 15.4696 12 16C12 16.5304 11.7893 17.0391 11.4142 17.4142C11.0391 17.7893 10.5304 18 10 18C9.46957 18 8.96086 17.7893 8.58579 17.4142C8.21071 17.0391 8 16.5304 8 16V16Z"/>
-                                                            </svg>                                                                
-                                                        </span>
-                                                    </a>
-                                                    <ul class="dropdown-menu">
-                                                        <li class="dropdown-item">
-                                                            <a href="#about_invoice">View Details</a>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <a href="#">Edit Details</a>
-                                                        </li>
-                                                        <li class="dropdown-divider"></li>
-                                                        <li class="dropdown-item">
-                                                            <button type="button">Download CSV</button>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button type="button">Print</button>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Delete Record</button>
+                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Buyer</button>
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <time>21/02/2021</time>
-                                                </div>
-                                            </td>
                                             <td>
                                                 <div class="media_item">
                                                     <div class="userAvi ">
-                                                        <span class="default_avi">UL</span>
+                                                        <span class="default_avi">EO</span>
                                                     </div>
                                                     <div class="user_info">
-                                                        <h4 class="title font-bold color__black">Unilever PLC</h4>
-                                                        <div class="metaList">
-                                                            <div class="metaItem">
-                                                                <span>22141155943</span>
-                                                            </div>
-                                                            <span class="inlineSeparator">•</span>
-                                                            <div class="metaItem">
-                                                                <span class="labelTag labelTagDanger">Overdue</span>
-                                                            </div>
-                                                        </div>
+                                                        <h4 class="title font-bold color__black">Emmanuel's Organization</h4>
+                                                        <span class="labelTag labelTagDefault">Inactive</span>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
                                                 <div class="">
-                                                    <span>
-                                                        ₦50,000.00
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <span>
-                                                        ₦1,576.25
-                                                    </span>
+                                                    <a href="tel:09090527304">09090527304</a>
                                                 </div>
                                             </td>
                                             <td>
-                                                <div class="">
-                                                    <span>
-                                                        ₦48,423.75
-                                                    </span>
+                                                <div class="hidden-sm">
+                                                    <a href="mailto:emekaemmanuel045@gmail.com">emekaemmanuel045@gmail.com</a>
                                                 </div>
                                             </td>
                                             <td>
@@ -1193,69 +847,41 @@
                                                     </a>
                                                     <ul class="dropdown-menu">
                                                         <li class="dropdown-item">
-                                                            <a href="#about_invoice">View Details</a>
+                                                            <a href="buyer_details.html">View Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="#">Edit Details</a>
-                                                        </li>
-                                                        <li class="dropdown-divider"></li>
-                                                        <li class="dropdown-item">
-                                                            <button type="button">Download CSV</button>
+                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <button type="button">Print</button>
+                                                            <a href="new_buyer.html">Edit Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Delete Record</button>
+                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Buyer</button>
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <time>21/02/2021</time>
-                                                </div>
-                                            </td>
                                             <td>
                                                 <div class="media_item">
                                                     <div class="userAvi ">
-                                                        <span class="default_avi">SW</span>
+                                                        <span class="default_avi">SC</span>
                                                     </div>
                                                     <div class="user_info">
-                                                        <h4 class="title font-bold color__black">Stom World</h4>
-                                                        <div class="metaList">
-                                                            <div class="metaItem">
-                                                                <span>22141155943</span>
-                                                            </div>
-                                                            <span class="inlineSeparator">•</span>
-                                                            <div class="metaItem">
-                                                                <span class="labelTag labelTagPrimary">Settled</span>
-                                                            </div>
-                                                        </div>
+                                                        <h4 class="title font-bold color__black">Smart Contr Sma Ltd Buyer</h4>
+                                                        <span class="labelTag labelTagDanger">Closed</span>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
                                                 <div class="">
-                                                    <span>
-                                                        ₦50,000.00
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <span>
-                                                        ₦1,576.25
-                                                    </span>
+                                                    <a href="tel:09090527304">09090527304</a>
                                                 </div>
                                             </td>
                                             <td>
-                                                <div class="">
-                                                    <span>
-                                                        ₦48,423.75
-                                                    </span>
+                                                <div class="hidden-sm">
+                                                    <a href="mailto:emekaemmanuel045@gmail.com">emekaemmanuel045@gmail.com</a>
                                                 </div>
                                             </td>
                                             <td>
@@ -1270,69 +896,41 @@
                                                     </a>
                                                     <ul class="dropdown-menu">
                                                         <li class="dropdown-item">
-                                                            <a href="#about_invoice">View Details</a>
+                                                            <a href="buyer_details.html">View Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="#">Edit Details</a>
-                                                        </li>
-                                                        <li class="dropdown-divider"></li>
-                                                        <li class="dropdown-item">
-                                                            <button type="button">Download CSV</button>
+                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <button type="button">Print</button>
+                                                            <a href="new_buyer.html">Edit Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Delete Record</button>
+                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Buyer</button>
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <time>21/02/2021</time>
-                                                </div>
-                                            </td>
                                             <td>
                                                 <div class="media_item">
                                                     <div class="userAvi ">
-                                                        <span class="default_avi">MB</span>
+                                                        <span class="default_avi">VV</span>
                                                     </div>
                                                     <div class="user_info">
-                                                        <h4 class="title font-bold color__black">Mr. Biggs</h4>
-                                                        <div class="metaList">
-                                                            <div class="metaItem">
-                                                                <span>23331325j32</span>
-                                                            </div>
-                                                            <span class="inlineSeparator">•</span>
-                                                            <div class="metaItem">
-                                                                <span class="labelTag labelTagSuccess">Paid</span>
-                                                            </div>
-                                                        </div>
+                                                        <h4 class="title font-bold color__black">Vvik</h4>
+                                                        <span class="labelTag labelTagSuccess">Active</span>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
                                                 <div class="">
-                                                    <span>
-                                                        ₦50,000.00
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    <span>
-                                                        ₦1,576.25
-                                                    </span>
+                                                    <a href="tel:09090527304">09090527304</a>
                                                 </div>
                                             </td>
                                             <td>
-                                                <div class="">
-                                                    <span>
-                                                        ₦48,423.75
-                                                    </span>
+                                                <div class="hidden-sm">
+                                                    <a href="mailto:emekaemmanuel045@gmail.com">emekaemmanuel045@gmail.com</a>
                                                 </div>
                                             </td>
                                             <td>
@@ -1347,20 +945,65 @@
                                                     </a>
                                                     <ul class="dropdown-menu">
                                                         <li class="dropdown-item">
-                                                            <a href="#about_invoice">View Details</a>
+                                                            <a href="buyer_details.html">View Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="#">Edit Details</a>
-                                                        </li>
-                                                        <li class="dropdown-divider"></li>
-                                                        <li class="dropdown-item">
-                                                            <button type="button">Download CSV</button>
+                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <button type="button">Print</button>
+                                                            <a href="new_buyer.html">Edit Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Delete Record</button>
+                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Buyer</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="media_item">
+                                                    <div class="userAvi ">
+                                                        <span class="default_avi">BO</span>
+                                                    </div>
+                                                    <div class="user_info">
+                                                        <h4 class="title font-bold color__black">Buyer Organization</h4>
+                                                        <span class="labelTag labelTagSecondary">Suspended</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="hidden-sm">
+                                                <div class="">
+                                                    <a href="tel:09090527304">09090527304</a>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="hidden-sm">
+                                                    <a href="mailto:emekaemmanuel045@gmail.com">emekaemmanuel045@gmail.com</a>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="dropdown tabelControl">
+                                                    <a href="#" data-toggle="dropdown" class="tableControlBtn">
+                                                        <span class="btnLabel hidden-sm">Options</span>
+                                                        <span class="btnIcon">                                                    
+                                                            <svg class="cust_icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8 4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2C10.5304 2 11.0391 2.21071 11.4142 2.58579C11.7893 2.96086 12 3.46957 12 4C12 4.53043 11.7893 5.03914 11.4142 5.41421C11.0391 5.78929 10.5304 6 10 6C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4ZM8 10C8 9.46957 8.21071 8.96086 8.58579 8.58579C8.96086 8.21071 9.46957 8 10 8C10.5304 8 11.0391 8.21071 11.4142 8.58579C11.7893 8.96086 12 9.46957 12 10C12 10.5304 11.7893 11.0391 11.4142 11.4142C11.0391 11.7893 10.5304 12 10 12C9.46957 12 8.96086 11.7893 8.58579 11.4142C8.21071 11.0391 8 10.5304 8 10ZM8 16C8 15.4696 8.21071 14.9609 8.58579 14.5858C8.96086 14.2107 9.46957 14 10 14C10.5304 14 11.0391 14.2107 11.4142 14.5858C11.7893 14.9609 12 15.4696 12 16C12 16.5304 11.7893 17.0391 11.4142 17.4142C11.0391 17.7893 10.5304 18 10 18C9.46957 18 8.96086 17.7893 8.58579 17.4142C8.21071 17.0391 8 16.5304 8 16V16Z"/>
+                                                            </svg>                                                                
+                                                        </span>
+                                                    </a>
+                                                    <ul class="dropdown-menu">
+                                                        <li class="dropdown-item">
+                                                            <a href="buyer_details.html">View Details</a>
+                                                        </li>
+                                                        <li class="dropdown-item">
+                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
+                                                        </li>
+                                                        <li class="dropdown-item">
+                                                            <a href="new_buyer.html">Edit Details</a>
+                                                        </li>
+                                                        <li class="dropdown-item">
+                                                            <button data-target="#confirm_delete" data-toggle="modal">Remove Buyer</button>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -1370,7 +1013,32 @@
                                     </tbody>
                                 </table>
                             </div>
-
+                            <div class="section_cto pager">
+                                <nav class="pager_nav">
+                                    <!--Show on page 2 upward-->
+                                    <div class="pager_item hidden prev">
+                                        <a href="#">Previous</a>
+                                    </div>
+                                    <div class="pager_item active">
+                                        <a href="#">1</a>
+                                    </div>
+                                    <div class="pager_item">
+                                        <a href="#">2</a>
+                                    </div>
+                                    <div class="pager_item">
+                                        <a href="#">3</a>
+                                    </div>
+                                    <div class="pager_item">
+                                        <a href="#">4</a>
+                                    </div>
+                                    <div class="pager_item">
+                                        <a href="#">5</a>
+                                    </div>
+                                    <div class="pager_item next">
+                                        <a href="#">Next</a>
+                                    </div>
+                                </nav>
+                            </div>
                         </div>
 
                     </div>

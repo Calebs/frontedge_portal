@@ -20,6 +20,14 @@
     color: $color_text_gray;
 }
 
+.insightTitle_md {
+    font-weight: 700;
+
+    @include MQ(M) {
+        font-size: 16px;
+    }
+}
+
 .insight_value {
     display: inline-flex;
     line-height: 1;
@@ -92,5 +100,18 @@
     
     + .titleListItem {
         margin-top: 15px;
+    }
+}
+
+.pageStatBanner {
+    display: block;
+    padding: 20px 15px;
+    background-color: transparent;
+    border: 1px solid $border_grey;
+    border-radius: 10px;    
+
+    @include MQ(M) {
+        padding-right: 30px;
+        padding-left: 30px;
     }
 }

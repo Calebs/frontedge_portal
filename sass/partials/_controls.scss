@@ -188,3 +188,32 @@
 .panelContentFilterItem {
     margin-bottom: 20px;
 }
+
+.pageBannerControl {
+    @include flexbox();
+}
+
+.bannerControlItem {
+    display: inline-block;
+
+    + .bannerControlItem {
+        margin-left: 30px;
+    }
+}
+
+.bannerControlBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: inherit;
+
+    &:hover, &:focus {
+        opacity: .75;
+        color: inherit;
+    }
+
+    > * + * {
+        margin-left: 10px;
+    }
+}

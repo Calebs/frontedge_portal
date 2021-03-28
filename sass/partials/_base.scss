@@ -76,6 +76,10 @@ body {
     color: $brand_primary !important;
 }
 
+.color__success {
+    color: $color_green !important;
+}
+
 .color__secondary {
     color: $brand_accent !important;
 }
@@ -94,6 +98,10 @@ body {
 
 .color__grey_light {
     color: $border_grey_dark !important;
+}
+
+.color__grey_dark {
+    color: $color_grey_dark !important;
 }
 
 .color__white {
@@ -260,6 +268,10 @@ address, address span {
     line-height: 1.45;
 }
 
+.margin_top_x {
+    margin-top: 5px !important;
+}
+
 .margin_top_sm {
     margin-top: 15px !important;
 }
@@ -398,4 +410,38 @@ address, address span {
 
 .alert-dismissible .close {
     top: 10px;
+}
+
+.badge {
+    border-radius: 25px;
+    padding: .85em 1.5em;
+    background-color: $border_grey;
+    color: inherit;
+    display: inline-block;
+    text-align: center;
+}
+
+.badge-default {
+    background-color: $border_grey_light;
+    color: $color_grey_dark;
+}
+
+.badge-primary {
+    background-color: rgba($brand_primary, .15);
+    color: $brand_primary;
+}
+
+.badge-secondary {
+    background-color: rgba($brand_accent, .15);
+    color: $brand_accent;
+}
+
+.badge-danger {
+    background-color: rgba($color_red, .15);
+    color: $color_red;
+}
+
+.badge-success {
+    background-color: rgba($color_green, .15);
+    color: $color_green;
 }

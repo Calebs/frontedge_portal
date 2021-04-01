@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Purchase Order | Front Edge</title>
+    <title>Repayment | Front Edge</title>
     <link rel="shortcut icon" href="img/favicon.png" type="image/png">
     <link rel="icon" href="img/favicon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -20,104 +20,23 @@
 
 <body class="bg__off_white">
 
-    <div class="modal fade" id="update_status">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <header class="modal-header">
-                    <h4 class="modal-title">Update Status</h4>
-                    <div class="dialogDismiss">
-                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
-                    </div>
-                </header>
-                <div class="modal-body">
-                    <div class="user_info margin_bottom_md">
-                        <span class="font-sm">PO Number here</span>
-                        <h4 class="title title_sm font-bold color__black">Vendor Name here</h4>
-                    </div>
-
-                    <form class="content_wrapper">
-                        
-                        <div class="form-group">
-                            <label for="status_0" class="controlSummary">
-                                <input type="radio" checked name="user_status" id="status_0">
-                                <div class="controlSummaryDetails">
-                                    <h5 class="title font-black text-style-italics">In Progress</h5>
-                                    <p>The purchased order is awaiting vendor response</p>
-                                </div>
-                            </label>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="status_1" class="controlSummary">
-                                <input type="radio" name="user_status" id="status_1">
-                                <div class="controlSummaryDetails">
-                                    <h5 class="title font-black text-style-italics">Invoiced</h5>
-                                    <p>Received an Invoice for this order from the vendor</p>
-                                </div>
-                            </label>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="status_2" class="controlSummary">
-                                <input type="radio" name="user_status" id="status_2">
-                                <div class="controlSummaryDetails">
-                                    <h5 class="title font-black text-style-italics">Issued</h5>
-                                    <p>Payment has been made to the vendor for the Purchase order</p>
-                                </div>
-                            </label>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="status_3" class="controlSummary">
-                                <input type="radio" name="user_status" id="status_3">
-                                <div class="controlSummaryDetails">
-                                    <h5 class="title font-black text-style-italics">Delivering</h5>
-                                    <p>Awaiting delivery from vendor</p>
-                                </div>
-                            </label>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="status_4" class="controlSummary">
-                                <input type="radio" name="user_status" id="status_4">
-                                <div class="controlSummaryDetails">
-                                    <h5 class="title font-black text-style-italics">Delivered</h5>
-                                    <p>Order has been received from vendor, but not confirmed.</p>
-                                </div>
-                            </label>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="status_5" class="controlSummary">
-                                <input type="radio" name="user_status" id="status_5">
-                                <div class="controlSummaryDetails">
-                                    <h5 class="title font-black text-style-italics">Completed</h5>
-                                    <p>Order has been received from the vendor and confirmed</p>
-                                </div>
-                            </label>
-                        </div>
-
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
-                    <button type="button" class="btn btn-secondary">Save Changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="about_po">
+    <div class="modal fade" id="about_payment">
         <div class="modal-dialog modal-md modal-dialog-centered">
             <div class="modal-content">
-                <header class="widgetBannerHeader bg__off_white modal-header">
+                <header class="widgetBannerHeader modal-header">
                     <div class="widgetBannerInner">
                         <div class="bannerInnerLeft">
-                            <h4 class="title title_sm font-black text-style-italics">Purchase Order</h4>
+                            <h4 class="title title_sm">#141155943</h4>
                         </div>
                         <div class="bannerInnerRight">
-                            <h4 class="title title_sm">#10015</h4>
-                            <span class="badge badge-primary">Invoiced</span>
+                            <div class="insight_item text-right">
+                                <div class="insight_title">
+                                    <span class="color__grey_dark">Invoice Amount(NGN)</span>
+                                </div>
+                                <div class="insight_value">
+                                    <span class="title title_sm font-black">₦40,000.00</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </header>
@@ -127,25 +46,26 @@
                             <span class="font-bold color__grey_dark">Paid To</span>
                             <h6 class="title font-black text-style-italics">Zeal Enterprises</h6>
                             <p class="font-sm">Azeez Olumide</p>
+                            <div class="margin_top_x">
+                                <a href="supplier_details.html" class="supLinkItem">View Supplier Details</a>
+                            </div>
                         </div>
                         <div class="col-sm-6 bannerInnerRight">
                             <div class="paymentMetaItem">
-                                <span class="metaItemLabel">Date Issued:</span>
+                                <span class="metaItemLabel">Invoice Date:</span>
                                 <span class="metaItemValue">Feb 4, 2021</span>
                             </div>
                             <div class="paymentMetaItem">
-                                <span class="metaItemLabel">Created On:</span>
-                                <span class="metaItemValue">Feb 3, 2021</span>
+                                <span class="metaItemLabel">Due Date:</span>
+                                <span class="metaItemValue">Mar 30, 2021</span>
                             </div>
                             <div class="paymentMetaItem">
-                                <span class="metaItemLabel">Create By:</span>
-                                <span class="metaItemValue">Frontedge Admin</span>
+                                <span class="metaItemLabel">Payout Date:</span>
+                                <span class="metaItemValue">Feb 6, 2021</span>
                             </div>
                             <div class="paymentMetaItem">
-                                <span class="metaItemLabel">Status:</span>
-                                <span class="metaItemValue">
-                                    <span class="labelTag labelTagPrimary">Issued</span>
-                                </span>
+                                <span class="metaItemLabel">Payment Ref:</span>
+                                <span class="metaItemValue">#4439088890</span>
                             </div>
                         </div>
                     </div>
@@ -153,33 +73,30 @@
                         <table class="table table-hover">
                             <thead>
                                 <tr>
-                                    <th><div>Description</div></th>
-                                    <th class="hidden-sm"><div>QTY</div></th>
-                                    <th class="text-right"><div>Sub Total</div></th>
+                                    <th><div>For Services to</div></th>
+                                    <th><div class="text-right">Amount</div></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>
-                                        <span class="">Website development Services</span>
+                                        <h4 class="title font-black text-style-italics">Front Edge Inc.</h4>
                                     </td>
-                                    <td class="hidden-sm">
-                                        <span class="">2</span>
-                                    </td>
-                                    <td class="text-right">
-                                        <span class="font-bold">₦8,000,000.00</span>
+                                    <td>
+                                        <div class="text-right">
+                                            <span class="font-bold">₦40,000.00</span>
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>
                             <tfoot>
                                 <tr>
                                     <td></td>
-                                    <td></td>
                                     <td>
                                         <div class="priceCalcHolder">
                                             <div class="priceCalcItem">
-                                                <span class="metaItemValue">Total:</span>
-                                                <span class="metaItemLabel"><span>₦8,000,000.00</span></span>
+                                                <span class="metaItemValue">Total Due:</span>
+                                                <span class="metaItemLabel"><span class="textHighlight">₦40,00.00</span></span>
                                             </div>
                                         </div>
                                     </td>
@@ -198,6 +115,171 @@
                         <span class="btnLabel">Print</span>
                     </button>
                     <button type="button" data-dismiss="modal" class="btn btn-primary-outline btn-sm">Dismiss</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="payment_reminder">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title">Payment Reminder</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <form class="content_wrapper">
+                        <div class="row form-group">
+                            <div class="form_group_item form_row_title col-md-4">
+                                <label class="control-label font-black text-style-italics">Sender</label>
+                            </div>
+                            <div class="form_group_item col-md-8">
+                                <p class="form-control-plaintext">admin@frontedge.com</p>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="form_group_item form_row_title col-md-4">
+                                <label class="control-label font-black text-style-italics">To</label>
+                            </div>
+                            <div class="form_group_item col-md-8">
+                                <p class="form-control-plaintext">Azeez Olumide <span class="font-sm color__grey_light">(az_olu@gmail.com)</span></p>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="form_group_item form_row_title col-md-4">
+                                <label class="control-label font-black text-style-italics">Subject</label>
+                            </div>
+                            <div class="form_group_item col-md-8">
+                                <input type="text" class="form-control" value="Payment Reminder from Front Edge">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="form_group_item form_row_title col-md-4">
+                                <label class="control-label font-black text-style-italics">Message</label>
+                            </div>
+                            <div class="form_group_item col-md-8">
+                                <textarea rows="5" class="form-control" placeholder="">Hello there, Just a friendly reminder that repayment on an invoice advance issued on Feb 20, 2020 is overdue. This has been due since Feb 20, 2020. Please remember to make your payment as soon as possible. Thank you.
+                                </textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                    <button type="button" data-target="#reminderFeedback" data-toggle="modal" class="btn btn-secondary" >Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="reminderFeedback">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <header class="modal-header">
+                </header>
+                <div class="modal-body">
+                    <div class="centered text-center">
+                        <div class="promptImageHolder centered">
+                            <img src="./img/icons/action_success.svg" alt="">
+                        </div>
+                        <h2 class="title title_sm font-black text-style-italics margin_bottom_sm color__black">Payment Reminder sent</h2>
+                        <p>A reminder for the payment of <strong>₦48,375,25</strong> has been sent to <strong>“Azeez Olumide”</strong>.</p>
+                        <div class="section_cto">
+                            <a href="repayments.html" class="btn btn-default">Dismiss</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="record_payment">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title">Record a Payment</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <form class="content_wrapper">
+                        <div class="row form-group">
+                            <div class="form_group_item form_row_title col-md-4">
+                                <label class="control-label font-black text-style-italics">Payment Date</label>
+                            </div>
+                            <div class="form_group_item col-md-8">
+                                <input type="date" class="form-control" value="01/04/2021">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="form_group_item form_row_title col-md-4">
+                                <label class="control-label font-black text-style-italics">Amount Paid</label>
+                            </div>
+                            <div class="form_group_item col-md-8">
+                                <div class="inputaffixed inputPrefixed">
+                                    <div class="inputfixture">
+                                        <span class="font-black color__primary">₦</span>
+                                    </div>
+                                    <input type="text" class="form-control inputControl" value="48,375,25">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="form_group_item form_row_title col-md-4">
+                                <label class="control-label font-black text-style-italics">Memo / Note</label>
+                            </div>
+                            <div class="form_group_item col-md-8">
+                                <textarea rows="5" class="form-control" placeholder=""></textarea>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="form_group_item form_row_title col-md-4">
+                                
+                            </div>
+                            <div class="form_group_item col-md-8">
+                                <label for="vendorNotification" class="">
+                                    <input type="checkbox" checked id="vendorNotification">
+                                    <span>
+                                        Send receipt to <strong>Azeez Olumide</strong>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                    <button type="button" data-target="#paymentFeedback" data-toggle="modal" class="btn btn-secondary" >Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="paymentFeedback">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <header class="modal-header">
+                </header>
+                <div class="modal-body">
+                    <div class="centered text-center">
+                        <div class="promptImageHolder centered">
+                            <img src="./img/icons/action_success.svg" alt="">
+                        </div>
+                        <h2 class="title title_sm font-black text-style-italics margin_bottom_sm color__black">Payment Record updated</h2>
+                        <p>The payment of <strong>₦48,375,25</strong> has been recorded for <strong>“Azeez Olumide”</strong>.</p>
+                        <div class="section_cto">
+                            <a href="repayments.html" class="btn btn-default">Dismiss</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    
                 </div>
             </div>
         </div>
@@ -252,7 +334,7 @@
                                 <span class="navLabel">Dashboard</span>
                             </a>
                         </div>
-                        <div class="menuListItem active">
+                        <div class="menuListItem ">
                             <a href="purchase_order.html" class="menuLinkItem dsp_tab_row">
                                 <span class="icon_holder">
                                     <svg class="cust_icon" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -275,7 +357,7 @@
                                 <span class="navLabel">Invoices</span>
                             </a>
                         </div>
-                        <div class="menuListItem">
+                        <div class="menuListItem active">
                             <a href="repayments.html" class="menuLinkItem dsp_tab_row">
                                 <span class="icon_holder">
                                     <svg class="cust_icon" viewBox="0 0 17 16" xmlns="http://www.w3.org/2000/svg">
@@ -410,7 +492,7 @@
             <div class="container">
                 <div class="appPageHeader">
                     <div class="appPageTitleHolder">
-                        <h2 class="title title_lg font-regular color__white">Purchase Order</h2>      
+                        <h2 class="title title_lg font-regular color__white">Repayments</h2>      
                     </div>
                     <div class="appPageCTAMain">
                         <a href="#filterBlock" data-toggle="collapse" data-parent="#ListFilter" class="btn btn-sm btn-default-outline collapsed visible_sm">
@@ -420,9 +502,6 @@
                                 </svg>                                                                              
                             </span>
                             <span class="btnLabel hidden-sm">Filter</span>
-                        </a>
-                        <a href="new_purchaseOrder.html" class="btn btn-sm btn-primary">
-                            Add New
                         </a>
                     </div>
                 </div>
@@ -440,7 +519,7 @@
                                 <article class="profileStatMeta  ">
                                     <div class="insight_item">
                                         <div class="insight_title insightTitle_md">
-                                            <span class="color__grey_dark font-bold">Recieved so Far</span>
+                                            <span class="color__grey_dark font-bold">Upcoming Repayment</span>
                                         </div>
                                         <div class="insight_value">
                                             <span class="title title_sm">₦360,756.85</span>
@@ -450,20 +529,20 @@
                                 <article class="profileStatMeta ">
                                     <div class="insight_item">
                                         <div class="insight_title insightTitle_md">
-                                            <span class="color__grey_dark font-bold">Not Received</span>
+                                            <span class="color__grey_dark font-bold">Total Overdue</span>
                                         </div>
                                         <div class="insight_value">
-                                            <span class="title title_sm">₦56,850.00</span>
+                                            <span class="title title_sm">₦325,876.95</span>
                                         </div>
                                     </div>
                                 </article>
                                 <article class="profileStatMeta  ">
                                     <div class="insight_item">
                                         <div class="insight_title insightTitle_md">
-                                            <span class="color__grey_dark font-bold">Open Orders</span>
+                                            <span class="color__grey_dark font-bold">Avg. repayment time</span>
                                         </div>
                                         <div class="insight_value">
-                                            <span class="title title_sm">20</span>
+                                            <h4 class="title title_sm">20 <span class="unit">days</span></h4>
                                         </div>
                                     </div>
                                 </article>
@@ -488,9 +567,23 @@
                             </div>
                         </div>
 
+                        <nav class="pageNavSecondary margin_bottom_sm">
+                            <ul class="nav secondaryNavlist">
+                                <li class="secondaryNavItem active">
+                                    <a href="repayments.html" class="secondaryNavLink">Active</a>
+                                </li>
+                                <li class="secondaryNavItem">
+                                    <a href="repayment_overdue.html" class="secondaryNavLink">Overdue</a>
+                                </li>
+                                <li class="secondaryNavItem">
+                                    <a href="repayment_report.html" class="secondaryNavLink">Report</a>
+                                </li>
+                            </ul>
+                        </nav>
+
                         <div class="pageFilterBar panel-collapse form-row" id="filterBlock">
                             <div class="searchBar panelContentFilterItem col-md-4">
-                                <input type="search" class="form-control" placeholder="Enter purchase order #">
+                                <input type="search" class="form-control" placeholder="Enter Invoice #">
                                 <div class="searchControl">
                                     <button class="searchBtn">
                                         <svg class="cust_icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -513,14 +606,14 @@
                             <div class="panelContentFilterItem col-sm-6 col-md-4">
                                 <div class="inputaffixed inputPrefixed">
                                     <div class="inputfixture">
-                                        <span class="font-bold color__grey_light">Vendor:</span>
+                                        <span class="font-bold color__grey_light">Customer:</span>
                                     </div>
                                     <select class="form-control inputControl">
                                         <option>All</option>
-                                        <option>Vendor name 1</option>
-                                        <option>Vendor name 2</option>
-                                        <option>Another Vendor name</option>
-                                        <option>Another vendor name</option>
+                                        <option>Customer name 1</option>
+                                        <option>Customer name 2</option>
+                                        <option>Another Customer name</option>
+                                        <option>Another Customer name</option>
                                     </select>
                                 </div>
                             </div>
@@ -529,15 +622,10 @@
                         <div class="emptyStateBlock centered hidden">
                             <div class="emptyStateWrapper color__grey_dark text-center">
                                 <div class="emptyStateIlloHolder">
-                                    <img src="./img/icons/invoice_illo.svg" alt="No new Invoice">
+                                    <img src="./img/icons/invoice_illo.svg" alt="No Record found">
                                 </div>
-                                <h4 class="title title_sm font-black text-style-italics margin_bottom_sm">No Order Found</h4>
-                                <p>You have no purchase order at the moment. Create one!.</p>
-                                <div class="section_cto">
-                                    <a href="new_purchaseOrder.html" class="btn btn-primary">
-                                        New Purchase Order
-                                    </a>
-                                </div>
+                                <h4 class="title title_sm font-black text-style-italics margin_bottom_sm">No Record Found</h4>
+                                <p>Seems like you have no active repayment. Check again soon.</p>
                             </div>
                         </div>
 
@@ -550,10 +638,10 @@
                                                 <div class="">Description</div>
                                             </th>
                                             <th class="hidden-sm">
-                                                <div class="">Vendor</div>
+                                                <div class="">Supplier</div>
                                             </th>
                                             <th class="hidden-sm">
-                                                <div>Status</div>
+                                                <div>Buyer</div>
                                             </th>
                                             <th class="hidden-sm">
                                                 <div class="">Amount Due</div>
@@ -567,39 +655,44 @@
                                         <tr>
                                             <td>
                                                 <div class="user_info">
-                                                    <h4 class="title font-bold color__black">#Order Number</h4>
+                                                    <h4 class="title font-bold color__black">#invoice Number</h4>
                                                     <time>21/02/2021</time>
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
                                                 <div class="">
-                                                    Vendor Name
+                                                    Supplier Name
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
-                                                <span class="labelTag labelTagDefault">In Progress</span>
+                                                <div class="">
+                                                    Buyer Name
+                                                </div>
                                             </td>
                                             <td class="hidden-sm">
                                                 <div>
-                                                    ₦148,375.00
+                                                    ₦48,375,25
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="dropdown tabelControl">
                                                     <a href="#" data-toggle="dropdown" class="tableControlBtn">
-                                                        <span class="btnLabel">More</span>
-                                                        <span class="btnIcon">                                           
-                                                            <svg class="cust_icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.52827 5.5286C3.78862 5.26825 4.21073 5.26825 4.47108 5.5286L7.99967 9.05719L11.5283 5.5286C11.7886 5.26825 12.2107 5.26825 12.4711 5.5286C12.7314 5.78895 12.7314 6.21106 12.4711 6.47141L8.47108 10.4714C8.21073 10.7318 7.78862 10.7318 7.52827 10.4714L3.52827 6.47141C3.26792 6.21106 3.26792 5.78895 3.52827 5.5286Z"/>
+                                                        <span class="btnLabel hidden-sm">Options</span>
+                                                        <span class="btnIcon">                                                    
+                                                            <svg class="cust_icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8 4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2C10.5304 2 11.0391 2.21071 11.4142 2.58579C11.7893 2.96086 12 3.46957 12 4C12 4.53043 11.7893 5.03914 11.4142 5.41421C11.0391 5.78929 10.5304 6 10 6C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4ZM8 10C8 9.46957 8.21071 8.96086 8.58579 8.58579C8.96086 8.21071 9.46957 8 10 8C10.5304 8 11.0391 8.21071 11.4142 8.58579C11.7893 8.96086 12 9.46957 12 10C12 10.5304 11.7893 11.0391 11.4142 11.4142C11.0391 11.7893 10.5304 12 10 12C9.46957 12 8.96086 11.7893 8.58579 11.4142C8.21071 11.0391 8 10.5304 8 10ZM8 16C8 15.4696 8.21071 14.9609 8.58579 14.5858C8.96086 14.2107 9.46957 14 10 14C10.5304 14 11.0391 14.2107 11.4142 14.5858C11.7893 14.9609 12 15.4696 12 16C12 16.5304 11.7893 17.0391 11.4142 17.4142C11.0391 17.7893 10.5304 18 10 18C9.46957 18 8.96086 17.7893 8.58579 17.4142C8.21071 17.0391 8 16.5304 8 16V16Z"/>
                                                             </svg>                                                                
                                                         </span>
                                                     </a>
                                                     <ul class="dropdown-menu">
                                                         <li class="dropdown-item">
-                                                            <a href="#about_po" data-toggle="modal">View Details</a>
+                                                            <a href="#about_payment" data-toggle="modal">View Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
+                                                            <a href="#payment_reminder" data-toggle="modal">Send Reminder</a>
+                                                        </li>
+                                                        <li class="dropdown-item">
+                                                            <a href="#record_payment" data-toggle="modal">Record Payment</a>
                                                         </li>
                                                         <li class="dropdown-divider"></li>
                                                         <li class="dropdown-item">
@@ -618,243 +711,44 @@
                                         <tr>
                                             <td>
                                                 <div class="user_info">
-                                                    <h4 class="title font-bold color__black">10012</h4>
+                                                    <h4 class="title font-bold color__black">#2332894078</h4>
                                                     <time>21/02/2021</time>
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
                                                 <div class="">
-                                                    Lifemate Furniture
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <span class="labelTag labelTagInfo">Invoiced</span>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div >
-                                                    ₦328,000.00
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="dropdown tabelControl">
-                                                    <a href="#" data-toggle="dropdown" class="tableControlBtn">
-                                                        <span class="btnLabel">More</span>
-                                                        <span class="btnIcon">                                           
-                                                            <svg class="cust_icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.52827 5.5286C3.78862 5.26825 4.21073 5.26825 4.47108 5.5286L7.99967 9.05719L11.5283 5.5286C11.7886 5.26825 12.2107 5.26825 12.4711 5.5286C12.7314 5.78895 12.7314 6.21106 12.4711 6.47141L8.47108 10.4714C8.21073 10.7318 7.78862 10.7318 7.52827 10.4714L3.52827 6.47141C3.26792 6.21106 3.26792 5.78895 3.52827 5.5286Z"/>
-                                                            </svg>                                                                
-                                                        </span>
-                                                    </a>
-                                                    <ul class="dropdown-menu">
-                                                        <li class="dropdown-item">
-                                                            <a href="#about_po" data-toggle="modal">View Details</a>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
-                                                        </li>
-                                                        <li class="dropdown-divider"></li>
-                                                        <li class="dropdown-item">
-                                                            <button type="button">Download CSV</button>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button type="button">Print</button>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Delete Record</button>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="user_info">
-                                                    <h4 class="title font-bold color__black">10012</h4>
-                                                    <time>21/02/2021</time>
+                                                    Zeal Enterprises
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
                                                 <div class="">
-                                                    Lifemate Furniture
+                                                    Front Edge Inc.
                                                 </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <span class="labelTag labelTagPrimary">Issued</span>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div >
-                                                    ₦328,000.00
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="dropdown tabelControl">
-                                                    <a href="#" data-toggle="dropdown" class="tableControlBtn">
-                                                        <span class="btnLabel">More</span>
-                                                        <span class="btnIcon">                                           
-                                                            <svg class="cust_icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.52827 5.5286C3.78862 5.26825 4.21073 5.26825 4.47108 5.5286L7.99967 9.05719L11.5283 5.5286C11.7886 5.26825 12.2107 5.26825 12.4711 5.5286C12.7314 5.78895 12.7314 6.21106 12.4711 6.47141L8.47108 10.4714C8.21073 10.7318 7.78862 10.7318 7.52827 10.4714L3.52827 6.47141C3.26792 6.21106 3.26792 5.78895 3.52827 5.5286Z"/>
-                                                            </svg>                                                                
-                                                        </span>
-                                                    </a>
-                                                    <ul class="dropdown-menu">
-                                                        <li class="dropdown-item">
-                                                            <a href="#about_po" data-toggle="modal">View Details</a>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
-                                                        </li>
-                                                        <li class="dropdown-divider"></li>
-                                                        <li class="dropdown-item">
-                                                            <button type="button">Download CSV</button>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button type="button">Print</button>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Delete Record</button>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="user_info">
-                                                    <h4 class="title font-bold color__black">10012</h4>
-                                                    <time>21/02/2021</time>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    Lifemate Furniture
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <span class="labelTag labelTagSecondary">Delivering</span>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div >
-                                                    ₦328,000.00
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="dropdown tabelControl">
-                                                    <a href="#" data-toggle="dropdown" class="tableControlBtn">
-                                                        <span class="btnLabel">More</span>
-                                                        <span class="btnIcon">                                           
-                                                            <svg class="cust_icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.52827 5.5286C3.78862 5.26825 4.21073 5.26825 4.47108 5.5286L7.99967 9.05719L11.5283 5.5286C11.7886 5.26825 12.2107 5.26825 12.4711 5.5286C12.7314 5.78895 12.7314 6.21106 12.4711 6.47141L8.47108 10.4714C8.21073 10.7318 7.78862 10.7318 7.52827 10.4714L3.52827 6.47141C3.26792 6.21106 3.26792 5.78895 3.52827 5.5286Z"/>
-                                                            </svg>                                                                
-                                                        </span>
-                                                    </a>
-                                                    <ul class="dropdown-menu">
-                                                        <li class="dropdown-item">
-                                                            <a href="#about_po" data-toggle="modal">View Details</a>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
-                                                        </li>
-                                                        <li class="dropdown-divider"></li>
-                                                        <li class="dropdown-item">
-                                                            <button type="button">Download CSV</button>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button type="button">Print</button>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Delete Record</button>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="user_info">
-                                                    <h4 class="title font-bold color__black">10012</h4>
-                                                    <time>21/02/2021</time>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    Lifemate Furniture
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <span class="labelTag labelTagSuccess">Completed</span>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div >
-                                                    ₦328,000.00
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="dropdown tabelControl">
-                                                    <a href="#" data-toggle="dropdown" class="tableControlBtn">
-                                                        <span class="btnLabel">More</span>
-                                                        <span class="btnIcon">                                           
-                                                            <svg class="cust_icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.52827 5.5286C3.78862 5.26825 4.21073 5.26825 4.47108 5.5286L7.99967 9.05719L11.5283 5.5286C11.7886 5.26825 12.2107 5.26825 12.4711 5.5286C12.7314 5.78895 12.7314 6.21106 12.4711 6.47141L8.47108 10.4714C8.21073 10.7318 7.78862 10.7318 7.52827 10.4714L3.52827 6.47141C3.26792 6.21106 3.26792 5.78895 3.52827 5.5286Z"/>
-                                                            </svg>                                                                
-                                                        </span>
-                                                    </a>
-                                                    <ul class="dropdown-menu">
-                                                        <li class="dropdown-item">
-                                                            <a href="#about_po" data-toggle="modal">View Details</a>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
-                                                        </li>
-                                                        <li class="dropdown-divider"></li>
-                                                        <li class="dropdown-item">
-                                                            <button type="button">Download CSV</button>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button type="button">Print</button>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Delete Record</button>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="user_info">
-                                                    <h4 class="title font-bold color__black">#Order Number</h4>
-                                                    <time>21/02/2021</time>
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div class="">
-                                                    Vendor Name
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <span class="labelTag labelTagDefault">In Progress</span>
                                             </td>
                                             <td class="hidden-sm">
                                                 <div>
-                                                    ₦148,375.00
+                                                    ₦37,034.75
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="dropdown tabelControl">
                                                     <a href="#" data-toggle="dropdown" class="tableControlBtn">
-                                                        <span class="btnLabel">More</span>
-                                                        <span class="btnIcon">                                           
-                                                            <svg class="cust_icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.52827 5.5286C3.78862 5.26825 4.21073 5.26825 4.47108 5.5286L7.99967 9.05719L11.5283 5.5286C11.7886 5.26825 12.2107 5.26825 12.4711 5.5286C12.7314 5.78895 12.7314 6.21106 12.4711 6.47141L8.47108 10.4714C8.21073 10.7318 7.78862 10.7318 7.52827 10.4714L3.52827 6.47141C3.26792 6.21106 3.26792 5.78895 3.52827 5.5286Z"/>
+                                                        <span class="btnLabel hidden-sm">Options</span>
+                                                        <span class="btnIcon">                                                    
+                                                            <svg class="cust_icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8 4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2C10.5304 2 11.0391 2.21071 11.4142 2.58579C11.7893 2.96086 12 3.46957 12 4C12 4.53043 11.7893 5.03914 11.4142 5.41421C11.0391 5.78929 10.5304 6 10 6C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4ZM8 10C8 9.46957 8.21071 8.96086 8.58579 8.58579C8.96086 8.21071 9.46957 8 10 8C10.5304 8 11.0391 8.21071 11.4142 8.58579C11.7893 8.96086 12 9.46957 12 10C12 10.5304 11.7893 11.0391 11.4142 11.4142C11.0391 11.7893 10.5304 12 10 12C9.46957 12 8.96086 11.7893 8.58579 11.4142C8.21071 11.0391 8 10.5304 8 10ZM8 16C8 15.4696 8.21071 14.9609 8.58579 14.5858C8.96086 14.2107 9.46957 14 10 14C10.5304 14 11.0391 14.2107 11.4142 14.5858C11.7893 14.9609 12 15.4696 12 16C12 16.5304 11.7893 17.0391 11.4142 17.4142C11.0391 17.7893 10.5304 18 10 18C9.46957 18 8.96086 17.7893 8.58579 17.4142C8.21071 17.0391 8 16.5304 8 16V16Z"/>
                                                             </svg>                                                                
                                                         </span>
                                                     </a>
                                                     <ul class="dropdown-menu">
                                                         <li class="dropdown-item">
-                                                            <a href="#about_po" data-toggle="modal">View Details</a>
+                                                            <a href="#about_payment" data-toggle="modal">View Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
+                                                            <a href="#payment_reminder" data-toggle="modal">Send Reminder</a>
+                                                        </li>
+                                                        <li class="dropdown-item">
+                                                            <a href="#record_payment" data-toggle="modal">Record Payment</a>
                                                         </li>
                                                         <li class="dropdown-divider"></li>
                                                         <li class="dropdown-item">
@@ -873,39 +767,44 @@
                                         <tr>
                                             <td>
                                                 <div class="user_info">
-                                                    <h4 class="title font-bold color__black">10012</h4>
+                                                    <h4 class="title font-bold color__black">#2001896864</h4>
                                                     <time>21/02/2021</time>
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
                                                 <div class="">
-                                                    Lifemate Furniture
+                                                    Ibile Creatives
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
-                                                <span class="labelTag labelTagInfo">Invoiced</span>
+                                                <div class="">
+                                                    Front Edge Inc.
+                                                </div>
                                             </td>
                                             <td class="hidden-sm">
-                                                <div >
-                                                    ₦328,000.00
+                                                <div>
+                                                    ₦107,468.35
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="dropdown tabelControl">
                                                     <a href="#" data-toggle="dropdown" class="tableControlBtn">
-                                                        <span class="btnLabel">More</span>
-                                                        <span class="btnIcon">                                           
-                                                            <svg class="cust_icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.52827 5.5286C3.78862 5.26825 4.21073 5.26825 4.47108 5.5286L7.99967 9.05719L11.5283 5.5286C11.7886 5.26825 12.2107 5.26825 12.4711 5.5286C12.7314 5.78895 12.7314 6.21106 12.4711 6.47141L8.47108 10.4714C8.21073 10.7318 7.78862 10.7318 7.52827 10.4714L3.52827 6.47141C3.26792 6.21106 3.26792 5.78895 3.52827 5.5286Z"/>
+                                                        <span class="btnLabel hidden-sm">Options</span>
+                                                        <span class="btnIcon">                                                    
+                                                            <svg class="cust_icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8 4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2C10.5304 2 11.0391 2.21071 11.4142 2.58579C11.7893 2.96086 12 3.46957 12 4C12 4.53043 11.7893 5.03914 11.4142 5.41421C11.0391 5.78929 10.5304 6 10 6C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4ZM8 10C8 9.46957 8.21071 8.96086 8.58579 8.58579C8.96086 8.21071 9.46957 8 10 8C10.5304 8 11.0391 8.21071 11.4142 8.58579C11.7893 8.96086 12 9.46957 12 10C12 10.5304 11.7893 11.0391 11.4142 11.4142C11.0391 11.7893 10.5304 12 10 12C9.46957 12 8.96086 11.7893 8.58579 11.4142C8.21071 11.0391 8 10.5304 8 10ZM8 16C8 15.4696 8.21071 14.9609 8.58579 14.5858C8.96086 14.2107 9.46957 14 10 14C10.5304 14 11.0391 14.2107 11.4142 14.5858C11.7893 14.9609 12 15.4696 12 16C12 16.5304 11.7893 17.0391 11.4142 17.4142C11.0391 17.7893 10.5304 18 10 18C9.46957 18 8.96086 17.7893 8.58579 17.4142C8.21071 17.0391 8 16.5304 8 16V16Z"/>
                                                             </svg>                                                                
                                                         </span>
                                                     </a>
                                                     <ul class="dropdown-menu">
                                                         <li class="dropdown-item">
-                                                            <a href="#about_po" data-toggle="modal">View Details</a>
+                                                            <a href="#about_payment" data-toggle="modal">View Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
+                                                            <a href="#payment_reminder" data-toggle="modal">Send Reminder</a>
+                                                        </li>
+                                                        <li class="dropdown-item">
+                                                            <a href="#record_payment" data-toggle="modal">Record Payment</a>
                                                         </li>
                                                         <li class="dropdown-divider"></li>
                                                         <li class="dropdown-item">
@@ -924,39 +823,44 @@
                                         <tr>
                                             <td>
                                                 <div class="user_info">
-                                                    <h4 class="title font-bold color__black">10012</h4>
+                                                    <h4 class="title font-bold color__black">#2332894078</h4>
                                                     <time>21/02/2021</time>
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
                                                 <div class="">
-                                                    Lifemate Furniture
+                                                    Zatech Farms
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
-                                                <span class="labelTag labelTagPrimary">Issued</span>
+                                                <div class="">
+                                                    Mr. Bigs
+                                                </div>
                                             </td>
                                             <td class="hidden-sm">
-                                                <div >
-                                                    ₦328,000.00
+                                                <div>
+                                                    ₦172,034.65
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="dropdown tabelControl">
                                                     <a href="#" data-toggle="dropdown" class="tableControlBtn">
-                                                        <span class="btnLabel">More</span>
-                                                        <span class="btnIcon">                                           
-                                                            <svg class="cust_icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.52827 5.5286C3.78862 5.26825 4.21073 5.26825 4.47108 5.5286L7.99967 9.05719L11.5283 5.5286C11.7886 5.26825 12.2107 5.26825 12.4711 5.5286C12.7314 5.78895 12.7314 6.21106 12.4711 6.47141L8.47108 10.4714C8.21073 10.7318 7.78862 10.7318 7.52827 10.4714L3.52827 6.47141C3.26792 6.21106 3.26792 5.78895 3.52827 5.5286Z"/>
+                                                        <span class="btnLabel hidden-sm">Options</span>
+                                                        <span class="btnIcon">                                                    
+                                                            <svg class="cust_icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8 4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2C10.5304 2 11.0391 2.21071 11.4142 2.58579C11.7893 2.96086 12 3.46957 12 4C12 4.53043 11.7893 5.03914 11.4142 5.41421C11.0391 5.78929 10.5304 6 10 6C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4ZM8 10C8 9.46957 8.21071 8.96086 8.58579 8.58579C8.96086 8.21071 9.46957 8 10 8C10.5304 8 11.0391 8.21071 11.4142 8.58579C11.7893 8.96086 12 9.46957 12 10C12 10.5304 11.7893 11.0391 11.4142 11.4142C11.0391 11.7893 10.5304 12 10 12C9.46957 12 8.96086 11.7893 8.58579 11.4142C8.21071 11.0391 8 10.5304 8 10ZM8 16C8 15.4696 8.21071 14.9609 8.58579 14.5858C8.96086 14.2107 9.46957 14 10 14C10.5304 14 11.0391 14.2107 11.4142 14.5858C11.7893 14.9609 12 15.4696 12 16C12 16.5304 11.7893 17.0391 11.4142 17.4142C11.0391 17.7893 10.5304 18 10 18C9.46957 18 8.96086 17.7893 8.58579 17.4142C8.21071 17.0391 8 16.5304 8 16V16Z"/>
                                                             </svg>                                                                
                                                         </span>
                                                     </a>
                                                     <ul class="dropdown-menu">
                                                         <li class="dropdown-item">
-                                                            <a href="#about_po" data-toggle="modal">View Details</a>
+                                                            <a href="#about_payment" data-toggle="modal">View Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
+                                                            <a href="#payment_reminder" data-toggle="modal">Send Reminder</a>
+                                                        </li>
+                                                        <li class="dropdown-item">
+                                                            <a href="#record_payment" data-toggle="modal">Record Payment</a>
                                                         </li>
                                                         <li class="dropdown-divider"></li>
                                                         <li class="dropdown-item">
@@ -975,90 +879,44 @@
                                         <tr>
                                             <td>
                                                 <div class="user_info">
-                                                    <h4 class="title font-bold color__black">10012</h4>
+                                                    <h4 class="title font-bold color__black">#2001896864</h4>
                                                     <time>21/02/2021</time>
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
                                                 <div class="">
-                                                    Lifemate Furniture
-                                                </div>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <span class="labelTag labelTagSecondary">Delivering</span>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div >
-                                                    ₦328,000.00
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="dropdown tabelControl">
-                                                    <a href="#" data-toggle="dropdown" class="tableControlBtn">
-                                                        <span class="btnLabel">More</span>
-                                                        <span class="btnIcon">                                           
-                                                            <svg class="cust_icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.52827 5.5286C3.78862 5.26825 4.21073 5.26825 4.47108 5.5286L7.99967 9.05719L11.5283 5.5286C11.7886 5.26825 12.2107 5.26825 12.4711 5.5286C12.7314 5.78895 12.7314 6.21106 12.4711 6.47141L8.47108 10.4714C8.21073 10.7318 7.78862 10.7318 7.52827 10.4714L3.52827 6.47141C3.26792 6.21106 3.26792 5.78895 3.52827 5.5286Z"/>
-                                                            </svg>                                                                
-                                                        </span>
-                                                    </a>
-                                                    <ul class="dropdown-menu">
-                                                        <li class="dropdown-item">
-                                                            <a href="#about_po" data-toggle="modal">View Details</a>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
-                                                        </li>
-                                                        <li class="dropdown-divider"></li>
-                                                        <li class="dropdown-item">
-                                                            <button type="button">Download CSV</button>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button type="button">Print</button>
-                                                        </li>
-                                                        <li class="dropdown-item">
-                                                            <button data-target="#confirm_delete" data-toggle="modal">Delete Record</button>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="user_info">
-                                                    <h4 class="title font-bold color__black">10012</h4>
-                                                    <time>21/02/2021</time>
+                                                    Natnudo Farms
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
                                                 <div class="">
-                                                    Lifemate Furniture
+                                                    Chicken Repubilc
                                                 </div>
                                             </td>
                                             <td class="hidden-sm">
-                                                <span class="labelTag labelTagSuccess">Completed</span>
-                                            </td>
-                                            <td class="hidden-sm">
-                                                <div >
-                                                    ₦328,000.00
+                                                <div>
+                                                    ₦97,278.65
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="dropdown tabelControl">
                                                     <a href="#" data-toggle="dropdown" class="tableControlBtn">
-                                                        <span class="btnLabel">More</span>
-                                                        <span class="btnIcon">                                           
-                                                            <svg class="cust_icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.52827 5.5286C3.78862 5.26825 4.21073 5.26825 4.47108 5.5286L7.99967 9.05719L11.5283 5.5286C11.7886 5.26825 12.2107 5.26825 12.4711 5.5286C12.7314 5.78895 12.7314 6.21106 12.4711 6.47141L8.47108 10.4714C8.21073 10.7318 7.78862 10.7318 7.52827 10.4714L3.52827 6.47141C3.26792 6.21106 3.26792 5.78895 3.52827 5.5286Z"/>
+                                                        <span class="btnLabel hidden-sm">Options</span>
+                                                        <span class="btnIcon">                                                    
+                                                            <svg class="cust_icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8 4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2C10.5304 2 11.0391 2.21071 11.4142 2.58579C11.7893 2.96086 12 3.46957 12 4C12 4.53043 11.7893 5.03914 11.4142 5.41421C11.0391 5.78929 10.5304 6 10 6C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4ZM8 10C8 9.46957 8.21071 8.96086 8.58579 8.58579C8.96086 8.21071 9.46957 8 10 8C10.5304 8 11.0391 8.21071 11.4142 8.58579C11.7893 8.96086 12 9.46957 12 10C12 10.5304 11.7893 11.0391 11.4142 11.4142C11.0391 11.7893 10.5304 12 10 12C9.46957 12 8.96086 11.7893 8.58579 11.4142C8.21071 11.0391 8 10.5304 8 10ZM8 16C8 15.4696 8.21071 14.9609 8.58579 14.5858C8.96086 14.2107 9.46957 14 10 14C10.5304 14 11.0391 14.2107 11.4142 14.5858C11.7893 14.9609 12 15.4696 12 16C12 16.5304 11.7893 17.0391 11.4142 17.4142C11.0391 17.7893 10.5304 18 10 18C9.46957 18 8.96086 17.7893 8.58579 17.4142C8.21071 17.0391 8 16.5304 8 16V16Z"/>
                                                             </svg>                                                                
                                                         </span>
                                                     </a>
                                                     <ul class="dropdown-menu">
                                                         <li class="dropdown-item">
-                                                            <a href="#about_po" data-toggle="modal">View Details</a>
+                                                            <a href="#about_payment" data-toggle="modal">View Details</a>
                                                         </li>
                                                         <li class="dropdown-item">
-                                                            <a href="#update_status" data-toggle="modal">Update Status</a>
+                                                            <a href="#payment_reminder" data-toggle="modal">Send Reminder</a>
+                                                        </li>
+                                                        <li class="dropdown-item">
+                                                            <a href="#record_payment" data-toggle="modal">Record Payment</a>
                                                         </li>
                                                         <li class="dropdown-divider"></li>
                                                         <li class="dropdown-item">
@@ -1077,7 +935,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="section_cto pager">
+                            <div class="section_cto pager hidden">
                                 <nav class="pager_nav">
                                     <!--Show on page 2 upward-->
                                     <div class="pager_item hidden prev">
@@ -1088,15 +946,6 @@
                                     </div>
                                     <div class="pager_item">
                                         <a href="#">2</a>
-                                    </div>
-                                    <div class="pager_item">
-                                        <a href="#">3</a>
-                                    </div>
-                                    <div class="pager_item">
-                                        <a href="#">4</a>
-                                    </div>
-                                    <div class="pager_item">
-                                        <a href="#">5</a>
                                     </div>
                                     <div class="pager_item next">
                                         <a href="#">Next</a>

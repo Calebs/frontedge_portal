@@ -40,7 +40,6 @@
     align-items: center;
     font-weight: 700;
     cursor: pointer;
-    cursor: pointer;
 }
 
 .statSupportInfo {
@@ -50,9 +49,8 @@
 
 .unit {
     font-size: .6em;
-    text-transform: capitalize;
     letter-spacing: .025em;
-    color: $brand_inverse;
+    color: $border_grey_dark;
     padding-left: 2.5px; 
 }
 

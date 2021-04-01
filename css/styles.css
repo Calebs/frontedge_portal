@@ -3247,6 +3247,7 @@ footer[role="contentinfo"] {
   z-index: 1;
   border-radius: inherit;
   text-indent: 9999;
+  background-color: #00BAFF;
   font-size: 0;
   color: transparent;
   left: 50%;
@@ -3259,39 +3260,39 @@ footer[role="contentinfo"] {
   transform: translateX(-50%) translateY(-50%);
 }
 
-/* line 45, ../sass/partials/_user_area.scss */
+/* line 46, ../sass/partials/_user_area.scss */
 .aviCubed {
   border-radius: 10px !important;
 }
 
-/* line 49, ../sass/partials/_user_area.scss */
+/* line 50, ../sass/partials/_user_area.scss */
 .avi_avg {
   height: 32px;
   width: 32px;
 }
 
-/* line 54, ../sass/partials/_user_area.scss */
+/* line 55, ../sass/partials/_user_area.scss */
 .avi_sm {
   height: 24px;
   width: 24px;
   font-size: 11px;
 }
 
-/* line 60, ../sass/partials/_user_area.scss */
+/* line 61, ../sass/partials/_user_area.scss */
 .avi_md {
   width: 48px;
   height: 48px;
   font-size: 16px;
 }
 
-/* line 66, ../sass/partials/_user_area.scss */
+/* line 67, ../sass/partials/_user_area.scss */
 .avi_lg {
   width: 64px;
   height: 64px;
   font-size: 21px;
 }
 
-/* line 72, ../sass/partials/_user_area.scss */
+/* line 73, ../sass/partials/_user_area.scss */
 .avi_large {
   width: 64px;
   height: 64px;
@@ -3299,7 +3300,7 @@ footer[role="contentinfo"] {
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 72, ../sass/partials/_user_area.scss */
+  /* line 73, ../sass/partials/_user_area.scss */
   .avi_large {
     width: 128px;
     height: 128px;
@@ -3307,7 +3308,7 @@ footer[role="contentinfo"] {
   }
 }
 
-/* line 84, ../sass/partials/_user_area.scss */
+/* line 85, ../sass/partials/_user_area.scss */
 .default_avi {
   width: 100%;
   height: 100%;
@@ -3326,12 +3327,12 @@ footer[role="contentinfo"] {
   align-items: center;
   justify-content: center;
 }
-/* line 102, ../sass/partials/_user_area.scss */
+/* line 103, ../sass/partials/_user_area.scss */
 .has_image .default_avi {
   opacity: 0;
 }
 
-/* line 107, ../sass/partials/_user_area.scss */
+/* line 108, ../sass/partials/_user_area.scss */
 .user_info {
   font-size: 12px;
   overflow: hidden;
@@ -3561,28 +3562,20 @@ footer[role="contentinfo"] {
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  /* Mobile devices */
 }
-@media only screen and (max-width: 575px) {
-  /* line 53, ../sass/partials/_controls.scss */
-  .tableControlBtn {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-/* line 69, ../sass/partials/_controls.scss */
+/* line 64, ../sass/partials/_controls.scss */
 .tableControlBtn .cust_icon {
   width: 16px;
   height: 16px;
 }
-/* line 74, ../sass/partials/_controls.scss */
+/* line 69, ../sass/partials/_controls.scss */
 .tableControlBtn:hover, .tableControlBtn:focus {
   background-color: #f0fbff;
   color: #000000;
   fill: #00BAFF;
 }
 
-/* line 81, ../sass/partials/_controls.scss */
+/* line 76, ../sass/partials/_controls.scss */
 .labelTag {
   font-size: 12px;
   font-weight: 700;
@@ -3592,32 +3585,37 @@ footer[role="contentinfo"] {
   white-space: nowrap;
 }
 
-/* line 90, ../sass/partials/_controls.scss */
+/* line 85, ../sass/partials/_controls.scss */
 .labelTagPrimary {
   color: #00BAFF;
 }
 
-/* line 94, ../sass/partials/_controls.scss */
+/* line 89, ../sass/partials/_controls.scss */
 .labelTagSecondary {
   color: #FFCC00;
 }
 
-/* line 98, ../sass/partials/_controls.scss */
+/* line 93, ../sass/partials/_controls.scss */
 .labelTagDanger {
   color: #cc1b1b;
 }
 
-/* line 102, ../sass/partials/_controls.scss */
+/* line 97, ../sass/partials/_controls.scss */
 .labelTagNeutral {
   color: #353535;
 }
 
-/* line 106, ../sass/partials/_controls.scss */
+/* line 101, ../sass/partials/_controls.scss */
 .labelTagSuccess {
   color: #0FC221;
 }
 
-/* line 110, ../sass/partials/_controls.scss */
+/* line 105, ../sass/partials/_controls.scss */
+.labelTagInfo {
+  color: #0082b3;
+}
+
+/* line 109, ../sass/partials/_controls.scss */
 .fileUploadWidgetToggle {
   display: block;
   width: 100%;
@@ -3634,26 +3632,26 @@ footer[role="contentinfo"] {
   -webkit-transition-delay: 0s;
   transition: all 0.4s ease-in-out 0s;
 }
-/* line 122, ../sass/partials/_controls.scss */
+/* line 121, ../sass/partials/_controls.scss */
 .fileUploadWidgetToggle:hover, .fileUploadWidgetToggle:focus {
   border-color: #00BAFF;
   background-color: #f0fbff;
 }
 
-/* line 128, ../sass/partials/_controls.scss */
+/* line 127, ../sass/partials/_controls.scss */
 .profileStatMeta {
   padding: 0 15px;
   /* Mobile devices */
 }
 @media only screen and (max-width: 575px) {
-  /* line 128, ../sass/partials/_controls.scss */
+  /* line 127, ../sass/partials/_controls.scss */
   .profileStatMeta {
     width: 50%;
     flex-basis: 50%;
   }
 }
 
-/* line 137, ../sass/partials/_controls.scss */
+/* line 136, ../sass/partials/_controls.scss */
 .profileManagementOptions {
   display: -webkit-box;
   display: -moz-box;
@@ -3663,12 +3661,12 @@ footer[role="contentinfo"] {
   flex-shrink: 0;
 }
 
-/* line 142, ../sass/partials/_controls.scss */
+/* line 141, ../sass/partials/_controls.scss */
 .bubbleControlItem + .bubbleControlItem {
   margin-left: 30px;
 }
 
-/* line 146, ../sass/partials/_controls.scss */
+/* line 145, ../sass/partials/_controls.scss */
 .bubbleControlBtn {
   display: block;
   text-align: center;
@@ -3676,22 +3674,22 @@ footer[role="contentinfo"] {
   color: #555555;
   font-weight: 700;
 }
-/* line 153, ../sass/partials/_controls.scss */
+/* line 152, ../sass/partials/_controls.scss */
 .bubbleControlBtn:hover, .bubbleControlBtn :focus {
   color: #000000;
 }
-/* line 156, ../sass/partials/_controls.scss */
+/* line 155, ../sass/partials/_controls.scss */
 .bubbleControlBtn:hover .bubbleControlTile, .bubbleControlBtn :focus .bubbleControlTile {
   background-color: #f5f5f5;
 }
 
-/* line 162, ../sass/partials/_controls.scss */
+/* line 161, ../sass/partials/_controls.scss */
 .tileLabel {
   margin-top: 10px;
   display: block;
 }
 
-/* line 167, ../sass/partials/_controls.scss */
+/* line 166, ../sass/partials/_controls.scss */
 .bubbleControlTile {
   display: -webkit-box;
   display: -moz-box;
@@ -3714,19 +3712,19 @@ footer[role="contentinfo"] {
   -webkit-transition-delay: 0s, 0s;
   transition: all, ease-in-out 0.4s 0s;
 }
-/* line 181, ../sass/partials/_controls.scss */
+/* line 180, ../sass/partials/_controls.scss */
 .contactItem .bubbleControlTile {
   width: 32px;
   height: 32px;
   background-color: #DBEEF8;
 }
 
-/* line 188, ../sass/partials/_controls.scss */
+/* line 187, ../sass/partials/_controls.scss */
 .panelContentFilterItem {
   margin-bottom: 20px;
 }
 
-/* line 192, ../sass/partials/_controls.scss */
+/* line 191, ../sass/partials/_controls.scss */
 .pageBannerControl {
   display: -webkit-box;
   display: -moz-box;
@@ -3735,16 +3733,16 @@ footer[role="contentinfo"] {
   display: flex;
 }
 
-/* line 196, ../sass/partials/_controls.scss */
+/* line 195, ../sass/partials/_controls.scss */
 .bannerControlItem {
   display: inline-block;
 }
-/* line 199, ../sass/partials/_controls.scss */
+/* line 198, ../sass/partials/_controls.scss */
 .bannerControlItem + .bannerControlItem {
   margin-left: 30px;
 }
 
-/* line 204, ../sass/partials/_controls.scss */
+/* line 203, ../sass/partials/_controls.scss */
 .bannerControlBtn {
   display: inline-flex;
   align-items: center;
@@ -3752,12 +3750,12 @@ footer[role="contentinfo"] {
   position: relative;
   color: inherit;
 }
-/* line 211, ../sass/partials/_controls.scss */
+/* line 210, ../sass/partials/_controls.scss */
 .bannerControlBtn:hover, .bannerControlBtn:focus {
   opacity: .75;
   color: inherit;
 }
-/* line 216, ../sass/partials/_controls.scss */
+/* line 215, ../sass/partials/_controls.scss */
 .bannerControlBtn > * + * {
   margin-left: 10px;
 }
@@ -3936,6 +3934,10 @@ footer[role="contentinfo"] {
   justify-content: flex-start;
   /* Tablets and phablets */
 }
+/* line 151, ../sass/partials/_dialogs.scss */
+.modal .modal-header.widgetBannerHeader {
+  padding-bottom: 20px;
+}
 @media only screen and (min-width: 768px) {
   /* line 146, ../sass/partials/_dialogs.scss */
   .modal .modal-header {
@@ -3943,26 +3945,26 @@ footer[role="contentinfo"] {
     padding-right: 30px;
   }
 }
-/* line 157, ../sass/partials/_dialogs.scss */
+/* line 161, ../sass/partials/_dialogs.scss */
 .modal .modal-body {
   position: relative;
   padding: 30px 15px;
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 157, ../sass/partials/_dialogs.scss */
+  /* line 161, ../sass/partials/_dialogs.scss */
   .modal .modal-body {
     padding-left: 30px;
     padding-right: 30px;
   }
 }
-/* line 167, ../sass/partials/_dialogs.scss */
+/* line 171, ../sass/partials/_dialogs.scss */
 .modal .modal-footer {
   border-top: none;
   padding: 0 15px 10px;
 }
 
-/* line 173, ../sass/partials/_dialogs.scss */
+/* line 177, ../sass/partials/_dialogs.scss */
 .modal-title {
   font-size: 1.85rem;
   font-weight: 900;
@@ -3970,26 +3972,25 @@ footer[role="contentinfo"] {
   font-style: italic;
 }
 
-/* line 180, ../sass/partials/_dialogs.scss */
+/* line 184, ../sass/partials/_dialogs.scss */
 .promptImageHolder {
   max-width: 96px;
   display: block;
   margin-bottom: 20px;
 }
-/* line 185, ../sass/partials/_dialogs.scss */
+/* line 189, ../sass/partials/_dialogs.scss */
 .promptImageHolder > img {
   display: block;
   width: 100%;
 }
 
-/* line 191, ../sass/partials/_dialogs.scss */
+/* line 195, ../sass/partials/_dialogs.scss */
 .widgetBannerHeader {
   background-color: #f0fbff;
   border-radius: inherit;
-  padding-bottom: 20px;
 }
 
-/* line 197, ../sass/partials/_dialogs.scss */
+/* line 200, ../sass/partials/_dialogs.scss */
 .widgetBannerInner {
   width: 100%;
   display: -webkit-box;
@@ -4000,7 +4001,7 @@ footer[role="contentinfo"] {
   justify-content: space-between;
 }
 
-/* line 203, ../sass/partials/_dialogs.scss */
+/* line 206, ../sass/partials/_dialogs.scss */
 .paymentMetaItem {
   display: -webkit-box;
   display: -moz-box;
@@ -4008,12 +4009,12 @@ footer[role="contentinfo"] {
   display: -webkit-flex;
   display: flex;
 }
-/* line 206, ../sass/partials/_dialogs.scss */
+/* line 209, ../sass/partials/_dialogs.scss */
 .paymentMetaItem + .paymentMetaItem {
   margin-top: 4px;
 }
 
-/* line 211, ../sass/partials/_dialogs.scss */
+/* line 214, ../sass/partials/_dialogs.scss */
 .widgetInfoRow {
   font-size: 12px;
   clear: both;
@@ -4021,19 +4022,19 @@ footer[role="contentinfo"] {
   /* Mobile devices */
 }
 @media only screen and (max-width: 575px) {
-  /* line 217, ../sass/partials/_dialogs.scss */
+  /* line 220, ../sass/partials/_dialogs.scss */
   .widgetInfoRow .bannerInnerRight {
     margin-top: 20px;
   }
 }
 
-/* line 223, ../sass/partials/_dialogs.scss */
+/* line 226, ../sass/partials/_dialogs.scss */
 .supLinkItem {
   color: #979797;
   text-decoration: underline;
 }
 
-/* line 228, ../sass/partials/_dialogs.scss */
+/* line 231, ../sass/partials/_dialogs.scss */
 .metaItemLabel {
   font-weight: 700;
   text-align: right;
@@ -4041,26 +4042,26 @@ footer[role="contentinfo"] {
   /* Mobile devices */
 }
 @media only screen and (min-width: 576px) {
-  /* line 228, ../sass/partials/_dialogs.scss */
+  /* line 231, ../sass/partials/_dialogs.scss */
   .metaItemLabel {
     flex-basis: 50%;
   }
 }
 
-/* line 238, ../sass/partials/_dialogs.scss */
+/* line 241, ../sass/partials/_dialogs.scss */
 .metaItemValue {
   flex-shrink: 0;
   padding-left: 10px;
   color: #555555;
 }
-/* line 243, ../sass/partials/_dialogs.scss */
+/* line 246, ../sass/partials/_dialogs.scss */
 .priceCalcItem .metaItemValue {
   padding-left: 0;
   padding-right: 20px;
   flex-basis: 50%;
 }
 
-/* line 250, ../sass/partials/_dialogs.scss */
+/* line 253, ../sass/partials/_dialogs.scss */
 .priceCalcItem {
   padding: 10px 0;
   text-align: right;
@@ -4072,7 +4073,7 @@ footer[role="contentinfo"] {
   display: flex;
 }
 
-/* line 257, ../sass/partials/_dialogs.scss */
+/* line 260, ../sass/partials/_dialogs.scss */
 .textHighlight {
   background-color: #000000;
   color: #f5f5f5;
@@ -4080,28 +4081,23 @@ footer[role="contentinfo"] {
 }
 
 /* Tables */
-/* line 264, ../sass/partials/_dialogs.scss */
+/* line 267, ../sass/partials/_dialogs.scss */
 table {
   width: 100%;
 }
 
-/* line 268, ../sass/partials/_dialogs.scss */
+/* line 271, ../sass/partials/_dialogs.scss */
 .table {
   margin-bottom: 0;
 }
-/* line 273, ../sass/partials/_dialogs.scss */
+/* line 276, ../sass/partials/_dialogs.scss */
 .table > thead > tr > td, .table > thead > tr > th, .table tbody > tr > td, .table tbody > tr > th, .table tfoot > tr > td, .table tfoot > tr > th {
   color: inherit;
   border: none;
   padding: 8px 10px;
   vertical-align: middle;
 }
-/* line 279, ../sass/partials/_dialogs.scss */
-.widgetInfoTable .table > thead > tr > td, .widgetInfoTable .table > thead > tr > th, .widgetInfoTable .table tbody > tr > td, .widgetInfoTable .table tbody > tr > th, .widgetInfoTable .table tfoot > tr > td, .widgetInfoTable .table tfoot > tr > th {
-  padding-left: 0;
-  padding-right: 0;
-}
-/* line 288, ../sass/partials/_dialogs.scss */
+/* line 286, ../sass/partials/_dialogs.scss */
 .table > thead > tr > th {
   border-bottom: 1px solid #d5d5d5;
   text-transform: uppercase;
@@ -4109,37 +4105,37 @@ table {
   font-weight: 700;
   color: #979797;
 }
-/* line 295, ../sass/partials/_dialogs.scss */
+/* line 293, ../sass/partials/_dialogs.scss */
 .widgetInfoTable .table > thead > tr > th {
   border-bottom: none;
   text-transform: initial;
   font-weight: 400;
   padding-bottom: 0;
 }
-/* line 304, ../sass/partials/_dialogs.scss */
+/* line 302, ../sass/partials/_dialogs.scss */
 .table .table {
   background-color: transparent;
 }
 
-/* line 309, ../sass/partials/_dialogs.scss */
+/* line 307, ../sass/partials/_dialogs.scss */
 .table_description {
   min-width: 250px;
   position: relative;
 }
 
-/* line 314, ../sass/partials/_dialogs.scss */
+/* line 312, ../sass/partials/_dialogs.scss */
 .table-responsive {
   border: none;
   /* Landscape tablets and desktop or laptops */
 }
 @media only screen and (min-width: 992px) {
-  /* line 314, ../sass/partials/_dialogs.scss */
+  /* line 312, ../sass/partials/_dialogs.scss */
   .table-responsive {
     overflow: visible;
   }
 }
 
-/* line 323, ../sass/partials/_dialogs.scss */
+/* line 321, ../sass/partials/_dialogs.scss */
 .table-hover > tbody > tr {
   cursor: pointer;
   font-size: 14px;
@@ -4151,31 +4147,31 @@ table {
   -webkit-transition-delay: 0s;
   transition: all 0.4s ease-in-out 0s;
 }
-/* line 330, ../sass/partials/_dialogs.scss */
+/* line 328, ../sass/partials/_dialogs.scss */
 .table-hover > tbody > tr:hover {
   background-color: #f5f5f5;
 }
 
-/* line 337, ../sass/partials/_dialogs.scss */
+/* line 335, ../sass/partials/_dialogs.scss */
 .wcCalculator {
   clear: both;
   position: relative;
   padding-bottom: 50px;
 }
 
-/* line 343, ../sass/partials/_dialogs.scss */
+/* line 341, ../sass/partials/_dialogs.scss */
 .wcCalculatorControls {
   padding-top: 15px;
   padding-bottom: 20px;
 }
 
-/* line 348, ../sass/partials/_dialogs.scss */
+/* line 346, ../sass/partials/_dialogs.scss */
 .wcCalculatorInfoWidget {
   width: 100%;
   padding: 20px 0;
 }
 
-/* line 353, ../sass/partials/_dialogs.scss */
+/* line 351, ../sass/partials/_dialogs.scss */
 .wcCalculatorInfoStatBox {
   display: block;
   width: 100%;
@@ -4186,31 +4182,31 @@ table {
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 353, ../sass/partials/_dialogs.scss */
+  /* line 351, ../sass/partials/_dialogs.scss */
   .wcCalculatorInfoStatBox {
     padding: 40px 50px;
   }
 }
 
-/* line 366, ../sass/partials/_dialogs.scss */
+/* line 364, ../sass/partials/_dialogs.scss */
 .statSnippetRow {
   display: block;
   padding: 30px 0;
 }
 
-/* line 371, ../sass/partials/_dialogs.scss */
+/* line 369, ../sass/partials/_dialogs.scss */
 .statSnippetMain {
   border-top: 1px solid #E5E5E5;
   border-bottom: 1px solid #E5E5E5;
 }
 
-/* line 376, ../sass/partials/_dialogs.scss */
+/* line 374, ../sass/partials/_dialogs.scss */
 .statLabel {
   color: #757575;
   font-size: 16px;
   display: inline-block;
 }
-/* line 381, ../sass/partials/_dialogs.scss */
+/* line 379, ../sass/partials/_dialogs.scss */
 .title .statLabel {
   margin-left: 5px;
 }

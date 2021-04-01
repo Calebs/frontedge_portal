@@ -147,6 +147,10 @@
         border-bottom: none;
         padding: 20px 15px 0;
         justify-content: flex-start;
+        
+        &.widgetBannerHeader {
+            padding-bottom: 20px;
+        }
 
         @include MQ(M) {
             padding-left: 30px;
@@ -191,7 +195,6 @@
 .widgetBannerHeader {
     background-color: $brand_inverse;
     border-radius: inherit;
-    padding-bottom: 20px;
 }
 
 .widgetBannerInner {
@@ -275,11 +278,6 @@ table {
                 border: none;
                 padding: 8px 10px;
                 vertical-align: middle;
-
-                .widgetInfoTable & {
-                    padding-left: 0;
-                    padding-right: 0;
-                }
             } 
         }
     }

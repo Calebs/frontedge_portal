@@ -332,6 +332,13 @@ footer[role="contentinfo"] {
         padding-left: 30px;
         padding-right: 30px;
     }
+
+    .userProfilePanel & {
+        background-color: transparent;
+        border-radius: 0;
+        box-shadow: unset;
+        padding: 0;
+    }
 }
 
 .contentPanelHeader {
@@ -417,4 +424,104 @@ footer[role="contentinfo"] {
 
 .panelSubGroup + .panelSubGroup {
     padding-top: 50px;
+}
+
+// User profile Layout
+.userProfileLayout {
+    @include flexbox();
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    box-shadow: 1px 1px 3px rgba(black, .15);
+    border-radius: 10px;
+    
+    @include MQ(M) {
+        min-height: 0;
+        flex: 1 1 0%;
+        flex-direction: row;
+    }
+}
+
+// Secondary page sidebar
+.userProfileNav {
+    padding-top: 30px ;
+    
+    @include MQ(M) {
+        flex-shrink: 0;
+        padding: 50px 0;
+        overflow-y: auto;
+        width: 350px;
+        border-right: 1px solid $border_grey_light;   
+    }
+}
+
+.profileNavMenu {
+    width: 100%;
+}
+
+.nav_heading {
+    margin-bottom: 30px;
+    font-size: 14px;
+    padding-left: 30px;
+    color: $border_grey_dark;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.profileNavMenu {
+    @include flexbox();
+    overflow-y: auto;
+    width: 100%;
+    
+    @include MQ(M) {
+        flex-direction: column;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+}
+
+.profileNavLink {
+    @include flexbox();
+    align-items: center;
+    padding: 7.5px 15px;
+    cursor: pointer;
+    text-decoration: none;
+    color: $color_grey_dark;
+    fill: $border_grey_dark;
+    white-space: nowrap;
+
+    @include MQ(M) {
+        padding: 10px 30px;
+    }
+
+    * + * {
+        margin-left: 15px;
+    }
+    
+    &:hover, &:focus {
+        font-weight: bold;
+        color: $color_text;
+        fill: $brand_primary;
+    }
+    
+    &.active {
+        font-weight: 900;
+        font-style: italic;
+        background-color: $brand_inverse;
+        fill: $brand_primary;
+        color: $brand_black;
+    }
+}
+
+
+.userProfilePanel {
+    width: 100%;
+    padding: 30px 15px;
+
+    @include MQ(M) {
+        padding: 50px;
+    }
 }

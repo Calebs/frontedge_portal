@@ -138,6 +138,16 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
-    font-size: 11px;
-    
+    font-size: 11px;   
+}
+
+.docNavigationItem {
+    list-style: none;
+    line-height: 2.5;
+    font-weight: bold;
+
+    a {
+        display: inline-block;
+        padding: 7.5px 0;
+    }
 }

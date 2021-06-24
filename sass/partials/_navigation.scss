@@ -141,6 +141,17 @@ button {
     }
 }
 
+.btn-default-danger {
+    background-color: transparent;
+    color: $color_red;
+
+    &:hover,
+    &:focus {
+        background-color: $border_grey_light;
+        color: $brand_black;
+    }
+}
+
 .btn-primary-outline {
     background-color: $brand_inverse;
     color: $brand_black;

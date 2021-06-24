@@ -525,3 +525,68 @@ footer[role="contentinfo"] {
         padding: 50px;
     }
 }
+
+.postArticle {
+    overflow: hidden;
+    color: $color_text_gray;
+
+    @include MQ(M) {
+        font-size: 16px;
+    }
+
+    img {
+        display: block;
+        object-fit: fill;
+        object-position: center center;
+        text-align: center;
+        margin: 10px 0 20px;
+    }
+    
+    ol,ul {
+        list-style: inherit;
+        padding: 10px 20px;
+
+        li {
+            display: list-item;
+            clear: both;
+            padding-bottom: 5px;
+        }
+    }
+    
+    ol {
+        li {
+            list-style: decimal;
+
+            > ol > li {
+                list-style: lower-alpha;
+            } 
+        }
+    }
+        
+    h2, h3, h4 {
+        margin: 30px 0 15px;
+        text-transform: capitalize;
+        font-weight: 700;
+        color: $brand_black;
+    }
+    
+    a {
+        text-decoration: underline;
+        color: darken($brand_inverse, 15);
+
+        &:hover, &:focus {
+            color: $brand_accent;
+        }
+    }
+
+    p:not(:last-of-type) {
+        margin-bottom: 1em;
+    }
+}
+
+.docTimeStamp {
+    clear: both;
+    padding: 20px 0;
+    border-top: 1px solid $border_grey_light;
+    margin-top: 20px;
+}

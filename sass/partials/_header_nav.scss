@@ -74,10 +74,6 @@ header[role="banner"] {
         position: absolute;
         left: 0;
     }
-
-    // @include MQ(L) {
-    //     padding-left: 40px;
-    // }
 }
 
 .brand_img {
@@ -95,6 +91,10 @@ header[role="banner"] {
     width: 130px;
     position: relative;
     height: 100%;
+
+    .sectionDialogHeader & {
+        line-height: normal;
+    }
 
     @include MQ(L) {
         width: 175px;

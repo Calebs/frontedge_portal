@@ -988,7 +988,7 @@ input[type="checkbox"]:disabled:checked:before,
   display: block;
 }
 
-/* line 336, ../sass/partials/_form.scss */
+/* line 335, ../sass/partials/_form.scss */
 .required::after {
   content: "*";
   font-size: 1.125em;
@@ -996,19 +996,19 @@ input[type="checkbox"]:disabled:checked:before,
   color: #F6515B;
 }
 
-/* line 343, ../sass/partials/_form.scss */
+/* line 342, ../sass/partials/_form.scss */
 input[disabled] {
   background-color: #c5c5c5;
 }
 
-/* line 347, ../sass/partials/_form.scss */
+/* line 346, ../sass/partials/_form.scss */
 .radio-inline,
 .checkbox-inline {
   padding: 10px 0 5px;
   display: inline-flex;
   align-items: center;
 }
-/* line 353, ../sass/partials/_form.scss */
+/* line 352, ../sass/partials/_form.scss */
 .radio-inline + .radio-inline,
 .radio-inline + .checkbox-inline,
 .checkbox-inline + .radio-inline,
@@ -1016,15 +1016,15 @@ input[disabled] {
   margin-left: 30px;
 }
 
-/* line 359, ../sass/partials/_form.scss */
+/* line 358, ../sass/partials/_form.scss */
 label {
   font-weight: normal;
 }
-/* line 362, ../sass/partials/_form.scss */
+/* line 361, ../sass/partials/_form.scss */
 label.radio-inline + label {
   margin-left: 30px;
 }
-/* line 366, ../sass/partials/_form.scss */
+/* line 365, ../sass/partials/_form.scss */
 label.checkbox-inline {
   margin: 5px 0;
   margin-bottom: 0 !important;
@@ -1033,44 +1033,44 @@ label.checkbox-inline {
   vertical-align: top;
 }
 
-/* line 375, ../sass/partials/_form.scss */
+/* line 374, ../sass/partials/_form.scss */
 .formCTA {
   clear: both;
   width: 100%;
   margin-top: 50px;
 }
 
-/* line 381, ../sass/partials/_form.scss */
+/* line 380, ../sass/partials/_form.scss */
 .searchBar {
   position: relative;
   width: 100%;
 }
 
-/* line 386, ../sass/partials/_form.scss */
+/* line 385, ../sass/partials/_form.scss */
 .searchControl {
   position: absolute;
   top: 10px;
   z-index: 2;
 }
 
-/* line 392, ../sass/partials/_form.scss */
+/* line 391, ../sass/partials/_form.scss */
 .searchBtn {
   fill: #979797;
   padding: 0 10px;
 }
-/* line 396, ../sass/partials/_form.scss */
+/* line 395, ../sass/partials/_form.scss */
 .searchBtn:hover, .searchBtn:focus {
   fill: #00BAFF;
 }
 
-/* line 401, ../sass/partials/_form.scss */
+/* line 400, ../sass/partials/_form.scss */
 .sampleImageHolder {
   width: 100%;
   position: relative;
   margin-bottom: 20px;
   border-radius: 5px;
 }
-/* line 407, ../sass/partials/_form.scss */
+/* line 406, ../sass/partials/_form.scss */
 .sampleImageHolder > img {
   width: 100%;
   border-radius: inherit;
@@ -3430,6 +3430,81 @@ footer[role="contentinfo"] {
   padding: 20px 0;
   border-top: 1px solid #E5E5E5;
   margin-top: 20px;
+}
+
+/* line 594, ../sass/partials/_sections.scss */
+.widgetPanel {
+  display: block;
+  width: 100%;
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: white;
+}
+
+/* line 604, ../sass/partials/_sections.scss */
+.promoBanner {
+  background-color: #000000;
+  color: #000000;
+  background-image: url(../img/banners/promptBanner.svg);
+}
+
+/* line 610, ../sass/partials/_sections.scss */
+.bannerInner {
+  padding: 15px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  /* Tablets and phablets */
+  /* Tablets and phablets */
+}
+@media only screen and (max-width: 767px) {
+  /* line 610, ../sass/partials/_sections.scss */
+  .bannerInner {
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* line 610, ../sass/partials/_sections.scss */
+  .bannerInner {
+    padding: 15px 30px;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* line 625, ../sass/partials/_sections.scss */
+.bannerCta {
+  flex-shrink: 0;
+  /* Tablets and phablets */
+}
+@media only screen and (max-width: 767px) {
+  /* line 625, ../sass/partials/_sections.scss */
+  .bannerCta {
+    margin-top: 15px;
+  }
+}
+
+/* line 633, ../sass/partials/_sections.scss */
+.bannerArrowBtn {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  border: none;
+  background-color: #000000;
+  fill: #f0fbff;
+  cursor: pointer;
+}
+/* line 645, ../sass/partials/_sections.scss */
+.bannerArrowBtn:hover, .bannerArrowBtn:hover {
+  background-color: #00BAFF;
+  opacity: 1;
 }
 
 /* line 1, ../sass/partials/_user_area.scss */

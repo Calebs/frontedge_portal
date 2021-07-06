@@ -162,6 +162,34 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="welcomeDialog">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <div class="dialogDismiss">
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <div class="centered text-center">
+                        <div class="promptImageHolder centered">
+                            <img src="./img/icons/hello.svg" alt="">
+                        </div>
+                        <h2 class="title title_sm font-black text-style-italics margin_bottom_sm color__black">Welcome to Front Edge</h2>
+                        <p>Whould you like to get paid early on your invoices?</p>
+                        <div class="section_cto">
+                            <div class="">
+                                <a href="supplier_edu.html" class="btn btn-secondary btn-block">Yes, Sign me up</a>
+                            </div>
+                            <div class="margin_top_sm">
+                                <button type="button" data-dismiss="modal" class="btn btn-default btn-block">No, Show me my Invoices</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <header role="banner" class="mainAppHeader">
         <div class="container">
@@ -338,7 +366,6 @@
     </header>
     
     <main class="mainContentArea">
-
         <header class="appMainHeader bg__black">
             <div class="container">
                 <div class="appPageHeader">
@@ -464,6 +491,22 @@
                         </div>
                     </div>
                 </section>
+
+                <div class="widgetPanel promoBanner margin_bottom_md">
+                    <div class="bannerInner">
+                        <div class="bannerText">
+                            <h4 class="title title_sm margin_bottom_x font-black">Get paid Early</h4>
+                            <p>Access just in time capital to achieve your business potential. Sign up now. </p>
+                        </div>
+                        <div class="bannerCta">
+                            <a href="#" class="bannerArrowBtn">
+                                <svg class="cust_icon" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M23.893 16.492C23.8296 16.3283 23.7344 16.1788 23.613 16.052L16.9464 9.38532C16.822 9.261 16.6745 9.16239 16.512 9.09511C16.3496 9.02783 16.1755 8.9932 15.9997 8.9932C15.6446 8.9932 15.3041 9.13425 15.053 9.38532C14.9287 9.50964 14.8301 9.65723 14.7628 9.81965C14.6955 9.98208 14.6609 10.1562 14.6609 10.332C14.6609 10.6871 14.802 11.0276 15.053 11.2787L19.453 15.6653H9.33303C8.97941 15.6653 8.64027 15.8058 8.39022 16.0558C8.14017 16.3059 7.99969 16.645 7.99969 16.9987C7.99969 17.3523 8.14017 17.6914 8.39022 17.9415C8.64027 18.1915 8.97941 18.332 9.33303 18.332H19.453L15.053 22.7187C14.9281 22.8426 14.8289 22.9901 14.7612 23.1525C14.6935 23.315 14.6586 23.4893 14.6586 23.6653C14.6586 23.8413 14.6935 24.0156 14.7612 24.1781C14.8289 24.3406 14.9281 24.488 15.053 24.612C15.177 24.737 15.3244 24.8361 15.4869 24.9038C15.6494 24.9715 15.8237 25.0064 15.9997 25.0064C16.1757 25.0064 16.35 24.9715 16.5125 24.9038C16.6749 24.8361 16.8224 24.737 16.9464 24.612L23.613 17.9453C23.7344 17.8185 23.8296 17.669 23.893 17.5053C24.0264 17.1807 24.0264 16.8166 23.893 16.492Z" fill="#D5D5D5"/>
+                                </svg>                        
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
                 <section class="contentPanelBlock panelflat_sm">
                     <div class="contentPanelWrapper">
@@ -1461,6 +1504,15 @@
 	<script src="js/jquery.js"></script>
     <script src="js/base.min.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        jQuery(document).ready(function(){
+            // $('#welcomeDialog').modal({
+            //     show: true,
+            //     backdrop: 'static',
+            // });
+        });
+    </script>
     
 </body>
 </html>

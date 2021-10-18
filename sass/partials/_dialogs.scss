@@ -183,7 +183,6 @@
 
 .sectionDialogWrapper {
     height: 720px;
-    // overflow: hidden;
 }
 
 .sectionDialogFooter, .sectionDialogHeader {
@@ -377,6 +376,11 @@ table {
                 font-weight: 400;
                 padding-bottom: 0;
             }
+
+            .accordionTable & {
+                border-bottom: none;
+                color: $color_text_gray;
+            }
         }
     }
 
@@ -384,6 +388,10 @@ table {
         background-color: transparent;
     }
 }
+
+.shadedTableHeader {
+    background-color: $color_white;
+}     
 
 .table_description {
     min-width: 250px;
@@ -459,5 +467,70 @@ table {
 
     .title & {
         margin-left: 5px;
+    }
+}
+
+// New invoice Layout
+
+.invoicePanel {
+    margin-bottom: 10px;
+}
+
+.invoiceHeaderRow {
+    //display: block;
+    width: 100%;
+    padding: 5px ;
+    background-color: $brand_inverse;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &.collapsed { 
+        border: 1px solid $border_grey_light;
+        background-color: white;
+    }
+
+    &:hover, &:focus {
+        background-color: $brand_inverse;
+        border-color: transparent;
+    }
+}
+
+.expandIndicator {
+    padding: 4px;
+    border-radius: 10px;
+    fill: $color_grey_dark;
+    display: inline-block;
+    background-color: $border_grey;
+    @include transform(rotate(180deg));
+    @include transition(transform .4s ease-in-out 0s);
+
+    .collapsed & {
+        background-color: $border_grey_light;
+        @include transform(rotate(0deg));
+        @include transition(transform .4s ease-in-out 0s);
+    }
+}
+
+.invoicePanelBody {
+    padding: 20px 0;
+
+    @include MQ(M) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.innerContent_Sup {
+    @include flexbox();
+
+    @include MQ-MAX(M) {
+        margin-top: 20px;
+        border-top: 1px solid $border_grey_light;
+        padding-top: 20px;
+    }
+
+    @include MQ(M) {
+        border-left: 1px solid $border_grey_light;       
+        flex-direction: column;
     }
 }

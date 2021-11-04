@@ -4815,3 +4815,15 @@ table {
     flex-direction: column;
   }
 }
+
+/* Tablets and phablets */
+@media only screen and (min-width: 768px) {
+  /* line 539, ../sass/partials/_dialogs.scss */
+  .invoiceHeaderRow > td {
+    width: 200px;
+  }
+  /* line 542, ../sass/partials/_dialogs.scss */
+  .invoiceHeaderRow > td.col_anchor {
+    min-width: 300px;
+  }
+}
